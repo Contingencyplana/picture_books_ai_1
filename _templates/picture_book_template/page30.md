@@ -1,4 +1,5 @@
-She left the hollow tree still open at one end, humming the almost-song she couldn’t finish.  
-Ahead, the Glass Castle glittered—perhaps a place where endings learn how.  
-// Code Task: close_loop(current_context) → ERROR: "Not yet. Try kindness first."
-[Illustration: Small glowing loop before a crystalline castle under soft dusk light.]
+{{BOOK_TITLE}} — Page {{PAGE_NUMBER}}
+She came from where the last clue hummed softly behind her.
+Ahead, a small decision flickered, asking to be tried next.
+// Code Task: {{BOOK_ID}}.page{{PAGE_NUMBER}}() → TODO
+[Illustration: A motif that matches {{BOOK_TITLE}} at page {{PAGE_NUMBER}}.]
