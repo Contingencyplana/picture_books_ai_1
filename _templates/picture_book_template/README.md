@@ -1,10 +1,10 @@
 # {{BOOK_TITLE}}
 
-One-line hook goes here.
+A very different fairytale in 32 tiny steps.
 
-Synopsis: Write 2–3 sentences describing the book’s premise, main character, and journey. Use this as a placeholder for your own story idea.
+Synopsis: (Write 2–3 sentences about the book’s premise, main character, and journey. Replace this placeholder with your own story idea.)
 
 ---
 
-**How to use this template:**
-Copy this entire folder, rename it for your new book, and fill in the placeholders above. Each pageNN.md is a micro-task for narrative, code, and illustration.
+**Using this template:**
+See COPYING_INSTRUCTIONS.md for how to copy, rename, and fill in this template for your new book.
