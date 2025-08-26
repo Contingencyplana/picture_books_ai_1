@@ -60,7 +60,8 @@ This repo represents the **first publishing workspace** in a larger vision.
 
 ## 📂 Structure
 
-```
+```markdownlint
+
 picture_books_ai_1/
 │ README.md # This file
 │ WORKSPACE_OVERVIEW.md # (to be added) Treasuries + file counts
