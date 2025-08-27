@@ -5,10 +5,7 @@
   - <repo>_clean_latest.zip (current build)
   - <repo>_clean_YYYY-MM-DD-HHmm.zip (previous build)
 
-.PROCESS
-  1) Delete any existing timestamped clean zips.
-  2) If a _clean_latest.zip exists, rename it to today's timestamp.
-  3) Create a fresh _clean_latest.zip from repo contents (excluding .git and dist).
+  Excludes Windows cruft (Thumbs.db, desktop.ini, *.lnk), .git, and dist.
 #>
 
 param(
@@ -22,16 +19,13 @@ Set-Location $RepoRoot
 
 # Ensure dist/
 $dist = Join-Path $RepoRoot "dist"
-if (-not (Test-Path $dist)) {
-  New-Item -ItemType Directory -Path $dist | Out-Null
-}
+if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }
 
 # Names/patterns
-$ts          = Get-Date -Format "yyyy-MM-dd-HHmm"
-$latestZip   = Join-Path $dist "$RepoName`_clean_latest.zip"
-$tsPattern   = Join-Path $dist "$RepoName`_clean_20*.zip"  # matches any timestamped clean zip
-$newTsZip    = Join-Path $dist "$RepoName`_clean_$ts.zip"
-$tmpZip      = Join-Path $dist "__tmp_build.zip"
+$ts        = Get-Date -Format "yyyy-MM-dd-HHmm"
+$latestZip = Join-Path $dist "$RepoName`_clean_latest.zip"
+$tsPattern = Join-Path $dist "$RepoName`_clean_20*.zip"   # any timestamped clean zip
+$newTsZip  = Join-Path $dist "$RepoName`_clean_$ts.zip"
 
 # 1) Delete any existing timestamped clean zips
 Get-ChildItem -Path $tsPattern -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
@@ -42,20 +36,43 @@ if (Test-Path $latestZip) {
   Write-Host "Rotated previous latest to: $newTsZip"
 }
 
-# 3) Build a fresh latest zip (exclude .git and dist)
-#    Gather items to include
-$items = Get-ChildItem -LiteralPath $RepoRoot -Force | Where-Object { $_.Name -notin @('.git','dist') }
-if (-not $items) {
-  Write-Host "No items found to archive." -ForegroundColor Yellow
-  exit 1
+# 3) Build a fresh latest zip
+#    Stage a filtered copy to avoid zipping cruft
+$staging = Join-Path $dist "__staging"
+if (Test-Path $staging) { Remove-Item -Recurse -Force $staging }
+New-Item -ItemType Directory -Path $staging | Out-Null
+
+# Copy everything except .git, dist, and Windows cruft
+$excludeDirs = @('.git', 'dist')
+$excludeFiles = @('Thumbs.db', 'desktop.ini')
+$excludeExts = @('.lnk')
+
+# Copy directories
+Get-ChildItem -Force -Directory | Where-Object { $_.Name -notin $excludeDirs } | ForEach-Object {
+  $target = Join-Path $staging $_.Name
+  Copy-Item -Recurse -Force -Path $_.FullName -Destination $target `
+    -Exclude $excludeFiles 2>$null
 }
 
-# Create temp zip then rename to latest
+# Copy loose files at root (respect exclusions)
+Get-ChildItem -Force -File | Where-Object {
+  $excludeFiles -notcontains $_.Name -and $excludeExts -notcontains $_.Extension
+} | ForEach-Object {
+  Copy-Item -Force -Path $_.FullName -Destination (Join-Path $staging $_.Name)
+}
+
+# Create/refresh latest zip from staging
+$tmpZip = Join-Path $dist "__tmp_build.zip"
 if (Test-Path $tmpZip) { Remove-Item $tmpZip -Force }
-Compress-Archive -Path ($items | ForEach-Object { $_.FullName }) -DestinationPath $tmpZip -Force
+Compress-Archive -Path $staging\* -DestinationPath $tmpZip -Force
+
 if (Test-Path $latestZip) { Remove-Item $latestZip -Force }
 Rename-Item -Path $tmpZip -NewName (Split-Path $latestZip -Leaf) -Force
 
-Write-Host "DONE. Kept two files in dist/:"
+# Clean staging
+Remove-Item -Recurse -Force $staging
+
+Write-Host "DONE. Kept up to two files in dist/:"
 Write-Host "  - $(Split-Path $latestZip -Leaf)"
 if (Test-Path $newTsZip) { Write-Host "  - $(Split-Path $newTsZip -Leaf)" }
+
