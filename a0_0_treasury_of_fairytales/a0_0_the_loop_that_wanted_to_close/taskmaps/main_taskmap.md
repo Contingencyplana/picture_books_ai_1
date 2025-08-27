@@ -39,7 +39,10 @@
 - Page 20: hidden shard inserted, hinge closes with radiant light (insert)
 
 ### Pagestanza 6 (Pages 21–24)
-- Page 21: verify finished hinge (verify)
-- Page 22: calibrate loop baseline (calibrate)
-- Page 23: align internal arcs (align)
-- Page 24: partial closure achieved (close_partial)
+
+
+### Pagestanza 7 (Pages 25–28)
+- Page 25: detect faint rift in loop (detect)
+- Page 26: whisper dialogue with rift (converse)
+- Page 27: fragments patch the gap (patch)
+- Page 28: rift healed, loop stabilized (heal)

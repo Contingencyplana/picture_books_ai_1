@@ -1,16 +1,13 @@
 # Milestones: Book 1 – The Loop That Wanted to Close
 
 ## Pagestanza 1 (Pages 01–04)
-- [x] Page 01
-- [x] Page 02
-- [x] Page 03
-- [x] Page 04
 
-## Pagestanza 2 (Pages 05–08)
-- [x] Page 05
-- [x] Page 06
-- [x] Page 07
-- [x] Page 08
+
+## Pagestanza 7 (Pages 25–28)
+- [x] Page 25
+- [x] Page 26
+- [x] Page 27
+- [x] Page 28
 
 ## Pagestanza 3 (Pages 09–12)
 - [x] Page 09
