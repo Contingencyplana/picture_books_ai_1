@@ -4,7 +4,7 @@
 
 ---
 
-## 📚 Pages (Current Progress: 01–16 drafted)
+## 📚 Pages (Current Progress: 01–32 drafted — complete)
 
 ### Pagestanza 1 (Pages 01–04)
 - Page 01: loop’s hum falters, fragments scatter (init)
@@ -24,13 +24,11 @@
 - Page 11: arrange fragments by curve & brightness (sort_by)
 - Page 12: shadow hinge discovered, promise to find (locate)
 
-
 ### Pagestanza 4 (Pages 13–16)
 - Page 13: probe shadow hinge, fragments lean toward shape (probe)
 - Page 14: bright shard attempts fit but mismatches (attempt_fit)
 - Page 15: child soothes fragments into patient circle (soothe)
 - Page 16: hidden clasp-like shard revealed beneath leaf (reveal)
-
 
 ### Pagestanza 5 (Pages 17–20)
 - Page 17: hidden shard compared with hinge shadow, strong match (compare_shape)
@@ -39,9 +37,16 @@
 - Page 20: hidden shard inserted, hinge closes with radiant light (insert)
 
 ### Pagestanza 6 (Pages 21–24)
-
+- Page 21: verify finished hinge (verify)
+- Page 22: calibrate loop baseline (calibrate)
+- Page 23: align internal arcs (align)
+- Page 24: partial closure achieved (close_partial)
 
 ### Pagestanza 7 (Pages 25–28)
+- Page 25: detect faint rift in loop (detect)
+- Page 26: whisper dialogue with rift (converse)
+- Page 27: fragments patch the gap (patch)
+- Page 28: rift healed, loop stabilized (heal)
 
 ### Pagestanza 8 (Pages 29–32)
 - Page 29: loop awaits final signal (await)
