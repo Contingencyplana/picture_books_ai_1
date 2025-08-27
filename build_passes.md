@@ -23,14 +23,15 @@
 - Add a tiny real code stub *beneath* the comment (language TBD; Python recommended later).
 
 ```python
-// Code Task: attempt_close(loop) → RESULT: "Fragmented"
+# Example (when stubbing begins)
+# // Code Task: attempt_close(loop) → RESULT: "Fragmented"
 def attempt_close(loop):
-return "Fragmented"
+    return "Fragmented"
 ```
 
-- (Optional now) add a micro-test or validation note.
+(Optional now) add a micro-test or validation note.
 
-**Pass 4 — Validation / Play**
+## Pass 4 — Validation / Play
 - Pages lint clean; `ai_player.json` validates against `_schemas/ai_player.schema.json`.
 - If stubs exist, confirm they execute (basic harness later).
 - Mark page checkboxes done in `taskmaps/milestones.md`.
@@ -63,4 +64,68 @@ return "Fragmented"
 ---
 
 ## 🧱 Page Contract (reminder)
-Each `pageNN.md` follows the 3-part format:
+
+Each `pageNN.md` must follow this exact shape:
+
+```markdownlint
+Page NN
+
+<Story line 1>
+<Story line 2>
+
+// Code Task line
+[Illustration: …]
+```
+
+### Rules (strict):
+
+1. **Header:** `# Page NN` where `NN` is zero-padded (01–32) and matches the filename (`pageNN.md`).
+2. **Story lines:** 1–2 lines, present-tense, ≤ 120 chars each; no trailing spaces.
+3. **Code Task line:**
+   - Starts with `// Code Task:`
+   - Format: `// Code Task: function_name(arg1, arg2) → RESULT: "Short result sentence."`
+   - `function_name` is `snake_case`; arguments optional; use the unicode arrow `→` (ASCII `->` permitted, but linter will warn).
+   - The RESULT string is quoted, ends with a period, ≤ 100 chars.
+4. **Illustration line:**
+   - Format: `[Illustration: <concise visual prompt>]`
+   - Keep ≤ 160 chars; present specific, drawable elements; no camera jargon unless needed.
+5. **Spacing:** Exactly the 7-line pattern shown (blank lines as in the template). Ensure file ends with a newline.
+6. **Typography:** Curly quotes OK; en/em dashes OK. Prefer consistent punctuation across the book.
+7. **Do not** add extra headings, links, or code blocks inside the pages at this stage.
+
+### Lint expectations (regex-level):
+- Header: `^#\s*Page\s*0?\d{1,2}\s*$`
+- Code Task: `^//\s*Code Task:\s*[a-z0-9_]+\(.*\)\s*→\s*RESULT:\s*\".+\"\.$`
+- Illustration: `^\[Illustration:\s*.{3,}\]$`
+
+### Naming & location:
+- Filenames: `page01.md` … `page32.md` inside the book folder
+  `a0_0_treasury_of_fairytales/a0_0_the_loop_that_wanted_to_close/`
+- Do **not** prefix page files with stanza codes (`a0_0_…`). Keep those only for folders.
+
+---
+
+## 🔁 Working Rhythm (per pagestanza = 4 pages)
+
+1. Draft pages `pageNN`–`pageNN+3`.
+2. Commit:
+   - **Commit A (pages):**
+     `Treasury of Fairytales: add Pages NN–NN+3 to 'The Loop That Wanted to Close'`
+     (Bullet the four Code Tasks in the body.)
+   - **Commit B (planning):**
+     `Treasury of Fairytales: update taskmap and milestones for Pagestanza X (Pages NN–NN+3)`
+3. Update `taskmaps/main_taskmap.md` and `taskmaps/milestones.md` (group by pagestanza).
+4. Run `./_scripts/make_zips.ps1` and verify.
+
+---
+
+## 🧪 Formatting Notes (Windows)
+
+- Git CRLF warnings are normal in this repo; we target LF in Git.
+- You may add a root `.gitattributes` with:
+
+```markdownlint
+*.md text eol=lf
+```
+
+to silence future diffs.
