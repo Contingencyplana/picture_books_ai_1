@@ -421,3 +421,5 @@ FodyWeavers.xsd
 Thumbs.db
 desktop.ini
 *.lnk
+
+dist/

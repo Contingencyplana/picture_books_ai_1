@@ -44,27 +44,23 @@ New-Item -ItemType Directory -Path $staging | Out-Null
 
 # Copy everything except .git, dist, and Windows cruft
 $excludeDirs = @('.git', 'dist')
-$excludeFiles = @('Thumbs.db', 'desktop.ini')
-$excludeExts = @('.lnk')
+$excludeGlobs = @('Thumbs.db','desktop.ini','*.lnk')
 
-# Copy directories
+# Copy directories (recursive)
 Get-ChildItem -Force -Directory | Where-Object { $_.Name -notin $excludeDirs } | ForEach-Object {
   $target = Join-Path $staging $_.Name
-  Copy-Item -Recurse -Force -Path $_.FullName -Destination $target `
-    -Exclude $excludeFiles 2>$null
+  Copy-Item -Recurse -Force -Path $_.FullName -Destination $target -Exclude $excludeGlobs 2>$null
 }
 
-# Copy loose files at root (respect exclusions)
-Get-ChildItem -Force -File | Where-Object {
-  $excludeFiles -notcontains $_.Name -and $excludeExts -notcontains $_.Extension
-} | ForEach-Object {
+# Copy loose files at root
+Get-ChildItem -Force -File -Exclude $excludeGlobs | ForEach-Object {
   Copy-Item -Force -Path $_.FullName -Destination (Join-Path $staging $_.Name)
 }
 
 # Create/refresh latest zip from staging
 $tmpZip = Join-Path $dist "__tmp_build.zip"
 if (Test-Path $tmpZip) { Remove-Item $tmpZip -Force }
-Compress-Archive -Path $staging\* -DestinationPath $tmpZip -Force
+Compress-Archive -Path $staging\* -DestinationPath $tmpZip -Force -CompressionLevel Optimal
 
 if (Test-Path $latestZip) { Remove-Item $latestZip -Force }
 Rename-Item -Path $tmpZip -NewName (Split-Path $latestZip -Leaf) -Force
@@ -75,4 +71,3 @@ Remove-Item -Recurse -Force $staging
 Write-Host "DONE. Kept up to two files in dist/:"
 Write-Host "  - $(Split-Path $latestZip -Leaf)"
 if (Test-Path $newTsZip) { Write-Host "  - $(Split-Path $newTsZip -Leaf)" }
-
