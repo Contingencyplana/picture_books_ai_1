@@ -5,7 +5,7 @@ param(
 
 if (-not $BookPath) {
     Write-Host "Usage: .\\lint_pages.ps1 -BookPath '<path-to-book-folder>'"
-    Write-Host "Example: .\\lint_pages.ps1 -BookPath .\\treasury_of_fairytales_1\\a0_00_the_loop_that_wanted_to_close"
+    Write-Host "Example: .\lint_pages.ps1 -BookPath .\a0_0_treasury_of_fairytales\a0_0_the_loop_that_wanted_to_close"
     exit 2
 }
 

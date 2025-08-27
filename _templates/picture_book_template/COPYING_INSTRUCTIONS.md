@@ -6,7 +6,7 @@ Copy `_templates/picture_book_template` into your treasury folder and rename it 
 Example (PowerShell):
 Copy-Item -Recurse -Force `
   .\_templates\picture_book_template `
-  .\treasury_of_fairytales_1\a0_03_your_book_name
+  .\a0_0_treasury_of_fairytales\a0_3_your_book_name
 
 ## 2) Update identifiers
 Open these files and replace placeholders:
