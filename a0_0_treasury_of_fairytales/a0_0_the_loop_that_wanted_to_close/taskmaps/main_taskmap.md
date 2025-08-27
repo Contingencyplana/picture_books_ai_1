@@ -4,32 +4,35 @@
 
 ---
 
-## 📚 Pages (Current Progress: 01–08 seeded)
+## 📚 Pages (Current Progress: 01–16 drafted)
 
-1. **p01** — Child finds silver loop; it refuses to close.  
-   - Code: `attempt_close(loop)` → fragmented  
-   - Illustration: glowing loop in moss
+### Pagestanza 1 (Pages 01–04)
+- Page 01: loop’s hum falters, fragments scatter (init)
+- Page 02: search among moss, fragment glints (find)
+- Page 03: fragment placed, faint spark returns (place)
+- Page 04: spark fades, loop incomplete (fail)
 
-2. **p02** — Loop hums when child walks slowly.  
-   - Code: `listen_to(loop.song)` → incomplete melody  
-   - Illustration: forest path, child holding loop
+### Pagestanza 2 (Pages 05–08)
+- Page 05: child gathers courage, listens (listen)
+- Page 06: tries again, fragments stir (retry)
+- Page 07: pattern forming, fragile coherence (pattern)
+- Page 08: shimmer collapses, test unresolved (collapse)
 
-3. **p03** — Hollow tree with circle-shaped heart.  
-   - Code: `fit(loop, hollow_tree)` → shape mismatch  
-   - Illustration: hollow tree opening
+### Pagestanza 3 (Pages 09–12)
+- Page 09: cloth pouch, warm breath revives shards (warm)
+- Page 10: brook counts pebbles, steadies hands (count_with_brook)
+- Page 11: arrange fragments by curve & brightness (sort_by)
+- Page 12: shadow hinge discovered, promise to find (locate)
 
-4. **p04** — Loop shatters into fragments, whispers softly.  
-   - Code: `reassemble(loop.fragments)` → fragile  
-   - Illustration: glowing fragments in tree
 
-5. **p05** — [Seeded: child follows fragment whispers deeper...]  
-6. **p06** — [Seeded: loop-song changes tone...]  
-7. **p07** — [Seeded: first hint of kindness mechanic...]  
-8. **p08** — [Seeded: fragments begin to align...]
+### Pagestanza 4 (Pages 13–16)
+- Page 13: probe shadow hinge, fragments lean toward shape (probe)
+- Page 14: bright shard attempts fit but mismatches (attempt_fit)
+- Page 15: child soothes fragments into patient circle (soothe)
+- Page 16: hidden clasp-like shard revealed beneath leaf (reveal)
 
----
-
-## ✅ Milestones
-- Scaffold: complete.
-- Pages 01–08: seeded with narrative/code/illustration.
-- Next: seed Pages 09–16 (continue recursive motif).
+### Pagestanza 5 (Pages 17–20)
+- Page 17: hidden shard compared with hinge shadow, strong match (compare_shape)
+- Page 18: fragments respond with discord, candidate questioned (query)
+- Page 19: child unifies fragments with calm whisper (unify)
+- Page 20: hidden shard inserted, hinge closes with radiant light (insert)
