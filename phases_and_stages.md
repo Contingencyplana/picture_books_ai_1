@@ -4,7 +4,7 @@
 
 ## Now (working set)
 - [x] Template + copier + linter + schema in place
-- [ ] Seed Book 1 (`a0_00_the_loop_that_wanted_to_close`) pages 01–04 with real text/code/art prompts
+- [ ] Seed Book 1 (`a0_0_the_loop_that_wanted_to_close`) pages 01–04 with real text/code/art prompts
 - [ ] Run linter on Book 1 and update `taskmaps/milestones.md`
 - [ ] Add Book 1 to `a0_0_treasury_of_fairytales/toc.md`
 

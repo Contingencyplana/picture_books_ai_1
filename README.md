@@ -72,7 +72,7 @@ picture_books_ai_1/
 │ README.md # This file
 │ WORKSPACE_OVERVIEW.md # (to be added) Treasuries + file counts
 │ a0_0_treasury_of_fairytales/ # First treasury (≈16 picture books)
-│ ├─ a0_00_the_loop_that_wanted_to_close/
+│ ├─ a0_0_the_loop_that_wanted_to_close/
 │ │ ├─ README.md
 │ │ ├─ ai_player.json
 │ │ ├─ page01.md … page32.md
