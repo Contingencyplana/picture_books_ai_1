@@ -31,8 +31,15 @@
 - Page 15: child soothes fragments into patient circle (soothe)
 - Page 16: hidden clasp-like shard revealed beneath leaf (reveal)
 
+
 ### Pagestanza 5 (Pages 17–20)
 - Page 17: hidden shard compared with hinge shadow, strong match (compare_shape)
 - Page 18: fragments respond with discord, candidate questioned (query)
 - Page 19: child unifies fragments with calm whisper (unify)
 - Page 20: hidden shard inserted, hinge closes with radiant light (insert)
+
+### Pagestanza 6 (Pages 21–24)
+- Page 21: verify finished hinge (verify)
+- Page 22: calibrate loop baseline (calibrate)
+- Page 23: align internal arcs (align)
+- Page 24: partial closure achieved (close_partial)

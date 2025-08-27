@@ -31,10 +31,10 @@
 - [x] Page 20
 
 ## Pagestanza 6 (Pages 21–24)
-- [ ] Page 21
-- [ ] Page 22
-- [ ] Page 23
-- [ ] Page 24
+- [x] Page 21
+- [x] Page 22
+- [x] Page 23
+- [x] Page 24
 
 ## Pagestanza 7 (Pages 25–28)
 - [ ] Page 25
