@@ -17,6 +17,7 @@
 - Linting (`_scripts/lint_pages.ps1`) — **Owner:** Copilot Pro
 - Schema discipline (`_schemas/ai_player.schema.json`) — **Owner:** GPT-5 (spec), Copilot (enforce)
 - (Later) CI (schema + linter on push) — **Owner:** GPT-5 spec, Copilot impl.
+- Executable stubs on pages — **Owner:** Copilot (impl), Mark (approve)
 
 ## Structure & Ops
 - Organize pages → books (AI players) — **Owner:** Copilot (scaffold), Mark (content)
@@ -32,6 +33,7 @@
 - Every page has: story line 1, story line 2, `// Code Task: …`, `[Illustration: …]`
 - `ai_player.json` must validate; pages must lint clean
 - Safe for children (safety rating “G”, gentle tone)
+- Safety pass per book: language/tone check & prompt suitability
 
 ## Out of Scope (for now)
 - Image rendering pipeline

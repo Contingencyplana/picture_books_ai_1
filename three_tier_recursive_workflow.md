@@ -1,4 +1,4 @@
-# three-Tier Recursive Workflow
+# Three-Tier Recursive Workflow
 
 **Purpose:**
 This file codifies the division of labor across vision, design, and build tiers.

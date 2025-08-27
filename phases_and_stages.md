@@ -13,6 +13,7 @@
 - Templates: picture_book_template with 32 page stubs, taskmaps, placeholders
 - Automation: `_scripts/new_book.ps1` copier, `_scripts/lint_pages.ps1` linter
 - Schema: `_schemas/ai_player.schema.json`
+- Stanza convention standardized: books grouped as a0_0–a3_3; treasuries grouped as a0_0–a3_3
 
 ## Phase 1 — First Publishable Slice (this week)
 - Fill pages 01–08 for Book 1 (3-part page contract: story, `// Code Task:`, `[Illustration: ...]`)
