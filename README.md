@@ -71,7 +71,7 @@ This repo represents the **first publishing workspace** in a larger vision.
 picture_books_ai_1/
 │ README.md # This file
 │ WORKSPACE_OVERVIEW.md # (to be added) Treasuries + file counts
-│ treasury_of_fairytales_1/ # First treasury (≈16 picture books)
+│ a0_0_treasury_of_fairytales/ # First treasury (≈16 picture books)
 │ ├─ a0_00_the_loop_that_wanted_to_close/
 │ │ ├─ README.md
 │ │ ├─ ai_player.json
@@ -84,7 +84,7 @@ picture_books_ai_1/
 
 ## ✅ Status
 - **Repo created:** August 2025
-- **Current focus:** Scaffolding `treasury_of_fairytales_1` (~16 picture books).
+- **Current focus:** Scaffolding `a0_0_treasury_of_fairytales` (~16 picture books).
 - **Vision holder:** Mark Gillam
 - **Design partner:** GPT-5
 - **Implementer:** Copilot Pro

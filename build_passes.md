@@ -13,8 +13,8 @@
 
 **Pass 2 — Narrative**
 - For *every page*, add:
-  1) 1–2 story lines (metaphorical micro-beat)  
-  2) `// Code Task: …` (commented, pseudo-code)  
+  1) 1–2 story lines (metaphorical micro-beat)
+  2) `// Code Task: …` (commented, pseudo-code)
   3) `[Illustration: …]` (clear visual prompt)
 - Run `_scripts/lint_pages.ps1` and update `taskmaps/milestones.md`.
 
@@ -43,8 +43,8 @@ return "Fragmented"
 - Tighten illustration prompts; draft `art/STYLE_NOTES.md` (motifs, palettes).
 
 **Pass 6 — Export Pass**
-- Generate PDF/EPUB/web preview (pipeline TBD).  
-- Place outputs in `treasury_of_fairytales_1/exports/`.
+- Generate PDF/EPUB/web preview (pipeline TBD).
+- Place outputs in `a0_0_treasury_of_fairytales/exports/`.
 
 **Pass 7 — Gameplay Pass (Later)**
 - Map page code to interactive minigame nodes (design TBD).

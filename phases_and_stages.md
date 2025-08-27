@@ -6,7 +6,7 @@
 - [x] Template + copier + linter + schema in place
 - [ ] Seed Book 1 (`a0_00_the_loop_that_wanted_to_close`) pages 01–04 with real text/code/art prompts
 - [ ] Run linter on Book 1 and update `taskmaps/milestones.md`
-- [ ] Add Book 1 to `treasury_of_fairytales_1/toc.md`
+- [ ] Add Book 1 to `a0_0_treasury_of_fairytales/toc.md`
 
 ## Phase 0 — Bootstrapping (Done)
 - Repo identity: README + workflow + settings.json
@@ -19,7 +19,7 @@
 - Fill pages 01–08 for Book 1 (3-part page contract: story, `// Code Task:`, `[Illustration: ...]`)
 - Complete `ai_player.json` for Book 1 (must validate)
 - Lint until clean; check off `taskmaps/milestones.md`
-- Export quick PDF draft to `treasury_of_fairytales_1/exports/` (placeholder is fine)
+- Export quick PDF draft to `a0_0_treasury_of_fairytales/exports/` (placeholder is fine)
 
 **Definition of Done (book):**
 - 32 pages present, linter clean
@@ -28,9 +28,9 @@
 - README has 1-line hook + 2-3 sentence synopsis
 
 ## Phase 2 — Treasury Spine (next)
-- `treasury_of_fairytales_1/toc.md` lists ~16 books with IDs/titles/status
+- `a0_0_treasury_of_fairytales/toc.md` lists ~16 books with IDs/titles/status
 - Use `new_book.ps1` to scaffold 2 more books (IDs only; content later)
-- Roadmap draft: `treasury_of_fairytales_1/roadmaps/main_roadmap.md`
+- Roadmap draft: `a0_0_treasury_of_fairytales/roadmaps/main_roadmap.md`
 
 ## Phase 3 — Art Pass v0 (optional)
 - Create a 1-page “style sheet” (`art/STYLE_NOTES.md`) with motifs/palettes
