@@ -416,3 +416,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Windows cruft
+Thumbs.db
+desktop.ini
+*.lnk
