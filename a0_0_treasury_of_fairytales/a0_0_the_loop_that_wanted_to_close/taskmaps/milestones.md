@@ -34,10 +34,12 @@
 - [x] Page 24
 
 ## Pagestanza 7 (Pages 25–28)
-- [ ] Page 25
-- [ ] Page 26
-- [ ] Page 27
-- [ ] Page 28
+
+## Pagestanza 8 (Pages 29–32)
+- [x] Page 29
+- [x] Page 30
+- [x] Page 31
+- [x] Page 32
 
 ## Pagestanza 8 (Pages 29–32)
 - [ ] Page 29

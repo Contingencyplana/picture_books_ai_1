@@ -42,7 +42,9 @@
 
 
 ### Pagestanza 7 (Pages 25–28)
-- Page 25: detect faint rift in loop (detect)
-- Page 26: whisper dialogue with rift (converse)
-- Page 27: fragments patch the gap (patch)
-- Page 28: rift healed, loop stabilized (heal)
+
+### Pagestanza 8 (Pages 29–32)
+- Page 29: loop awaits final signal (await)
+- Page 30: sync breath with loop (sync)
+- Page 31: edges merge, nearing closure (merge)
+- Page 32: loop closes, fragments unite (close)
