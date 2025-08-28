@@ -65,8 +65,7 @@
 
   <script type="text/babel">
     const MINIGAMES = ["lab_research","kickstarter","monetary_sandbox","sanctuary","game_studio"];
-    const SPEC_PATH = (name) => `../minigames/${name}.json`;
-
+    const SPEC_PATH = (name) => `/x0_0_research_arcade/minigames/${name}.json`;
     function hmeanTriplet(b) {
       const nums = ["i","n","g"].map(k => Math.max(1e-6, b[k]));
       return 3.0 / nums.reduce((acc, x) => acc + (1.0 / x), 0);
