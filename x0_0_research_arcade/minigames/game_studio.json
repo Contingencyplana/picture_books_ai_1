@@ -1,0 +1,28 @@
+{
+  "title": "Game Studio",
+  "intro": "Synthesize outputs from other minigames to design a new slice (still text).",
+  "unlock_threshold": 0.66,
+  "steps": [
+    {
+      "prompt": "Choose a slice brief.",
+      "choices": [
+        {"label":"Cool tech demo","feedback":"Shiny, shallow impact.","benefit":{"i":0.60,"n":0.50,"g":0.55}},
+        {"label":"Kid-friendly healing game","feedback":"Teaches and soothes.","benefit":{"i":0.80,"n":0.82,"g":0.79}}
+      ]
+    },
+    {
+      "prompt": "Audience review plan.",
+      "choices": [
+        {"label":"Friends only","feedback":"Echo chamber risks.","benefit":{"i":0.56,"n":0.54,"g":0.52}},
+        {"label":"Diverse testers + consent","feedback":"Better fit, fewer harms.","benefit":{"i":0.78,"n":0.80,"g":0.77}}
+      ]
+    },
+    {
+      "prompt": "Ship ritual.",
+      "choices": [
+        {"label":"Ship silently","feedback":"No feedback loop.","benefit":{"i":0.55,"n":0.50,"g":0.52}},
+        {"label":"Open changelog + learnings","feedback":"Knowledge compounds.","benefit":{"i":0.79,"n":0.82,"g":0.80}}
+      ]
+    }
+  ]
+}

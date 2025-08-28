@@ -1,0 +1,28 @@
+{
+  "title": "Sanctuary",
+  "intro": "Gentle, non-clinical wellbeing prompts that restore clarity. This is not medical advice.",
+  "unlock_threshold": 0.66,
+  "steps": [
+    {
+      "prompt": "Breathing cadence",
+      "choices": [
+        {"label":"Hold breath for long counts","feedback":"May induce strain.","benefit":{"i":0.55,"n":0.55,"g":0.50}},
+        {"label":"4-in / 4-out steady","feedback":"Calm, sustainable rhythm.","benefit":{"i":0.78,"n":0.80,"g":0.79}}
+      ]
+    },
+    {
+      "prompt": "Self-talk style",
+      "choices": [
+        {"label":"Harsh critique","feedback":"Closes options.","benefit":{"i":0.40,"n":0.50,"g":0.45}},
+        {"label":"Curious reframe","feedback":"Opens next step.","benefit":{"i":0.76,"n":0.80,"g":0.78}}
+      ]
+    },
+    {
+      "prompt": "Creative reset",
+      "choices": [
+        {"label":"Scroll aimlessly","feedback":"Energy leaks away.","benefit":{"i":0.45,"n":0.52,"g":0.48}},
+        {"label":"2-line journal","feedback":"Tiny step, real shift.","benefit":{"i":0.75,"n":0.78,"g":0.76}}
+      ]
+    }
+  ]
+}
