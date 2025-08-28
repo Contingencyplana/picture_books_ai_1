@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Research Arcade — React Preview</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    html, body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #0b0f14; color: #e6edf3; }
+    .wrap { max-width: 880px; margin: 32px auto; padding: 0 16px; }
+    .card { background: #0f1720; border: 1px solid #1f2a37; border-radius: 14px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    h1 { font-size: 22px; margin: 0 0 8px 0; }
+    p, label { color: #cbd5e1; }
+    select, button { font: inherit; background: #111827; color: #e6edf3; border: 1px solid #273244; border-radius: 10px; padding: 10px 12px; }
+    button.primary { background: #1e293b; border-color: #2c3e57; cursor: pointer; }
+    button.primary:hover { background: #243447; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .spacer { height: 12px; }
+    .prompt { font-weight: 600; color: #f8fafc; }
+    .choices { display: grid; gap: 10px; margin-top: 10px; }
+    .choice { background: #0b1220; border: 1px solid #1a2638; border-radius: 12px; padding: 12px; cursor: pointer; }
+    .choice:hover { background: #112033; }
+    .muted { color: #9aa6b2; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; background:#0f2033; border:1px solid #1b2d44; color:#a8c5ff; font-weight:600; font-size:12px; }
+    .score { font-size: 18px; font-weight: 700; }
+    .good { color: #7ee787; }
+    .tip { color: #facc15; }
+    .footer { margin-top: 18px; font-size: 12px; color: #93a5b1; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Research Arcade — React Preview</h1>
+      <p class="muted">Local JSON → simple UI. No external APIs; all data is in <code>x0_0_research_arcade/minigames/*.json</code>.</p>
+
+      <div class="row">
+        <label for="game">Choose minigame:</label>
+        <select id="game">
+          <option value="lab_research">lab_research</option>
+          <option value="kickstarter">kickstarter</option>
+          <option value="monetary_sandbox">monetary_sandbox</option>
+          <option value="sanctuary">sanctuary</option>
+          <option value="game_studio">game_studio</option>
+        </select>
+        <button id="start" class="primary">Load</button>
+        <span class="pill">Benefit Index = h-mean of I, N, G</span>
+      </div>
+
+      <div class="spacer"></div>
+      <div id="root"></div>
+
+      <div class="footer">
+        Tip: For local file access, open with a local server (e.g. VS Code “Live Server” or <code>py -3 -m http.server 5500</code>).
+        This page loads React via CDN; to be fully offline later, we can vendor UMD bundles into the repo.
+      </div>
+    </div>
+  </div>
+
+  <!-- React (UMD) + Babel for JSX. No external APIs; only library CDNs. -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const MINIGAMES = ["lab_research","kickstarter","monetary_sandbox","sanctuary","game_studio"];
+    const SPEC_PATH = (name) => `../minigames/${name}.json`;
+
+    function hmeanTriplet(b) {
+      const nums = ["i","n","g"].map(k => Math.max(1e-6, b[k]));
+      return 3.0 / nums.reduce((acc, x) => acc + (1.0 / x), 0);
+    }
+
+    function App({ spec }) {
+      const [stepIdx, setStepIdx] = React.useState(0);
+      const [scores, setScores] = React.useState([]);
+
+      if (!spec) return <p className="muted">Select a minigame and click <b>Load</b>.</p>;
+
+      const step = spec.steps[stepIdx];
+
+      function choose(c) {
+        setScores(prev => [...prev, hmeanTriplet(c.benefit)]);
+        if (stepIdx + 1 < spec.steps.length) {
+          setStepIdx(stepIdx + 1);
+        }
+      }
+
+      function reset() {
+        setStepIdx(0);
+        setScores([]);
+      }
+
+      const finished = (stepIdx >= spec.steps.length);
+      const avg = scores.length ? (scores.reduce((a,b)=>a+b,0)/scores.length) : 0;
+
+      return (
+        <div>
+          <p><b>{spec.title}</b></p>
+          <p className="muted">{spec.intro}</p>
+
+          {!finished && (
+            <>
+              <p className="prompt">{step.prompt}</p>
+              <div className="choices">
+                {step.choices.map((c,idx)=>(
+                  <div key={idx} className="choice" onClick={()=>choose(c)}>
+                    <div><b>{c.label}</b></div>
+                    <div className="muted">{c.feedback}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="spacer"></div>
+              <p className="muted">Step {stepIdx+1} of {spec.steps.length}</p>
+            </>
+          )}
+
+          {finished && (
+            <div>
+              <p className="score">Benefit Index: <span className={avg>=spec.unlock_threshold ? "good":""}>{avg.toFixed(2)}</span></p>
+              {avg >= spec.unlock_threshold
+                ? <p className="good">Unlocked: Next mode available (fictional).</p>
+                : <p className="tip">Tip: Balance Impact, Inclusion, and Integrity to unlock.</p>}
+              <button className="primary" onClick={reset}>Play again</button>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    let currentSpec = null;
+
+    async function loadSpec(name) {
+      const res = await fetch(SPEC_PATH(name));
+      if (!res.ok) throw new Error("Failed to load spec: " + name);
+      const spec = await res.json();
+      currentSpec = spec;
+      root.render(<App spec={spec} />);
+    }
+
+    document.getElementById('start').addEventListener('click', () => {
+      const name = document.getElementById('game').value;
+      loadSpec(name).catch(err => {
+        root.render(<p style={{color:"#f87171"}}>{String(err)}</p>);
+      });
+    });
+
+    // initial render (empty)
+    root.render(<App spec={null} />);
+  </script>
+</body>
+</html>
