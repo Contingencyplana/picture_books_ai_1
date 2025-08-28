@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cyberciv (TextGrid) — Offline Prototype</title>
+<style>
+  :root{
+    /* Accessible-ish dark palette, 16 distinct hues */
+    --A1:#8b5cf6; --A2:#22d3ee; --B1:#34d399; --B2:#f472b6;
+    --C1:#84cc16; --C2:#06b6d4; --D1:#f59e0b; --D2:#60a5fa;
+    --E1:#f87171; --E2:#a3e635; --F1:#e879f9; --F2:#38bdf8;
+    --G1:#fbbf24; --G2:#10b981; --H1:#fb7185; --H2:#c084fc;
+
+    --bg:#0b0f14; --panel:#0f1720; --muted:#94a3b8; --text:#e6edf3;
+    --cell:28px;       /* square size */
+    --gap:4px;
+    --border:#1f2a37;
+    --accent:#1e293b;
+  }
+  html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+  .wrap{display:grid;grid-template-columns:1fr 320px;gap:16px;max-width:1200px;margin:24px auto;padding:0 16px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+  header{padding:14px 16px;border-bottom:1px solid var(--border)}
+  header h1{margin:0;font-size:16px}
+  header p{margin:4px 0 0 0;color:var(--muted);font-size:12px}
+  .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--border)}
+  select,button{background:#111827;color:var(--text);border:1px solid var(--accent);border-radius:8px;padding:6px 10px}
+  button:hover{background:#152235;cursor:pointer}
+  .grid{padding:12px;display:grid;grid-template-columns:repeat(var(--W),var(--cell));gap:var(--gap);justify-content:center}
+  .cell{width:var(--cell);height:var(--cell);display:flex;align-items:center;justify-content:center;
+        border:1px solid var(--border);border-radius:6px;user-select:none}
+  .cell[role="button"]{cursor:pointer}
+  .legend{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:10px 12px}
+  .legend .item{display:flex;gap:8px;align-items:center}
+  .swatch{width:14px;height:14px;border-radius:4px;border:1px solid var(--border)}
+  aside{padding:12px 14px}
+  aside h2{margin:6px 0 10px 0;font-size:15px}
+  .muted{color:var(--muted)}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+  .score{font-weight:700}
+  .good{color:#7ee787}
+  .mono{font-family:inherit}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--accent);background:#0b1220;color:#a8c5ff;font-weight:700}
+
+  /* synergy color utilities */
+  .A1{background:var(--A1)} .A2{background:var(--A2)} .B1{background:var(--B1)} .B2{background:var(--B2)}
+  .C1{background:var(--C1)} .C2{background:var(--C2)} .D1{background:var(--D1)} .D2{background:var(--D2)}
+  .E1{background:var(--E1)} .E2{background:var(--E2)} .F1{background:var(--F1)} .F2{background:var(--F2)}
+  .G1{background:var(--G1)} .G2{background:var(--G2)} .H1{background:var(--H1)} .H2{background:var(--H2)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>Cyberciv (TextGrid) — Offline Prototype</h1>
+        <p class="muted">Monospace grid of 16 synergy types. Click a square to enter its locale. Safe toy simulation.</p>
+      </header>
+
+      <div class="toolbar">
+        <label>Width
+          <select id="w" class="mono">
+            <option>16</option><option selected>24</option><option>32</option>
+          </select>
+        </label>
+        <label>Height
+          <select id="h" class="mono">
+            <option>10</option><option selected>16</option><option>20</option>
+          </select>
+        </label>
+        <button id="regen">Regenerate</button>
+        <button id="tick">Tick ×1</button>
+        <button id="run">Run</button>
+        <button id="stop">Stop</button>
+        <span class="pill">Benefit Index = harmonic mean of I,N,G</span>
+      </div>
+
+      <div id="grid" class="grid" aria-label="text grid"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="card">
+      <aside>
+        <h2 id="panelTitle">Locale</h2>
+        <p id="panelDesc" class="muted">Click a cell to open its locale. Try the actions; watch scores nudge toward balance.</p>
+        <div class="row">
+          <button id="act1">Nudge balance</button>
+          <button id="act2">Spark neighbors</button>
+          <button id="act3">Stabilize inclusion</button>
+        </div>
+        <p class="muted">Scores (0..1): <span class="score">I=</span><span id="sI">-</span> · <span class="score">N=</span><span id="sN">-</span> · <span class="score">G=</span><span id="sG">-</span></p>
+        <p>Benefit Index: <span id="sB" class="score">-</span></p>
+        <hr style="border-color:#1f2a37;border-width:1px 0 0 0">
+        <p class="muted">Tip: “Run” advances the world every 1s. “Tick” advances once. Everything is local & fictional.</p>
+      </aside>
+    </div>
+  </div>
+
+<script>
+/*** Model ***/
+const TYPES = [
+  {code:'A1', name:'Research & Development'},
+  {code:'A2', name:'Science & Technology'},
+  {code:'B1', name:'Healing & Wellbeing'},
+  {code:'B2', name:'AI & Humanity'},
+  {code:'C1', name:'Biosphere'},
+  {code:'C2', name:'Climate Action'},
+  {code:'D1', name:'Economy'},
+  {code:'D2', name:'Sustainability'},
+  {code:'E1', name:'Education'},
+  {code:'E2', name:'Inclusion'},
+  {code:'F1', name:'Governance'},
+  {code:'F2', name:'Community'},
+  {code:'G1', name:'Infrastructure'},
+  {code:'G2', name:'Urban Planning'},
+  {code:'H1', name:'Data'},
+  {code:'H2', name:'Privacy'}
+];
+
+function hmeanTriplet(b){
+  const nums = [b.i,b.n,b.g].map(x => Math.max(1e-6,x));
+  return 3.0 / (1/nums[0]+1/nums[1]+1/nums[2]);
+}
+function clamp01(x){return Math.max(0,Math.min(1,x));}
+
+let W=24,H=16;
+let world=[],running=null,selected=null;
+
+function seedWorld(){
+  world=Array.from({length:H},(_,y)=>
+    Array.from({length:W},(_,x)=>{
+      const t=TYPES[(x*7+y*11)%TYPES.length];
+      return {x,y,type:t,i:0.5+Math.random()*0.2,n:0.5+Math.random()*0.2,g:0.5+Math.random()*0.2};
+    })
+  );
+}
+
+function renderLegend(){
+  const el=document.getElementById('legend');el.innerHTML='';
+  TYPES.forEach(t=>{
+    const row=document.createElement('div');
+    row.className='item';
+    row.innerHTML=`<span class="swatch ${t.code}"></span><span><b>${t.code}</b> — ${t.name}</span>`;
+    el.appendChild(row);
+  });
+}
+
+function renderGrid(){
+  const host=document.getElementById('grid');
+  host.style.setProperty('--W',W);
+  host.innerHTML='';
+  world.forEach(row=>row.forEach(cell=>{
+    const d=document.createElement('div');
+    d.className=`cell ${cell.type.code}`;
+    d.setAttribute('role','button');
+    d.setAttribute('title',`${cell.type.code} — ${cell.type.name}`);
+    d.textContent=cell.type.code;
+    d.addEventListener('click',()=>openPanel(cell.x,cell.y));
+    host.appendChild(d);
+  }));
+}
+
+function openPanel(x,y){
+  selected={x,y};
+  const c=world[y][x];
+  document.getElementById('panelTitle').textContent=`Locale: ${c.type.code} — ${c.type.name}`;
+  document.getElementById('panelDesc').textContent=`Coordinates (${x},${y}). Try actions that push toward balance.`;
+  updatePanelScores(c);
+  document.getElementById('act1').onclick=()=>{
+    ['i','n','g'].forEach(k=>c[k]=clamp01(c[k]+(0.75-c[k])*0.2));
+    updatePanelScores(c);
+  };
+  document.getElementById('act2').onclick=()=>{
+    neighbors(x,y).forEach(nb=>{
+      const avg=(nb.i+nb.n+nb.g)/3;
+      ['i','n','g'].forEach(k=>nb[k]=clamp01(nb[k]+(avg-nb[k])*0.1));
+    });
+    updatePanelScores(c);
+  };
+  document.getElementById('act3').onclick=()=>{
+    const target=(c.i+c.g)/2;
+    c.n=clamp01(c.n+(target-c.n)*0.25);
+    updatePanelScores(c);
+  };
+}
+
+function updatePanelScores(c){
+  document.getElementById('sI').textContent=c.i.toFixed(2);
+  document.getElementById('sN').textContent=c.n.toFixed(2);
+  document.getElementById('sG').textContent=c.g.toFixed(2);
+  const b=hmeanTriplet(c);
+  const elB=document.getElementById('sB');
+  elB.textContent=b.toFixed(2);
+  elB.className='score '+(b>=0.66?'good':'');
+}
+
+function neighbors(x,y){
+  const out=[];
+  for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){
+    if(dx===0&&dy===0)continue;
+    const nx=x+dx,ny=y+dy;
+    if(nx>=0&&nx<W&&ny>=0&&ny<H)out.push(world[ny][nx]);
+  }
+  return out;
+}
+
+function tick(){
+  world.forEach((row,y)=>row.forEach((c,x)=>{
+    const ns=neighbors(x,y);
+    if(ns.length){
+      const meanI=ns.reduce((a,b)=>a+b.i,0)/ns.length;
+      const meanN=ns.reduce((a,b)=>a+b.n,0)/ns.length;
+      const meanG=ns.reduce((a,b)=>a+b.g,0)/ns.length;
+      c.i=clamp01(c.i+(meanI-c.i)*0.05+(Math.random()*0.02-0.01));
+      c.n=clamp01(c.n+(meanN-c.n)*0.05+(Math.random()*0.02-0.01));
+      c.g=clamp01(c.g+(meanG-c.g)*0.05+(Math.random()*0.02-0.01));
+    }
+  }));
+  if(selected)updatePanelScores(world[selected.y][selected.x]);
+}
+
+function wire(){
+  document.getElementById('regen').onclick=()=>{
+    W=parseInt(document.getElementById('w').value,10);
+    H=parseInt(document.getElementById('h').value,10);
+    seedWorld();renderGrid();
+    selected=null;
+    document.getElementById('panelTitle').textContent='Locale';
+    document.getElementById('panelDesc').textContent='Click a cell to open its locale.';
+    ['sI','sN','sG','sB'].forEach(id=>document.getElementById(id).textContent='-');
+  };
+  document.getElementById('tick').onclick=tick;
+  document.getElementById('run').onclick=()=>{if(!running)running=setInterval(tick,1000);};
+  document.getElementById('stop').onclick=()=>{if(running){clearInterval(running);running=null;}};
+}
+
+/*** Boot ***/
+renderLegend();seedWorld();renderGrid();wire();
+</script>
+</body>
+</html>
