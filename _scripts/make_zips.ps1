@@ -75,7 +75,7 @@ $DatedFiles = Get-ChildItem -LiteralPath $DistDir -Filter "${BaseName}_*.zip" -E
   Where-Object { $_.Name -match $DateNameRegex } |
   Sort-Object Name -Descending
 
-Write-Host "DONE. Kept exactly two files in dist/:"
+Write-Host "DONE. Kept exactly two files in dist:"
 Write-Host "  - $([System.IO.Path]::GetFileName($LatestZip))"
 if ($DatedFiles.Count -ge 1) {
   Write-Host "  - $($DatedFiles[0].Name)"
@@ -117,10 +117,12 @@ function Show-BuildSummary {
     Write-Host "`nBuild Summary:"
     $rows | Format-Table -AutoSize | Out-String | Write-Host
 
-    if ($rows.Count -eq 2 -and $rows[0].SHA256 -eq $rows[1].SHA256) {
-      Write-Host "Hash check: ✅ latest matches the rotated timestamped zip."
-    } elseif ($rows.Count -eq 2) {
-      Write-Host "Hash check: ⚠ latest differs from the rotated timestamped zip."
+    if ($rows.Count -eq 2) {
+      if ($rows[0].SHA256 -eq $rows[1].SHA256) {
+        Write-Host "Hash check: ℹ latest matches previous (reproducible/no content change)."
+      } else {
+        Write-Host "Hash check: ℹ latest differs from previous (expected if files changed)."
+      }
     }
   }
 }
