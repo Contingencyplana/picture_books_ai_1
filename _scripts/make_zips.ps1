@@ -1,73 +1,130 @@
 # _scripts/make_zips.ps1
-<#
-.SYNOPSIS
-  Maintain exactly two zips in dist/: 
-  - <repo>_clean_latest.zip (current build)
-  - <repo>_clean_YYYY-MM-DD-HHmm.zip (previous build)
+# Build a clean zip after running pre-zip checks.
+# Enforces exactly two files in dist/: <project>_clean_latest.zip and the single most recent timestamped zip.
+# Also prints SHA256 checksums and a size/timestamp summary for quick verification.
 
-  Excludes Windows cruft (Thumbs.db, desktop.ini, *.lnk), .git, and dist.
-#>
+$ErrorActionPreference = 'Stop'
 
-param(
-  [string]$RepoName = "picture_books_ai_1"
-)
-
-# Resolve paths
-$ScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$RepoRoot   = Split-Path -Parent $ScriptRoot
+# Resolve repo root (parent of this script's folder)
+$RepoRoot = Split-Path -Parent $PSScriptRoot
 Set-Location $RepoRoot
 
-# Ensure dist/
-$dist = Join-Path $RepoRoot "dist"
-if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }
+# --- Pre-zip: run stub contract checks ---------------------------------------------------------
+Write-Host "Running stub contract checks..."
+& python "tests/page_stub_check.py"
+if ($LASTEXITCODE -ne 0) {
+  Write-Error "Stub check failed. Aborting zip."
+  exit 1
+}
+Write-Host "Stub check passed.`n"
 
-# Names/patterns
-$ts        = Get-Date -Format "yyyy-MM-dd-HHmm"
-$latestZip = Join-Path $dist "$RepoName`_clean_latest.zip"
-$tsPattern = Join-Path $dist "$RepoName`_clean_20*.zip"   # any timestamped clean zip
-$newTsZip  = Join-Path $dist "$RepoName`_clean_$ts.zip"
+# --- Prep paths --------------------------------------------------------------------------------
+$ProjectName = Split-Path $RepoRoot -Leaf           # e.g., picture_books_ai_1
+$BaseName    = "${ProjectName}_clean"               # e.g., picture_books_ai_1_clean
+$DistDir     = Join-Path $RepoRoot 'dist'
+$LatestZip   = Join-Path $DistDir  "${BaseName}_latest.zip"
+$Timestamp   = Get-Date -Format "yyyy-MM-dd-HHmm"
+$DatedZip    = Join-Path $DistDir  "${BaseName}_${Timestamp}.zip"
 
-# 1) Delete any existing timestamped clean zips
-Get-ChildItem -Path $tsPattern -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
-
-# 2) Rotate: latest -> timestamped (if latest exists)
-if (Test-Path $latestZip) {
-  Rename-Item -Path $latestZip -NewName (Split-Path $newTsZip -Leaf) -Force
-  Write-Host "Rotated previous latest to: $newTsZip"
+if (-not (Test-Path $DistDir)) {
+  New-Item -ItemType Directory -Path $DistDir | Out-Null
 }
 
-# 3) Build a fresh latest zip
-#    Stage a filtered copy to avoid zipping cruft
-$staging = Join-Path $dist "__staging"
-if (Test-Path $staging) { Remove-Item -Recurse -Force $staging }
-New-Item -ItemType Directory -Path $staging | Out-Null
-
-# Copy everything except .git, dist, and Windows cruft
-$excludeDirs = @('.git', 'dist')
-$excludeGlobs = @('Thumbs.db','desktop.ini','*.lnk')
-
-# Copy directories (recursive)
-Get-ChildItem -Force -Directory | Where-Object { $_.Name -notin $excludeDirs } | ForEach-Object {
-  $target = Join-Path $staging $_.Name
-  Copy-Item -Recurse -Force -Path $_.FullName -Destination $target -Exclude $excludeGlobs 2>$null
+# --- Rotate previous latest (if any) -----------------------------------------------------------
+if (Test-Path $LatestZip) {
+  Move-Item -LiteralPath $LatestZip -Destination $DatedZip -Force
+  Write-Host "Rotated previous latest to: $DatedZip"
 }
 
-# Copy loose files at root
-Get-ChildItem -Force -File -Exclude $excludeGlobs | ForEach-Object {
-  Copy-Item -Force -Path $_.FullName -Destination (Join-Path $staging $_.Name)
+# --- Build clean zip ---------------------------------------------------------------------------
+# Exclude typical non-source directories/files from the archive.
+$ExcludeTop = @('.git', 'dist', '.venv', 'venv', 'node_modules', '.pytest_cache', '__pycache__')
+
+# Collect top-level entries to include (everything except excluded tops)
+$TopLevel = Get-ChildItem -LiteralPath $RepoRoot -Force | Where-Object {
+  $ExcludeTop -notcontains $_.Name
 }
 
-# Create/refresh latest zip from staging
-$tmpZip = Join-Path $dist "__tmp_build.zip"
-if (Test-Path $tmpZip) { Remove-Item $tmpZip -Force }
-Compress-Archive -Path $staging\* -DestinationPath $tmpZip -Force -CompressionLevel Optimal
+# Create temp zip, then move into dist as *_latest.zip
+$TempZip = Join-Path $env:TEMP ("${BaseName}_${Timestamp}.tmp.zip")
+if (Test-Path $TempZip) { Remove-Item -LiteralPath $TempZip -Force }
 
-if (Test-Path $latestZip) { Remove-Item $latestZip -Force }
-Rename-Item -Path $tmpZip -NewName (Split-Path $latestZip -Leaf) -Force
+Compress-Archive -Path $TopLevel.FullName -DestinationPath $TempZip -Force
 
-# Clean staging
-Remove-Item -Recurse -Force $staging
+# Promote to latest
+Move-Item -LiteralPath $TempZip -Destination $LatestZip -Force
 
-Write-Host "DONE. Kept up to two files in dist/:"
-Write-Host "  - $(Split-Path $latestZip -Leaf)"
-if (Test-Path $newTsZip) { Write-Host "  - $(Split-Path $newTsZip -Leaf)" }
+# --- Prune old zips: keep ONLY latest + most recent dated --------------------------------------
+# Regex for: <BaseName>_YYYY-MM-DD-HHmm.zip
+$DateNameRegex = ([regex]::Escape("${BaseName}_")) + '\d{4}-\d{2}-\d{2}-\d{4}\.zip$'
+
+# Get dated files (exclude *_latest.zip), keep newest one by name, delete others
+$DatedFiles = Get-ChildItem -LiteralPath $DistDir -Filter "${BaseName}_*.zip" -ErrorAction SilentlyContinue |
+  Where-Object { $_.Name -match $DateNameRegex } |
+  Sort-Object Name -Descending
+
+if ($DatedFiles.Count -gt 1) {
+  $ToRemove = $DatedFiles | Select-Object -Skip 1
+  foreach ($f in $ToRemove) {
+    Remove-Item -LiteralPath $f.FullName -Force -ErrorAction SilentlyContinue
+  }
+}
+
+# Recompute to reflect final state
+$DatedFiles = Get-ChildItem -LiteralPath $DistDir -Filter "${BaseName}_*.zip" -ErrorAction SilentlyContinue |
+  Where-Object { $_.Name -match $DateNameRegex } |
+  Sort-Object Name -Descending
+
+Write-Host "DONE. Kept exactly two files in dist/:"
+Write-Host "  - $([System.IO.Path]::GetFileName($LatestZip))"
+if ($DatedFiles.Count -ge 1) {
+  Write-Host "  - $($DatedFiles[0].Name)"
+} else {
+  Write-Host "  - (no prior timestamped build yet)"
+}
+
+# --- Summary: size + timestamp + SHA256 --------------------------------------------------------
+function Show-BuildSummary {
+  param(
+    [Parameter(Mandatory=$true)][string]$LatestPath,
+    [Parameter(Mandatory=$false)][System.IO.FileInfo]$DatedFile
+  )
+
+  $rows = @()
+
+  if (Test-Path $LatestPath) {
+    $fi = Get-Item -LiteralPath $LatestPath
+    $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $LatestPath).Hash
+    $rows += [PSCustomObject]@{
+      Name          = $fi.Name
+      Size_MB       = [Math]::Round($fi.Length / 1MB, 2)
+      LastWriteTime = $fi.LastWriteTime
+      SHA256        = $hash
+    }
+  }
+
+  if ($null -ne $DatedFile) {
+    $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $DatedFile.FullName).Hash
+    $rows += [PSCustomObject]@{
+      Name          = $DatedFile.Name
+      Size_MB       = [Math]::Round($DatedFile.Length / 1MB, 2)
+      LastWriteTime = $DatedFile.LastWriteTime
+      SHA256        = $hash
+    }
+  }
+
+  if ($rows.Count -gt 0) {
+    Write-Host "`nBuild Summary:"
+    $rows | Format-Table -AutoSize | Out-String | Write-Host
+
+    if ($rows.Count -eq 2 -and $rows[0].SHA256 -eq $rows[1].SHA256) {
+      Write-Host "Hash check: ✅ latest matches the rotated timestamped zip."
+    } elseif ($rows.Count -eq 2) {
+      Write-Host "Hash check: ⚠ latest differs from the rotated timestamped zip."
+    }
+  }
+}
+
+$MostRecentDated = $null
+if ($DatedFiles.Count -ge 1) { $MostRecentDated = $DatedFiles[0] }
+Show-BuildSummary -LatestPath $LatestZip -DatedFile $MostRecentDated
