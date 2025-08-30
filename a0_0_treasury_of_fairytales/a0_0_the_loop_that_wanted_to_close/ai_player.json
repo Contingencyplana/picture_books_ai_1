@@ -1,24 +1,16 @@
 {
-  "$schema": "../../_schemas/ai_player.schema.json",
+  "$schema": "_schemas/ai_player.schema.json",
   "id": "a0_0_the_loop_that_wanted_to_close",
   "title": "The Loop That Wanted to Close",
-  "schema_version": "1.0",
-  "role": "picture_book_ai_player",
-  "description": "A gentle, agent-ready picture book where each page includes a Code Task and a tiny executable stub. The player’s ethos follows Integrity, Inclusion, and Impact.",
-  "book": {
-    "series": "a0_0_treasury_of_fairytales",
-    "path": "a0_0_treasury_of_fairytales/a0_0_the_loop_that_wanted_to_close",
-    "pages": 32
-  },
-  "behavior": {
-    "principles": ["Integrity", "Inclusion", "Impact"],
-    "tone": ["gentle", "curious", "patient"]
-  },
-  "io": {
-    "inputs": ["page_index"],
-    "outputs": ["result_string_from_stub"]
-  },
-  "validation": {
-    "requires_stub_check_pass": true
+  "path": "a0_0_treasury_of_fairytales/a0_0_the_loop_that_wanted_to_close",
+  "pages": 32,
+  "principles": {
+    "tone": "gentle, patient, wonder-first",
+    "themes": ["kindness", "persistence", "cohesion"],
+    "rules": [
+      "present-tense narration",
+      "short, readable sentences",
+      "child-safe metaphor"
+    ]
   }
 }
