@@ -4,7 +4,7 @@
 This workspace (`picture_books_ai_1`) contains the first set of **Treasuries of Fairytales**,
 each treasury bundling ~16 picture books (32 pages each).
 
-Every picture book is also an **AI player**: a whimsical persona with its own story beats,
+Every picture book is simultaneously an **AI player** and a **minigame** — a whimsical persona with its own story beats,
 cover, synopsis, and recursive identity. Together, they form treasuries,
 and treasuries build toward larger layers of interaction, publishing, and play.
 
@@ -64,7 +64,7 @@ It ensures that creative play is always safe, aligned, and resilient:
 
 7. **Children’s Cartoon Channel**
    Picture books and games become cartoons.
-   By children, for children, with strong parental controls.
+   By children, for children — with built-in parental guidance and safeguards.
    Studios for animated movies and series.
 
 8. **Gamified LLVM (Lingual Lab)**
