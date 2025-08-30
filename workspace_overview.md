@@ -33,6 +33,7 @@ picture_books_ai_1/
 ├─ _scripts/               # PowerShell automation (lint, validate, zip, new_book)
 ├─ tests/                  # Python harness (stub checks, contracts)
 └─ dist/                   # Build outputs (clean zips, reproducible builds)
+```
 
 ---
 
