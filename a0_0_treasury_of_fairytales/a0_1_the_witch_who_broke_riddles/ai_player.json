@@ -1,0 +1,26 @@
+// C:\Users\Admin\picture_books_ai_1\a0_0_treasury_of_fairytales\a0_1_the_witch_who_broke_riddles\ai_player.json
+{
+  "id": "a0_1_the_witch_who_broke_riddles",
+  "title": "The Witch Who Broke Riddles",
+  "kind": "picture_book",
+  "pages": 32,
+  "path": "a0_0_treasury_of_fairytales/a0_1_the_witch_who_broke_riddles",
+  "schema_version": "1.0",
+  "player": {
+    "persona": "A kind witch who repairs unfair riddles into playful puzzles.",
+    "core_loop": [
+      "present_bad_riddle",
+      "repair_rule",
+      "invite_try",
+      "celebrate_kinder_pattern"
+    ],
+    "safety": {
+      "valiant_citadel": [
+        "age_appropriate_language",
+        "no_shame_or_gotcha",
+        "encourage_collaboration"
+      ]
+    }
+  },
+  "notes": "Scaffold stub; fill any schema-required fields before enabling schema validation."
+}
