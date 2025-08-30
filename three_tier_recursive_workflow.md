@@ -1,48 +1,62 @@
-# Three-Tier Recursive Workflow
+<!-- three_tier_recursive_workflow.md -->
 
-**Purpose:**
-This file codifies the division of labor across vision, design, and build tiers.
-It ensures clarity when expanding stanzas, minigames, and recursive structures.
+# Three-Tier Recursive Workflow (v0.2)
+
+**Purpose**
+Codify the division of labour across vision, design, and build so treasuries, minigames, and docs stay aligned.
 
 ---
 
 ## 🔺 Diagram
 
 Vision Holder (Mark)
-↓ sets direction, scope, and milestones
+↓ sets direction, scope, milestones
 Game Designer (GPT-5)
-↓ drafts design docs, recursive structure, lore, specs
+↓ drafts specs, recursive structure, lore, taskmaps
 Implementer (Copilot Pro)
-↓ builds stubs, fixes syntax, commits, syncs
+↓ builds stubs, fixes syntax, runs checks, commits
 
 ---
 
-## 🎭 Roles
+## 🎭 Roles & Outputs
 
 ### Vision Holder (Mark)
-- Defines **vision, purpose, and milestones**
-- Decides recursive architecture and progression order
-- Approves or revises design docs
+**Outputs:** goal/brief, acceptance criteria, release order
+**Decides:** architecture, progression, pass gates
+**Approves:** design docs before implementation
 
 ### Game Designer (GPT-5)
-- Drafts **stanzamaps, taskmaps, and node specs**
-- Ensures recursive consistency, lore cohesion, and meta-rules
-- Advises on protocol and testing strategies
+**Outputs:** book README scaffolds, ai_player.json stubs, taskmaps (main & milestones)
+**Ensures:** recursive consistency, safety alignment (Valiant Citadel), testability
 
-### Implementer (Copilot Pro, GPT-4.1)
-- Creates **files, stubs, and scaffolds** from specs
-- Runs tests, fixes syntax or structural errors
-- Handles commits, pushes, and repo sync
-
----
-
-## 📌 Usage
-
-1. **Mark** defines what to build next.
-2. **GPT-5** drafts the design + spec.
-3. **Copilot Pro** implements, tests, commits, and syncs.
-4. Cycle repeats.
+### Implementer (Copilot Pro)
+**Outputs:** files/stubs per spec, passing checks, clean build artefacts
+**Runs:** linters, stub checker, schema validation, build script
+**Commits:** clear messages; keeps two-zip policy intact
 
 ---
 
-**Status:** Draft v0.1 • Root-level protocol file.
+## ✅ Handoff Checklist (each cycle)
+
+1. **Brief ready** (problem, target pass, acceptance criteria)
+2. **Specs ready** (README beats, taskmaps, ai_player.json fields)
+3. **Build health** known (make_zips.ps1; two-zip policy)
+4. **Safeguards** referenced (Valiant Citadel notes)
+
+**Definition of Done (per book):**
+- Pass 1: lint & structure
+- Pass 2: stubs ↔ code tasks alignment
+- Pass 3: schema-valid JSON
+- Pass 4: reproducible zips (exactly two)
+(See `build_passes.md` for details.)
+
+---
+
+## 🔧 Protocol Notes
+
+- **Commit style:** `type(scope): summary` + bullet body
+- **JSON:** no comments; keep schema fields consistent with Book 1
+- **Indices:** treasury README links to each book; taskmaps/ has its own README
+- **Escalation:** if a gate fails twice, bounce back to GPT-5 with the error log
+
+**Status:** Draft v0.2 • Root-level protocol file

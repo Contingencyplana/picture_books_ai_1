@@ -1,0 +1,20 @@
+{
+  "$schema": "_schemas/ai_player.schema.json",
+  "id": "tof1.a0_01",
+  "title": "The Witch Who Broke Riddles",
+  "age_band": "5-8",
+  "voice": "playful, bright, a little mischievous; zero meanness",
+  "pages": 32,
+  "style_tags": ["folk-tale", "painterly", "warm", "twilight", "bold shapes"],
+  "safety": {
+    "rating": "E",
+    "violence": "none",
+    "fear": "none"
+  },
+  "checks": [
+    "32_files",
+    "3_paragraphs_per_page",
+    "has_illustration_prompt",
+    "has_code_task"
+  ]
+}
