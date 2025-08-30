@@ -4,3 +4,4 @@
 - [x] Add `ai_player.json` (stub aligned)
 - [x] Add `taskmaps/` stubs
 - [x] Pass 1: lint / structure
+- [x] Pass 2: stubs ↔ code tasks
