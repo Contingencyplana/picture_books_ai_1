@@ -1,0 +1,15 @@
+# Binary/large or local-only references
+_assets/reference_images/**
+_assets/original_art/**
+_samples/**
+_cache/**
+_temp/**
+
+# Local playgrounds
+_playground/**
+
+# Local-only scripts
+_scripts/local_only/**
+
+# Machine-specific configs not for review
+*.code-workspace
