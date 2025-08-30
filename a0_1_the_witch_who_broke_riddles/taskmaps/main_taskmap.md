@@ -6,3 +6,4 @@
 - [x] Pass 1: lint / structure
 - [x] Pass 2: stubs ↔ code tasks
 - [x] Pass 3: schema-valid JSON
+- [x] Pass 4: reproducible zips
