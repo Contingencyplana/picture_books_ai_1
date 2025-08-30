@@ -32,9 +32,30 @@ def attempt_close(loop):
 (Optional now) add a micro-test or validation note.
 
 ## Pass 4 — Validation / Play
-- Pages lint clean; `ai_player.json` validates against `_schemas/ai_player.schema.json`.
-- If stubs exist, confirm they execute (basic harness later).
-- Mark page checkboxes done in `taskmaps/milestones.md`.
+- Run `python tests/page_stub_check.py` → all stubs must execute and match their `// Code Task` expectations.
+- Run `pwsh _scripts/lint_pages.ps1 -BookPath <book>` → all pages must pass lint (titles, tasks, illustrations).
+- Ensure `ai_player.json` exists at the book root and validates against `_schemas/ai_player.schema.json`.
+  - Must define: `id`, `title`, `path`, `pages` (1–32), and optional `principles` (tone, theme, rules).
+  - Validation must succeed before Pass 4 is considered complete.
+- Run `pwsh _scripts/make_zips.ps1`:
+  - Enforces zip rotation policy → exactly 2 files kept in `dist/`:
+    - `<project>_clean_latest.zip`
+    - The most recent timestamped archive
+  - Prints a build summary (file size in MB, last modified, SHA256 checksum).
+  - Verify that `latest` matches the rotated zip unless intentional content changes occurred.
+- Mark page checkboxes complete in `taskmaps/milestones.md`.
+
+---
+
+## 🤖 AI Player JSON
+Each book must contain an `ai_player.json` file at its root. It validates
+against `_schemas/ai_player.schema.json` and defines:
+- **id**: unique string, e.g. `"a0_0_the_loop_that_wanted_to_close"`
+- **title**: human-readable book title
+- **path**: relative folder path
+- **pages**: number of pages (always 32 for picture books)
+- **principles**: optional (tone, theme, rules)
+- **$schema**: reference to `_schemas/ai_player.schema.json`
 
 ---
 
@@ -57,7 +78,7 @@ def attempt_close(loop):
 - [ ] **P1 Scaffold:** 32 pages present; linter runs.
 - [ ] **P2 Narrative:** Each page has story + `// Code Task:` + `[Illustration: …]`.
 - [ ] **P3 Code:** Executable stubs exist (where applicable).
-- [ ] **P4 Validation:** Linter + schema green; milestones updated.
+- [ ] **P4 Validation:** Linter + schema green; zip policy enforced; checksums reviewed.
 - [ ] (Opt) **P5 Art:** STYLE_NOTES; prompts consistent.
 - [ ] (Opt) **P6 Export:** Preview generated to `exports/`.
 
@@ -115,13 +136,14 @@ Page NN
    - **Commit B (planning):**
      `Treasury of Fairytales: update taskmap and milestones for Pagestanza X (Pages NN–NN+3)`
 3. Update `taskmaps/main_taskmap.md` and `taskmaps/milestones.md` (group by pagestanza).
-4. Run `./_scripts/make_zips.ps1` and verify.
+4. Run `./_scripts/make_zips.ps1` and verify (checksums + file sizes must be reviewed).
 
 ---
 
 ## 🧪 Formatting Notes (Windows)
 
 - Git CRLF warnings are normal in this repo; we target LF in Git.
+- `.ps1` scripts may remain CRLF (safe on Windows).
 - You may add a root `.gitattributes` with:
 
 ```markdownlint
