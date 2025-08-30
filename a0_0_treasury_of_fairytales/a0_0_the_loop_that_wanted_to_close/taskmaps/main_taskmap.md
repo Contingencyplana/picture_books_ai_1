@@ -1,6 +1,17 @@
+# C:\Users\Admin\picture_books_ai_1\a0_0_treasury_of_fairytales\a0_0_the_loop_that_wanted_to_close\taskmaps\main_taskmap.md
 # Main Taskmap — Book 1: *The Loop That Wanted to Close*
 
 **Purpose:** Organize narrative + subtasks into a sequential map.
+
+---
+
+## ✅ Status (Pass 4 complete)
+- Pages 01–32 present and narrative written.
+- `// Code Task:` lines normalized (→ RESULT: "…").
+- Python stubs inserted beneath every Code Task; harness passes.
+- Linter clean for titles, code tasks (presence), and illustrations.
+- `ai_player.json` present for this book.
+- Zips reproducible; rotation policy “latest + 1 timestamp” enforced; SHA256 summary shown.
 
 ---
 
@@ -53,3 +64,9 @@
 - Page 30: sync breath with loop (sync)
 - Page 31: edges merge, nearing closure (merge)
 - Page 32: loop closes, fragments unite (close)
+
+---
+
+## 🔜 Next Up
+- (Opt) Pass 5 — Art Pass v0: tighten illustration prompts; draft `art/STYLE_NOTES.md`.
+- (Opt) Pass 6 — Export Pass: PDF/EPUB/web preview to `exports/`.
