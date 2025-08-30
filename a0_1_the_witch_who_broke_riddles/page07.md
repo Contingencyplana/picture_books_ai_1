@@ -1,10 +1,12 @@
 # Page 07
 
-A lantern in the wood (rumor of a witch)
+
+At the edge of the woods, a warm lantern glows beneath the twilight trees.
+Shall we follow the winding path to see who lights the way?
 
 // Code Task: lantern_in_wood() → RESULT: "Stub."
 // Code Task ID: a0_1-CT-07
 [python]
 def lantern_in_wood():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: A lantern glowing on a tree branch, a winding path through gentle woods, hints of chalk marks.]
