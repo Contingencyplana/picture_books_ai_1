@@ -5,11 +5,20 @@
   "age_band": "5-8",
   "voice": "playful, bright, a little mischievous; zero meanness",
   "pages": 32,
-  "style_tags": ["folk-tale", "painterly", "warm", "twilight", "bold shapes"],
+  "style_tags": [
+    "folk-tale",
+    "painterly",
+    "warm",
+    "twilight",
+    "bold shapes"
+  ],
   "safety": {
     "rating": "E",
     "violence": "none",
-    "fear": "none"
+    "fear": "none",
+    "age_appropriate_language": true,
+    "no_shame_or_gotcha": true,
+    "encourage_collaboration": true
   },
   "checks": [
     "32_files",
