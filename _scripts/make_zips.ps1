@@ -23,15 +23,16 @@ $ProjectName = Split-Path $RepoRoot -Leaf           # e.g., picture_books_ai_1
 $BaseName    = "${ProjectName}_clean"               # e.g., picture_books_ai_1_clean
 $DistDir     = Join-Path $RepoRoot 'dist'
 $LatestZip   = Join-Path $DistDir  "${BaseName}_latest.zip"
-$Timestamp   = Get-Date -Format "yyyy-MM-dd-HHmm"
-$DatedZip    = Join-Path $DistDir  "${BaseName}_${Timestamp}.zip"
 
 if (-not (Test-Path $DistDir)) {
   New-Item -ItemType Directory -Path $DistDir | Out-Null
 }
 
-# --- Rotate previous latest (if any) -----------------------------------------------------------
+# --- Rotate previous latest (if any) using its original timestamp ------------------------------
+# Name the rotated zip from the previous latest's LastWriteTime (yyyy-MM-dd-HHmm)
 if (Test-Path $LatestZip) {
+  $prevTs   = (Get-Item $LatestZip).LastWriteTime.ToString('yyyy-MM-dd-HHmm')
+  $DatedZip = Join-Path $DistDir "${BaseName}_${prevTs}.zip"
   Move-Item -LiteralPath $LatestZip -Destination $DatedZip -Force
   Write-Host "Rotated previous latest to: $DatedZip"
 }
@@ -41,15 +42,15 @@ if (Test-Path $LatestZip) {
 $ExcludeTop = @('.git', 'dist', '.venv', 'venv', 'node_modules', '.pytest_cache', '__pycache__')
 
 # Collect top-level entries to include (everything except excluded tops)
-$TopLevel = Get-ChildItem -LiteralPath $RepoRoot -Force | Where-Object {
+$TopLevelPaths = (Get-ChildItem -LiteralPath $RepoRoot -Force | Where-Object {
   $ExcludeTop -notcontains $_.Name
-}
+}).FullName
 
 # Create temp zip, then move into dist as *_latest.zip
-$TempZip = Join-Path $env:TEMP ("${BaseName}_${Timestamp}.tmp.zip")
+$TempZip = Join-Path $env:TEMP ("${BaseName}_$(Get-Date -Format 'yyyy-MM-dd-HHmm').tmp.zip")
 if (Test-Path $TempZip) { Remove-Item -LiteralPath $TempZip -Force }
 
-Compress-Archive -Path $TopLevel.FullName -DestinationPath $TempZip -Force
+Compress-Archive -Path $TopLevelPaths -DestinationPath $TempZip -CompressionLevel Optimal -Force
 
 # Promote to latest
 Move-Item -LiteralPath $TempZip -Destination $LatestZip -Force
@@ -130,3 +131,6 @@ function Show-BuildSummary {
 $MostRecentDated = $null
 if ($DatedFiles.Count -ge 1) { $MostRecentDated = $DatedFiles[0] }
 Show-BuildSummary -LatestPath $LatestZip -DatedFile $MostRecentDated
+
+Write-Host "`nFluff summary:"
+pwsh -NoProfile -File tools/list_fluff.ps1
