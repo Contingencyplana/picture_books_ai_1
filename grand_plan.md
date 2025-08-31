@@ -23,7 +23,7 @@ Each shipped artifact does double duty: it progresses the system **and** tells t
 - **Treasury** ✅
   - ≥ 2 finished books sharing theme/audience
   - Table of contents + shared style notes (`art/STYLE_NOTES.md`)
-- **Saga (VSC Workspace)** ✅
+- **Saga (VS Code Workspace)** ✅
   - Documented reason (settings/tasks/extensions) beyond convenience
 
 ## Operating cadence
