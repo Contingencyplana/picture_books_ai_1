@@ -18,12 +18,12 @@
 
 ## Books in Roadstanza 0 (a0_0..a0_3)
 
-| Book ID | Title                              | Function its code performs (ecosystem role)                                                                 | Status               |
-|--------:|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| a0_0    | The Loop That Wanted to Close      | Establish the **page contract + stub harness**; golden path for `// Code Task` execution and reproducible builds.                                | P1–P4 ✅             |
-| a0_1    | The Witch Who Broke Riddles        | Demonstrate **rule-repair** & kinder constraints; **CT mapping**; Art v0 patterns (STYLE_NOTES, ALT_TEXT_GUIDE); accessibility cues.            | P1–P5 ✅ (v0.1)      |
-| a0_2    | The Castle of Glass Arguments      | Teach **fragile vs. resilient reasoning**; safe disagreement patterns; constraints that improve clarity without “gotcha”.                        | P0 → P1 target       |
-| a0_3    | *(TBD)*                            | Complement the arc (e.g., **bridges of kind questions**): inquiry mechanics; inclusive play + safety.                                            | P0 (reserve)         |
+| Book ID | Title                                  | Function its code performs (ecosystem role) | Status                              |
+|---------|----------------------------------------|---------------------------------------------|-------------------------------------|
+| a0_0    | The Loop That Wanted to Close          | Establish the **page contract + stub harness**; golden path for `// Code Task` execution and reproducible builds.                 | P1–P4 ✅                                    |
+| a0_1    | The Witch Who Broke Riddles            | Demonstrate **rule-repair** & kinder constraints; **CT mapping**; Art v0 patterns (STYLE_NOTES, ALT_TEXT_GUIDE); accessibility cues. | P1–P5 ✅ (v0.1)                             |
+| a0_2    | The Castle of Glass Arguments          | Teach **fragile vs. resilient reasoning**; safe disagreement patterns; constraints that improve clarity without “gotcha”.             | P0 → P1 target                              |
+| a0_3    | *(TBD)*                                | Complement the arc (e.g., **bridges of kind questions**): inquiry mechanics; inclusive play + safety.                           | P0 (reserve)                                |
 
 ### Drift checks (keep these true)
 - Page contract intact (header; 1–2 story lines; `// Code Task: …`; `[Illustration: … ≤160]`).
