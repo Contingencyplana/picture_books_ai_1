@@ -8,7 +8,7 @@ Build a Picture Book Publishing House AI — and a public library/website of pic
 ## Scope (what we keep adding)
 - **Picture Books** (32-page micro-beats)
 - **Treasuries of Fairytales** (thematic groupings of finished books)
-- **VS Code workspaces** (only when settings/tasks materially differ)
+- **Sagas (VS Code workspaces)** (only when settings/tasks materially differ)
 
 These continue until the capabilities in `skillset.md` are in place.
 
@@ -23,7 +23,7 @@ Each shipped artifact does double duty: it progresses the system **and** tells t
 - **Treasury** ✅
   - ≥ 2 finished books sharing theme/audience
   - Table of contents + shared style notes (`art/STYLE_NOTES.md`)
-- **Workspace** ✅
+- **Saga (VSC Workspace)** ✅
   - Documented reason (settings/tasks/extensions) beyond convenience
 
 ## Operating cadence

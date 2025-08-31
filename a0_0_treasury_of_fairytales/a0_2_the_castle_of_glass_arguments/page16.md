@@ -1,4 +1,3 @@
-
 # Page 16
 
 We ask, “What would shatter this?”

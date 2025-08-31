@@ -1,4 +1,3 @@
-
 # Page 17
 
 We add a kind rule, making the brittle spot resilient.

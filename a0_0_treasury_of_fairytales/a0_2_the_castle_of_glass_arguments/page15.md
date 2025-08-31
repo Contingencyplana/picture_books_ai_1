@@ -1,4 +1,3 @@
-
 # Page 15
 
 We disagree kindly, rebuilding the question together.

@@ -1,5 +1,6 @@
-
-# Page 29
-
-// Code Task: glass_rule_p29() → RESULT: "Stub."
-[Illustration: Placeholder.]
+# Page 29 — Thanks and Shine
+We thank everyone for their care and patience.
+The glass shines, and so do we.
+// Code Task: Return a message of thanks and shining glass.
+// Stub: TBD in Pass 3
+[Illustration: Children and adults smiling, glass sparkling, warm light.]

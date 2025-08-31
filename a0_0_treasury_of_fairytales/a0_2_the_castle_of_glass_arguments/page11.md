@@ -1,4 +1,3 @@
-
 # Page 11
 
 A brittle claim appears, thin as a hairline crack.

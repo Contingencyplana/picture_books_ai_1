@@ -1,4 +1,3 @@
-
 # Page 12
 
 A gentle rule is set, soft as a velvet rope.
