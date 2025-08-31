@@ -5,7 +5,6 @@ With a gentle touch, the witch unclicks a tangled thread—no scolding, just kin
 Can you imagine a new rule that feels softer for everyone?
 
 // Code Task: snap_mean_rule() → RESULT: "Stub."
-// Code Task ID: a0_1-CT-10
 [python]
 def snap_mean_rule():
     return "Stub."

@@ -5,7 +5,6 @@ At the edge of the woods, a warm lantern glows beneath the twilight trees.
 Shall we follow the winding path to see who lights the way?
 
 // Code Task: lantern_in_wood() → RESULT: "Stub."
-// Code Task ID: a0_1-CT-07
 [python]
 def lantern_in_wood():
     return "Stub."

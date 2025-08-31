@@ -5,7 +5,6 @@ Boards bloom with clear, kind rules you can test and try.
 Add one rule that helps new players in.
 
 // Code Task: write_gentle_rules() → RESULT: "Stub."
-// Code Task ID: a0_1-CT-25
 [python]
 def write_gentle_rules():
     return "Stub."

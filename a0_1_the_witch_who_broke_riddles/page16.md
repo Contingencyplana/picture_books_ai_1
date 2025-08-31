@@ -5,7 +5,6 @@ A loud riddler struts in, puffed up like a rooster.
 Welcome him kindly—what rule keeps our game fair?
 
 // Code Task: boastful_riddler_arrives() → RESULT: "Stub."
-// Code Task ID: a0_1-CT-16
 [python]
 def boastful_riddler_arrives():
     return "Stub."

@@ -5,7 +5,6 @@ The Witch Who Broke Riddles smiles, her cloak covered in tiny keys and soft knot
 She welcomes all with a gentle voice: “Here, every question is safe.”
 
 // Code Task: meet_witch() → RESULT: "Stub."
-// Code Task ID: a0_1-CT-08
 [python]
 def meet_witch():
     return "Stub."
