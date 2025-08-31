@@ -1,4 +1,3 @@
-
 # Page 14
 
 We turn sharp edges into bridges.

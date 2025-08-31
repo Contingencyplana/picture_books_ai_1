@@ -1,5 +1,6 @@
-
-# Page 22
-
-// Code Task: glass_rule_p22() → RESULT: "Stub."
-[Illustration: Placeholder.]
+# Page 22 — Polishing Away
+Someone brings a soft cloth to polish the glass.
+The flaw fades, but the care remains.
+// Code Task: Polish the glass so the flaw fades.
+// Stub: TBD in Pass 3
+[Illustration: Child polishing glass with a soft cloth, friends watching, gentle colors.]

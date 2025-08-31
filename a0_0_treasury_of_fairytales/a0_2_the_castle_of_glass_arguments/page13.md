@@ -1,4 +1,3 @@
-
 # Page 13
 
 We test the glass with soft tools first.

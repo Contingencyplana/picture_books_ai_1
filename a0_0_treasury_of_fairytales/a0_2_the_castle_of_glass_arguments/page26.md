@@ -1,5 +1,6 @@
-
-# Page 26
-
-// Code Task: glass_rule_p26() → RESULT: "Stub."
-[Illustration: Placeholder.]
+# Page 26 — Resting in Light
+We rest in the glass room, light all around.
+No cracks, just calm and quiet.
+// Code Task: Return a message that the room is peaceful.
+// Stub: TBD in Pass 3
+[Illustration: Children sitting quietly, glass walls glowing, peaceful palette.]

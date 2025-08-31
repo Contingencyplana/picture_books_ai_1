@@ -1,4 +1,3 @@
-
 # Page 18
 
 The window holds—a small win for everyone.
