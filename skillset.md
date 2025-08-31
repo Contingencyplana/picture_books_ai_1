@@ -68,3 +68,5 @@ _Use: keep this section short and living. Move bullets between lists as status c
 ## Out of Scope (for now)
 - PDF/EPUB exporters
 - Game mechanics beyond page-level beats
+
+> For the “why / scope / milestones,” see **docs/grand_plan.md** (our single source of truth for the plan).
