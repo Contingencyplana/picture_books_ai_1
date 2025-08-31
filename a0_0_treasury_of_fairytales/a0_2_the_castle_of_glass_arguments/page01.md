@@ -1,4 +1,4 @@
-
+o
 # Page 01
 
 The glass room is quiet and bright.

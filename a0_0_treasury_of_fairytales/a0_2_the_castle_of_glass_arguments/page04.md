@@ -2,6 +2,7 @@
 
 Clear talk feels bright and safe.
 Everyone’s voice glows in the sunlight.
+
 // Code Task: clear_talk() → RESULT: "Voices shine together."
 [python]
 def clear_talk():

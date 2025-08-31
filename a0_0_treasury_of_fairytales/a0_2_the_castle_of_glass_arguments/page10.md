@@ -2,6 +2,7 @@
 
 They mend a brittle rule with care.
 The crack becomes a neat seam, held by a gentle brace.
+
 // Code Task: mend_rule() → RESULT: "A rule is made stronger."
 [python]
 def mend_rule():

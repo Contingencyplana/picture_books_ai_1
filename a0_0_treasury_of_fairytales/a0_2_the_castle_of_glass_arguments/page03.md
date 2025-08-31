@@ -2,6 +2,7 @@
 
 Welcome to the Castle of Glass Arguments.
 Here, every idea is seen from many sides.
+
 // Code Task: invite_readers() → RESULT: "Readers are welcomed."
 [python]
 def invite_readers():

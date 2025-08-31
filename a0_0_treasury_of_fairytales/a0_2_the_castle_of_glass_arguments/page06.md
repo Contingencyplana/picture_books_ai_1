@@ -2,6 +2,7 @@
 
 A child’s voice wobbles, unsure.
 They ask, “Can someone help me mend this?”
+
 // Code Task: child_voice_wobbles() → RESULT: "Help is invited."
 [python]
 def child_voice_wobbles():
