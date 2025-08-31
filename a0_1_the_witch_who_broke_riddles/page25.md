@@ -1,10 +1,12 @@
 # Page 25
 
-The village writes “gentle rules” on chalkboards
+
+Boards bloom with clear, kind rules you can test and try.
+Add one rule that helps new players in.
 
 // Code Task: write_gentle_rules() → RESULT: "Stub."
 // Code Task ID: a0_1-CT-25
 [python]
 def write_gentle_rules():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: Three boards: “clear,” “kind,” “testable”; kids chalking.]
