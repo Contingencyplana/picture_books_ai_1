@@ -1,9 +1,10 @@
 # Page 02
 
-Title page
+The Castle of Glass Arguments
+A welcome for kind questions and brave, gentle minds.
 
 // Code Task: title_page() → RESULT: "Stub."
 [python]
 def title_page():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: Title page motif—delicate glass filigree, a small key-and-flower emblem, calm blue-gold palette.]
