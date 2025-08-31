@@ -11,6 +11,8 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 - **AI** — Artificial Intelligence.
 - **AI Labscape (AIL)** — Open sandbox for AI R&D; humans and AI co-experiment (new modes, safeguards, recursion).
 - **AI Player (AIP)** — A book’s persona/agent defined by `ai_player.json` and page contracts.
+- **AI Player JSON (AIPJ)** — The `ai_player.json` file (schema-validated book/player metadata).
+- **ALT** — Alternative text for images/illustrations (accessibility).
 
 ## B
 
@@ -18,9 +20,11 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 
 ## C
 
-- **CRC** — *Contract, Reproducibility, Consistency* (shorthand for our build guarantees).
-- **CSR** — *Checksums & Size Review* (the quick SHA256 + MB scan after zips).
 - **C3** — *Children’s Cartoon Channel* (kid-made cartoons with parental safeguards).
+- **CRC** — *Contract, Reproducibility, Consistency* (shorthand for our build guarantees).
+- **CRLF** — Windows newline (`\r\n`); used in `.ps1` while repo targets LF for Markdown/text.
+- **CSR** — *Checksums & Size Review* (the quick SHA256 + MB scan after zips).
+- **CT** — *Code Task* ID (CT-01..CT-32) defined in `taskmaps/code_tasks.md`.
 
 ## D
 
@@ -32,8 +36,8 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 
 ## G
 
-- **GLVL** — *Gamified LLVM* (“Lingual Lab”: compiler as playground).
 - **GKS** — *Gamified Kickstarter* (“Money Machine”: funding as gameplay).
+- **GLVL** — *Gamified LLVM* (“Lingual Lab”: compiler as playground).
 
 ## L
 
@@ -43,18 +47,20 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 ## M
 
 - **MB** — Megabytes (size unit shown in build summaries).
+- **MSZ** — *Mirrorstanza* (four consecutive **Roadstanzas**; a macro planning layer).
 
 ## P
 
-- **PBP** — *Picture Book Page* (one `pageNN.md`).
-- **PS** — PowerShell script.
 - **Pass N** — One of the build passes (Scaffold, Narrative, Code, Validation/Play).
+- **PBP** — *Picture Book Page* (one `pageNN.md`).
+- **PNN** — Page shorthand used in docs/commits (e.g., P03–P10).
+- **PS** — PowerShell script.
 
 ## R
 
 - **RZP** — *Rotation Zip Policy* (“latest + one timestamped”).
-- **RSZ** — *Roadstanza* (series-level planning segment).
-- **RZ** — *Roadmap Zero* / *Roadstanza 0* (Foundations).
+- **RSZ** — *Roadstanza* (four consecutive picture books; series-level planning segment, e.g., RSZ-0 “Foundations”).
+- ~~**RZ**~~ — **Deprecated** alias (“Roadmap Zero / Roadstanza 0”). Prefer **RSZ-0** or the full phrase *Roadstanza 0* to avoid confusion with **RZP**.
 
 ## S
 
@@ -70,3 +76,6 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 ## V
 
 - **VC** — *Valiant Citadel* (parallel safeguards: security, alignment, parental controls, resilience).
+- **V0** — Version 0 (first, lightweight pass; e.g., Art Pass v0).
+
+---
