@@ -1,10 +1,12 @@
 # Page 11
 
-Crowd gathers, curious
+
+Neighbors gather in a bright hush, eyebrows shaped like question marks.
+What’s the kindest question you want to ask first?
 
 // Code Task: crowd_gathers() → RESULT: "Stub."
 // Code Task ID: a0_1-CT-11
 [python]
 def crowd_gathers():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: Lantern-lit square; diverse villagers leaning in; soft glow on faces.]

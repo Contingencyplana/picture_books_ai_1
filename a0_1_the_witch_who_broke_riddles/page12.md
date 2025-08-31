@@ -1,10 +1,12 @@
 # Page 12
 
-New riddle appears—too many answers!
+
+A fresh riddle flutters like leaves—every answer seems to fit.
+Which clues help most, and which feel too wiggly?
 
 // Code Task: new_riddle_many_answers() → RESULT: "Stub."
 // Code Task ID: a0_1-CT-12
 [python]
 def new_riddle_many_answers():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: Swirling paper leaves with faint symbols; options floating; curious smiles.]

@@ -1,10 +1,12 @@
 # Page 17
 
-He sets a trap riddle
+
+His riddle snaps shut like a box with no door.
+Spot the trick—what part feels unkind?
 
 // Code Task: trap_riddle() → RESULT: "Stub."
 // Code Task ID: a0_1-CT-17
 [python]
 def trap_riddle():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: Little box with spiky chalk glyphs; tiny padlock drawn on.]
