@@ -1,6 +1,5 @@
 # Page 30
 
-
 Grown-ups: Kind riddles welcome every voice and grow with gentle rules.
 
 // Code Task: authors_note() → RESULT: "Stub."

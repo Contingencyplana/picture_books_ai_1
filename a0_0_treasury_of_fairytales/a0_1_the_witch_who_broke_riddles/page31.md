@@ -1,6 +1,5 @@
 # Page 31
 
-
 Curiosity glimmers—another puzzle waits just beyond the next lantern.
 
 // Code Task: back_cover_teaser() → RESULT: "Stub."

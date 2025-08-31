@@ -1,6 +1,5 @@
 # Page 05
 
-
 One riddle feels sharp, leaving a knot in someone’s chest.
 Can you notice when a puzzle stops feeling kind?
 

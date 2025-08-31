@@ -1,6 +1,5 @@
 # Page 29
 
-
 Tuck this game in your pocket: “Repair a riddle with me!”
 What’s the first rule you’d make together?
 

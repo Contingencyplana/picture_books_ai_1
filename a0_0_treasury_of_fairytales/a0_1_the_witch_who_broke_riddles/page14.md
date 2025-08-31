@@ -1,6 +1,5 @@
 # Page 14
 
-
 The riddle turns like a lantern arrow, pointing softly.
 Follow the glow—where does it guide you first?
 

@@ -1,6 +1,5 @@
 # Page 20
 
-
 The child cups a spark and shapes a new riddle in both hands.
 Whisper one clue that makes it welcoming.
 

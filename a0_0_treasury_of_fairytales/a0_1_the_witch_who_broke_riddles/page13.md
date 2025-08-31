@@ -1,6 +1,5 @@
 # Page 13
 
-
 The witch ties a gentle knot: “Let’s choose one fair rule.”
 Pick a rule that guides, not traps—what would you choose?
 

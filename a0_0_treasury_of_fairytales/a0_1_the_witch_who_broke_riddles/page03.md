@@ -1,6 +1,5 @@
 # Page 03
 
-
 Welcome, riddle-fixer! Here, every puzzle can be mended with a kind heart.
 Will you help us find gentle ways to repair what feels tricky?
 

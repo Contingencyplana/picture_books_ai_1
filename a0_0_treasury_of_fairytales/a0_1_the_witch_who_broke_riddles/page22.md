@@ -1,6 +1,5 @@
 # Page 22
 
-
 Call… the village answers; the pattern finds its rhythm.
 Try the next echo—what comes after?
 

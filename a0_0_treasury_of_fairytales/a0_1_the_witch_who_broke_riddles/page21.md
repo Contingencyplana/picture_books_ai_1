@@ -1,6 +1,5 @@
 # Page 21
 
-
 It wobbles like a three-leg stool; the witch taps one shy leg.
 Which tiny rule would steady it?
 

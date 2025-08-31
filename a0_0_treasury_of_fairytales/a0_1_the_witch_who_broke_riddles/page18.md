@@ -1,6 +1,5 @@
 # Page 18
 
-
 The box clicks tighter when answers are honest.
 Where could a gentler hinge go? Point to it.
 

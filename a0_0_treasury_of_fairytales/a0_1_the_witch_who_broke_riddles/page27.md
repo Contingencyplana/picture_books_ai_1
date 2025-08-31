@@ -1,6 +1,5 @@
 # Page 27
 
-
 The witch smiles, holding a tiny knot in her palm. “Some doors open slowly.”
 What gentle question would you ask the knot?
 

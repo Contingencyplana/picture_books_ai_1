@@ -1,6 +1,5 @@
 # Page 17
 
-
 His riddle snaps shut like a box with no door.
 Spot the trick—what part feels unkind?
 

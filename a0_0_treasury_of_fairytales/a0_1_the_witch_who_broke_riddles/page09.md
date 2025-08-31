@@ -1,6 +1,5 @@
 # Page 09
 
-
 The witch listens closely as the child shares her riddle, nodding with care.
 What do you notice about how she listens?
 

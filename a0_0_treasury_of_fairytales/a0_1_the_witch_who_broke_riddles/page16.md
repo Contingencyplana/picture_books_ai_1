@@ -1,6 +1,5 @@
 # Page 16
 
-
 A loud riddler struts in, puffed up like a rooster.
 Welcome him kindly—what rule keeps our game fair?
 

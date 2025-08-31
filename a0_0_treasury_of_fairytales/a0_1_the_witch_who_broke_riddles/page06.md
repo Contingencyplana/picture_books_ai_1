@@ -1,6 +1,5 @@
 # Page 06
 
-
 A child sits quietly, unsure how to untangle the tricky riddle.
 Would you like to help her find a gentle clue?
 

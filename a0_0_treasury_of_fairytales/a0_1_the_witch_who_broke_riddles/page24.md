@@ -1,6 +1,5 @@
 # Page 24
 
-
 Petals of maybe bloom across the dark like lantern stars.
 Point to one glow you want to follow.
 

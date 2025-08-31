@@ -1,6 +1,5 @@
 # Page 15
 
-
 Hands lift; guesses braid like rope across a little gap.
 Offer a clue that helps someone else cross.
 

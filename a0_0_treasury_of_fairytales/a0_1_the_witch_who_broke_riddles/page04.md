@@ -1,6 +1,5 @@
 # Page 04
 
-
 In the village square, friends gather to share riddles and laughter.
 Chalk glyphs and question-flowers bloom as everyone joins in the fun.
 

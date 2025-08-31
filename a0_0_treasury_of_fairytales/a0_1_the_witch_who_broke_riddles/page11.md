@@ -1,6 +1,5 @@
 # Page 11
 
-
 Neighbors gather in a bright hush, eyebrows shaped like question marks.
 What’s the kindest question you want to ask first?
 

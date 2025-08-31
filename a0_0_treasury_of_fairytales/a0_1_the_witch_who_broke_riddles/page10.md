@@ -1,6 +1,5 @@
 # Page 10
 
-
 With a gentle touch, the witch unclicks a tangled thread—no scolding, just kindness.
 Can you imagine a new rule that feels softer for everyone?
 
