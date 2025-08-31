@@ -1,5 +1,8 @@
 
+
 # Book 2 Taskmap — The Witch Who Broke Riddles
+
+**Status (Pass Gates):** ✅ P1 Scaffold · ✅ P2 Narrative · ✅ P3 Schema · ✅ P4 Repro zips · ✅ P5 Art v0
 
 - [x] Create `README.md` (already)
 - [x] Add `ai_player.json` (stub aligned)
