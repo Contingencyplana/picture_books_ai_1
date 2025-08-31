@@ -1,3 +1,4 @@
+
 # Book 2 Taskmap — The Witch Who Broke Riddles
 
 - [x] Create `README.md` (already)
@@ -7,3 +8,7 @@
 - [x] Pass 2: stubs ↔ code tasks
 - [x] Pass 3: schema-valid JSON
 - [x] Pass 4: reproducible zips
+
+## Optional Passes
+
+- [x] Pass 5 — Art Pass v0
