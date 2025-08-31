@@ -1,72 +1,38 @@
-# Roadstanza 0 — Foundations (Picture Books 1–4)
+# Roadstanza 0 — Foundations (Stage 0.0.0) · v0.2
 
-**Purpose:** Establish a stable baseline by delivering the first **quartet** of picture books in the Treasury, with a reliable build pipeline and safety conventions.
+**Scope:** Four picture books inside **Treasury of Fairytales · Vol. a0** (a0_0..a0_3).
+**Why:** Plan one stage ahead (4 books) so we can stay flexible.
 
----
+## Canonical mapping (for reference)
+- **Phase = Mirrorstanza** → 4 treasuries (meta-arc). *(Not what this file manages.)*
+- **Subphase = Treasury** → one family (≈16 books).
+- **Stage = Roadstanza** → **4 consecutive books in one treasury**. ← *This file*
+- **Substage = Book** → one 32-page picture book (Book = AI Player = Minigame).
 
-## 📚 Composition (this roadstanza)
-- **Book 1 — a0_0 _The Loop That Wanted to Close_**
-- **Book 2 — a0_1 _The Witch Who Broke Riddles_** ← current focus
-- **Book 3 — a0_2 (placeholder)**
-- **Book 4 — a0_3 (placeholder)**
-
-> One roadstanza = **4 books** shipped to Pass 4 (minimum), with optional higher passes as stretch goals.
-
----
-
-## ✅ Exit Criteria (for this roadstanza)
-- Each of the four books reaches:
-  - **Pass 1:** Scaffold (32 pages, README, taskmaps)
-  - **Pass 2:** Narrative (stubs ↔ code tasks aligned)
-  - **Pass 3:** Schema-valid JSON (`ai_player.json`)
-  - **Pass 4:** Reproducible zips (two-file policy)
-- Build health proven (hash stability, rotation, logs).
-- Safety (Valiant Citadel) consistently applied.
+## Invariants
+- Each Treasury = **16 books = 4 roadstanzas × 4 books**.
+- This roadstanza covers **a0_0..a0_3** only.
+- Pass gates: **P1 Scaffold · P2 Narrative · P3 Schema · P4 Repro Zips · (P5 Art v0 optional)**.
 
 ---
 
-## 📈 Status by Book
+## Books in Roadstanza 0 (a0_0..a0_3)
 
-### Book 1 — a0_0 _The Loop That Wanted to Close_
-- [x] **P1 Scaffold**
-- [x] **P2 Narrative**
-- [x] **P3 Schema-valid JSON**
-- [x] **P4 Reproducible zips**
-- (Opt) P5 Art v0 — _TBD_
-- (Opt) P6 Export — _TBD_
-- (Opt) P7 Gameplay — _TBD_
+| Book ID | Title                              | Function its code performs (ecosystem role)                                                                 | Status               |
+|--------:|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| a0_0    | The Loop That Wanted to Close      | Establish the **page contract + stub harness**; golden path for `// Code Task` execution and reproducible builds.                                | P1–P4 ✅             |
+| a0_1    | The Witch Who Broke Riddles        | Demonstrate **rule-repair** & kinder constraints; **CT mapping**; Art v0 patterns (STYLE_NOTES, ALT_TEXT_GUIDE); accessibility cues.            | P1–P5 ✅ (v0.1)      |
+| a0_2    | The Castle of Glass Arguments      | Teach **fragile vs. resilient reasoning**; safe disagreement patterns; constraints that improve clarity without “gotcha”.                        | P0 → P1 target       |
+| a0_3    | *(TBD)*                            | Complement the arc (e.g., **bridges of kind questions**): inquiry mechanics; inclusive play + safety.                                            | P0 (reserve)         |
 
-### Book 2 — a0_1 _The Witch Who Broke Riddles_ (current)
-- [x] **P1 Scaffold**
-- [x] **P2 Narrative** (pages use `// Code Task:` only)
-- [x] **P3 Schema-valid JSON**
-- [x] **P4 Reproducible zips**
-- [x] **P5 Art v0** (`art/STYLE_NOTES.md`, `art/ALT_TEXT_GUIDE.md`)
-- (Opt) P6 Export — _Next_
-- (Opt) P7 Gameplay — _Later_
+### Drift checks (keep these true)
+- Page contract intact (header; 1–2 story lines; `// Code Task: …`; `[Illustration: … ≤160]`).
+- Only **`// Code Task:`** in pages (no extra “ID” lines).
+- `ai_player.json` validates `_schemas/ai_player.schema.json`.
+- Build rotation: **latest + one timestamped**; no-change rebuild hashes match.
+- Release builds append **Build snapshot** line to `fluff_inventory.md`.
 
-### Book 3 — a0_2 (placeholder)
-- [ ] **P1 Scaffold**
-- [ ] **P2 Narrative**
-- [ ] **P3 Schema-valid JSON**
-- [ ] **P4 Reproducible zips**
-
-### Book 4 — a0_3 (placeholder)
-- [ ] **P1 Scaffold**
-- [ ] **P2 Narrative**
-- [ ] **P3 Schema-valid JSON**
-- [ ] **P4 Reproducible zips**
-
----
-
-## 🔭 Immediate Next Steps
-1. **Export Pass (P6) for Book 2:** generate PDF/EPUB/web preview (pipeline TBD).
-2. **Scaffold Book 3 (P1):** create folder, 32 pages, README, taskmaps; keep lints green.
-3. Keep build snapshots up-to-date in `fluff_inventory.md` after release builds.
-
----
-
-## 🧱 Why this roadstanza matters
-- Proves the **quartet cadence** (4-books per roadstanza).
-- Locks a reproducible build habit (hashes, two-zip rotation).
-- Sets consistent safety and formatting norms for subsequent stanzas.
+### Exit criteria for Roadstanza 0
+- a0_0..a0_3 reach **P4** (repro zips), with ≥1 book at **P5 Art v0**.
+- `a0_0_treasury_of_fairytales/toc.md` lists all **16** a0 books (TBD titles allowed).
+- Glossary entries (**Mirrorstanza**, **Roadstanza**) match this mapping.
