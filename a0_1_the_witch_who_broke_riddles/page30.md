@@ -1,9 +1,10 @@
 # Page 30
 
-Author’s note to grown-ups: how to host kind riddles
+
+Grown-ups: Kind riddles welcome every voice and grow with gentle rules.
 
 // Code Task: authors_note() → RESULT: "Stub."
 [python]
 def authors_note():
     return "Stub."
-[Illustration: (placeholder)]
+[Illustration: Open circle of adults and children, chalk glyphs and question-flowers around.]

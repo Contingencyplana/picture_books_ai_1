@@ -75,7 +75,6 @@
 - **Build:** `pwsh -NoProfile -ExecutionPolicy Bypass ./_scripts/make_zips.ps1`
 - **After build:** Update this file’s *Build Snapshot* with the latest ZIP hash.
 
-
 ### Build Snapshot
 
 - **Latest ZIP:** `dist/picture_books_ai_1_clean_latest.zip`
