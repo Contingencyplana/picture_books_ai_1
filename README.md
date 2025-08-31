@@ -92,7 +92,7 @@ It ensures that creative play is always safe, aligned, and resilient:
    By children, for children — with built-in parental guidance and safeguards.
    Studios for animated movies and series.
 
-9. **Gamified LLVM (Lingual Lab)**
+9. **Lingual Lab (Gamified LLVM)**
    Compiler as playground.
    Teaches recursion/creativity in disguise.
 
