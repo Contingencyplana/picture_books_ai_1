@@ -1,0 +1,12 @@
+{
+  "$schema": "_schemas/ai_player.schema.json",
+  "id": "a0_2_the_castle_of_glass_arguments",
+  "title": "The Castle of Glass Arguments",
+  "path": "a0_0_treasury_of_fairytales/a0_2_the_castle_of_glass_arguments",
+  "pages": 32,
+  "principles": [
+    "Prefer gentle, resilient reasoning over brittle ‘gotcha’.",
+    "Disagree kindly; improve clarity with better constraints.",
+    "Valiant Citadel: safety and accessibility are first-class."
+  ]
+}
