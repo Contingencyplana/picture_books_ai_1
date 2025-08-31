@@ -16,8 +16,8 @@ An open sandbox for AI R&D where humans and AI co-experiment on new modes, safeg
 A minimal cadence for moving a book from scaffold → publishable slice:
 1. **Pass 1 — Scaffold**
 2. **Pass 2 — Narrative**
-3. **Pass 3 — Code (Executable Stubs)**
-4. **Pass 4 — Validation / Play** (lint + stub check + zip policy + checksums)
+3. **Pass 3 — Schema-valid JSON** (`ai_player.json` validates)
+4. **Pass 4 — Validation / Play** (lint + stub check + **reproducible zips**)
 
 ### Children’s Cartoon Channel
 A kid-centric pipeline to transform books/games into cartoons (movies/series), *by children, for children* — with built-in parental guidance and safeguards.
@@ -40,6 +40,9 @@ A single-line bracketed description on each page (e.g., `[Illustration: …]`) p
 ### Minigame
 The interactive scaffold of a book: code tasks, responses, and gentle mechanics mapped to narrative beats.
 
+### Mirrorstanza
+A **design lens inside a Treasury**: the four Roadstanzas (Q1–Q4) are planned to **mirror or echo** one another thematically or mechanically. Not a separate deliverable or count unit—just a patterning device used in planning and review to keep the quartet-of-quartets cohesive.
+
 ### Page Contract
 Strict per-page shape and regex rules (title, story lines, `// Code Task`, `[Illustration: …]`). Enforced by `lint_pages.ps1` and validated by the stub checker.
 
@@ -50,13 +53,13 @@ A group of four consecutive pages that form a micro-arc. Used for drafting rhyth
 Deterministic build outputs produced by `_scripts/make_zips.ps1`, verified with SHA256, with a rotation policy of **latest + one timestamped**.
 
 ### Roadstanza
-Series-level planning segment (e.g., **Roadstanza 0 — Foundations**) that records treasury-wide milestones and direction.
+A **quartet of four consecutive picture books within a single Treasury**. It’s the planning/delivery unit we ship to at least Pass 4 (minimum). Example: **Roadstanza 0 — Foundations** spans Books 1–4 of the Treasury.
 
 ### Stub Checker
 Python harness (`tests/page_stub_check.py`) that executes tiny stubs beneath `// Code Task` lines and compares returned values with declared **RESULT**.
 
 ### Treasury
-A curated set of ~16 picture books (~500 pages total) under a named family (e.g., *Treasury of Fairytales*). Each treasury has roadmaps and taskmaps.
+A curated set of **16 picture books** (≈500 pages) under a named family (e.g., *Treasury of Fairytales*). Structurally: **4 Roadstanzas × 4 books each**. Each Treasury has its own roadmaps and taskmaps.
 
 ### Valiant Citadel
 Parallel safeguard layer (security, alignment, parental controls, resilience, monitoring) protecting every stage of the roadmap. See **Parallel Safeguard** note in README.
@@ -69,4 +72,3 @@ Parallel safeguard layer (security, alignment, parental controls, resilience, mo
 - Cross-link with **bold** term names when helpful.
 - If a term is both an acronym and a concept, add it to **acronyms.md** and **glossary.md**.
 - Keep examples minimal and non-speculative.
-
