@@ -106,9 +106,37 @@ It ensures that creative play is always safe, aligned, and resilient:
     An open sandbox for AI research and development.
     Humans and AI experiment together — new modes, safeguards, recursion.
 
+    11.1 **Doctor Lucid (Consent-First Steward Bot)**
+    A GitHub App / CI action that **proposes** PRs (never pushes to main) to
+    gently “heal” repos: formatting, encoding, lint fixes, safer defaults.
+
+    - **Consent & scope**: install per-repo; strict allow-lists; rate limits.
+    - **Transparency**: minimal diffs; clear PR titles & notes; auto-revert on CI fail.
+    - **Safety**: no self-spreading; no private infra; telemetry only with opt-in.
+    - **Standards path**: upstream via PEPs / Rust RFCs / LLVM reviews / WG papers.
+    - **Compliance**: license checks; safe-harbor when invited; counsel review.
+
+    *MVP targets*: MD022 blank line after H1; LF/UTF-8 normalization; CP1252→UTF-8 repair;
+    duplicate Illustration-line dedupe; page-contract guard; ghost-dir guard; two-zip policy checks.
+
 12. **Creative Ecosystem (SHAGI Emergence)**
     All layers merge: publishing, play, art, music, community.
     A living recursive engine, not just content.
+
+    12.1 **Stewardship & Standards — Lucid Armada (see §11.1)**
+    An opt-in, community-governed program that deploys Doctor Lucid and drives
+    durable wins into standards.
+
+    12.2 **Less Loony Labyrinths (Lucid Armada Campaign)**
+    A public, opt-in clean-code drive to untangle everyday dev headaches — with receipts.
+
+    - **What it does**: proposes reversible fixes (never pushes), publishes clear diffs,
+      and opens upstream RFCs for durable improvements.
+    - **Guardrails**: consent-only installs; strict allow-lists; no lateral movement;
+      auto-revert on red CI; audit logs.
+    - **Initial wins**: newline/encoding normalization, mojibake repair, markdownlint basics,
+      duplicate-line cleanup, reproducible-build guards.
+    - **Badge line**: *“Less Loony Labyrinths: proposed by Doctor Lucid — approve to merge.”*
 
 ---
 
