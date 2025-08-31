@@ -1,7 +1,8 @@
+
 # Page 13
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+We test the glass with soft tools first.
+No sharp edges, only gentle taps and questions.
 
-// Code Task: glass_rule_p13() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: soft_tools_p13() → RESULT: "Stub."
+[Illustration: Children using padded tools to gently tap a glass bridge, everyone watching closely.]

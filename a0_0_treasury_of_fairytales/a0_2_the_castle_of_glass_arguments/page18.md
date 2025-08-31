@@ -1,7 +1,8 @@
+
 # Page 18
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+The window holds—a small win for everyone.
+We celebrate together, knowing the glass is stronger now.
 
-// Code Task: glass_rule_p18() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: small_win_p18() → RESULT: "Stub."
+[Illustration: Children cheering softly, sunlight through a mended glass window, gentle colors.]

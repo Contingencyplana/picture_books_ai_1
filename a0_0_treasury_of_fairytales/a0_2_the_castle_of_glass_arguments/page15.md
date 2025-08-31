@@ -1,7 +1,8 @@
+
 # Page 15
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+We disagree kindly, rebuilding the question together.
+No one is left out; every voice helps shape the glass.
 
-// Code Task: glass_rule_p15() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: kind_disagreement_p15() → RESULT: "Stub."
+[Illustration: Children and adults discussing, hands shaping a new glass pane, warm and calm.]

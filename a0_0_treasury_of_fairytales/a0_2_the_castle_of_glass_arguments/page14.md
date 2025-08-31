@@ -1,7 +1,8 @@
+
 # Page 14
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+We turn sharp edges into bridges.
+Reframing helps us cross together, not apart.
 
-// Code Task: glass_rule_p14() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: reframing_p14() → RESULT: "Stub."
+[Illustration: Glass bridge forming where a crack was, children crossing hand-in-hand, soft colors.]

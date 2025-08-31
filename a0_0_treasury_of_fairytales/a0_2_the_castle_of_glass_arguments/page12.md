@@ -1,7 +1,8 @@
+
 # Page 12
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+A gentle rule is set, soft as a velvet rope.
+The crack stops growing, held by care.
 
-// Code Task: glass_rule_p12() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: gentle_constraint_p12() → RESULT: "Stub."
+[Illustration: Soft-gloved hands placing a gentle brace on the glass, crack halted, warm light.]

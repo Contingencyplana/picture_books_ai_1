@@ -1,7 +1,8 @@
+
 # Page 11
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+A brittle claim appears, thin as a hairline crack.
+We all notice, pausing before we speak.
 
-// Code Task: glass_rule_p11() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: brittle_claim_p11() → RESULT: "Stub."
+[Illustration: Close-up of a glass pane with a faint crack, children’s hands hovering gently nearby.]

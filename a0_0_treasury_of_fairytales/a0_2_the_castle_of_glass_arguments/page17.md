@@ -1,7 +1,8 @@
+
 # Page 17
 
-We pause to notice where a thought might crack.
-We add a gentle rule so everyone stays safe.
+We add a kind rule, making the brittle spot resilient.
+Together, we reinforce the window so it can flex, not break.
 
-// Code Task: glass_rule_p17() → RESULT: "Stub."
-[Illustration: Hairline crack on a glass pane, soft gloves nearby; calm twilight.]
+// Code Task: add_kind_rule_p17() → RESULT: "Stub."
+[Illustration: Children fitting a flexible brace to a glass window, everyone smiling, soft blue palette.]
