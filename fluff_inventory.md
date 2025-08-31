@@ -79,7 +79,7 @@
 
 - **Latest ZIP:** `dist/picture_books_ai_1_clean_latest.zip`
 - **Last Hash:** 021D3FBEC5A8DAD3CA7BA3BCDAC193122DCD8172CD57645119F4B655F6B7B944
-- **Last Updated:** 2025-08-31 21:58 local
+- **Last Updated:** 2025-08-31 21:58 localh
 
 ---
 
