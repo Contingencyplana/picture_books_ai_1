@@ -5,6 +5,16 @@
 
 $ErrorActionPreference = 'Stop'
 
+# --- guard: block root-level ghost book dirs ---
+$root = (Resolve-Path "$PSScriptRoot\..").Path
+$ghosts = Get-ChildItem -Directory -LiteralPath $root |
+  Where-Object { $_.Name -match '^a\d+_' -and $_.Name -ne 'a0_0_treasury_of_fairytales' }
+if ($ghosts) {
+  Write-Error "Ghost directories at root: $($ghosts.Name -join ', '). Aborting zip."
+  exit 1
+}
+# --- end guard ---
+
 # Resolve repo root (parent of this script's folder)
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 Set-Location $RepoRoot
@@ -127,6 +137,51 @@ function Show-BuildSummary {
     }
   }
 }
+
+# --- Auto-update docs/fluff_inventory.md Build Snapshot ---
+if (-not $env:SKIP_SNAPSHOT) {
+  try {
+    $zip = $LatestZip
+    if (Test-Path $zip) {
+      $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $zip).Hash
+      $ts   = (Get-Item $zip).LastWriteTime.ToString("yyyy-MM-dd HH:mm")
+
+      $docs = Join-Path $RepoRoot "docs"
+      if (-not (Test-Path $docs)) { New-Item -ItemType Directory -Path $docs | Out-Null }
+      $md   = Join-Path $docs "fluff_inventory.md"
+
+      if (-not (Test-Path $md)) {
+        @(
+          "# Fluff Inventory",
+          "",
+          "### Build Snapshot",
+          "",
+          "- **Latest ZIP:** (none)",
+          "- **Last Hash:**",
+          "- **Last Updated:**",
+          ""
+        ) | Set-Content $md -Encoding UTF8
+      }
+
+      $relZip = ($zip -replace [regex]::Escape($RepoRoot + [System.IO.Path]::DirectorySeparatorChar), '') -replace '\\','/'
+
+      $block = @"
+### Build Snapshot
+
+- **Latest ZIP:** `$relZip`
+- **Last Hash:** $hash
+- **Last Updated:** $ts local
+"@
+
+      $content = Get-Content $md -Raw
+      $pattern = "(?ms)^### Build Snapshot.*?(?=^#|`$)"
+      if ($content -match $pattern) {
+        $content = [regex]::Replace($content, $pattern, $block, 'Multiline')
+      } else {
+        $content = $content.TrimEnd() + "`r`n`r`n$block`r`n"
+      }
+      Set-Content $md $content -Encoding UTF8
+      Write-Host "Updated Build Snapshot in $md"
 
 $MostRecentDated = $null
 if ($DatedFiles.Count -ge 1) { $MostRecentDated = $DatedFiles[0] }

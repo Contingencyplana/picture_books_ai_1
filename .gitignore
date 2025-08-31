@@ -426,3 +426,5 @@ dist/
 # Guard against accidental resurrection of purged experimental modules
 x0_0_research_arcade/
 x0_1_cyberciv_textgrid/
+
+fluff_inventory.md
