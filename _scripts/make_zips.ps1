@@ -3,12 +3,16 @@
 # Enforces exactly two files in dist/: <project>_clean_latest.zip and the single most recent timestamped zip.
 # Also prints SHA256 checksums and a size/timestamp summary for quick verification.
 
+param(
+  [switch]$Release
+)
+
 $ErrorActionPreference = 'Stop'
 
 # --- guard: block root-level ghost book dirs ---
 $root = (Resolve-Path "$PSScriptRoot\..").Path
 $ghosts = Get-ChildItem -Directory -LiteralPath $root |
-  Where-Object { $_.Name -match '^a\d+_' -and $_.Name -ne 'a0_0_treasury_of_fairytales' }
+  Where-Object { $_.Name -match '^a\d+_' -and $_.Name -notmatch '^a\d+_0_treasury_' }
 if ($ghosts) {
   Write-Error "Ghost directories at root: $($ghosts.Name -join ', '). Aborting zip."
   exit 1
@@ -104,7 +108,7 @@ function Show-BuildSummary {
   $rows = @()
 
   if (Test-Path $LatestPath) {
-    $fi = Get-Item -LiteralPath $LatestPath
+    $fi   = Get-Item -LiteralPath $LatestPath
     $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $LatestPath).Hash
     $rows += [PSCustomObject]@{
       Name          = $fi.Name
@@ -138,58 +142,42 @@ function Show-BuildSummary {
   }
 }
 
-# --- Auto-update docs/fluff_inventory.md Build Snapshot ---
-if (-not $env:SKIP_SNAPSHOT) {
-  try {
-    $zip = $LatestZip
-    if (Test-Path $zip) {
-      $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $zip).Hash
-      $ts   = (Get-Item $zip).LastWriteTime.ToString('yyyy-MM-dd HH:mm')
-
-      $docs = Join-Path $RepoRoot 'docs'
-      if (-not (Test-Path $docs)) { New-Item -ItemType Directory -Path $docs | Out-Null }
-      $md   = Join-Path $docs 'fluff_inventory.md'
-      if (-not (Test-Path $md)) {
-        @(
-          '# Fluff Inventory', ''
-          '### Build Snapshot', ''
-          '- **Latest ZIP:** (none)'
-          '- **Last Hash:**'
-          '- **Last Updated:**', ''
-        ) | Set-Content $md -Encoding UTF8
-      }
-
-      # Repo-relative path with forward slashes for Markdown
-      $zipFull  = (Resolve-Path $zip).Path
-      $rootFull = (Resolve-Path $RepoRoot).Path
-      $relZip   = $zipFull.Substring($rootFull.Length).TrimStart('\') -replace '\\','/'
-
-      $block = @"
-### Build Snapshot
-
-- **Latest ZIP:** $relZip
-- **Last Hash:** $hash
-- **Last Updated:** $ts local
-"@
-
-      $content = Get-Content $md -Raw
-      $pattern = '(?s)### Build Snapshot.*?(?=^\#\# |\Z)'
-      if ($content -match $pattern) {
-        $content = [regex]::Replace($content, $pattern, $block, 'Multiline')
-      } else {
-        $content = $content.TrimEnd() + "`r`n`r`n$block`r`n"
-      }
-      Set-Content $md $content -Encoding UTF8
-      Write-Host "Updated Build Snapshot in $md"
-    }
-  } catch {
-    Write-Warning "Could not update Build Snapshot: $($_.Exception.Message)"
-  }
-}
-
 $MostRecentDated = $null
 if ($DatedFiles.Count -ge 1) { $MostRecentDated = $DatedFiles[0] }
 Show-BuildSummary -LatestPath $LatestZip -DatedFile $MostRecentDated
 
-Write-Host "`nFluff summary:"
-pwsh -NoProfile -File tools/list_fluff.ps1
+# --- Print snapshot to console ----------------------------------------------------------
+$zip  = Get-Item -LiteralPath $LatestZip
+$hash = (Get-FileHash $zip.FullName -Algorithm SHA256).Hash
+$when = (Get-Item -LiteralPath $LatestZip).LastWriteTime.ToString("yyyy-MM-dd HH:mm:ss")
+
+Write-Host "`nBuild Snapshot:"
+Write-Host "  ZIP:    $($zip.Name)"
+Write-Host "  SHA256: $hash"
+Write-Host "  When:   $when"
+
+# --- Fluff summary (optional) -----------------------------------------------------------
+$fluff = Join-Path $RepoRoot 'tools\list_fluff.ps1'
+if (Test-Path $fluff) {
+  Write-Host "`nFluff summary:"
+  pwsh -NoProfile -File $fluff
+} else {
+  Write-Host "`nFluff summary: (no fluff script)"
+}
+
+# --- Append snapshot to docs ONLY on -Release -------------------------------------------
+if ($Release) {
+  $docDir = Join-Path $RepoRoot 'docs'
+  if (-not (Test-Path $docDir)) { New-Item -ItemType Directory -Path $docDir | Out-Null }
+  $doc = Join-Path $docDir 'fluff_inventory.md'
+  Add-Content -Path $doc -Value @"
+### Build Snapshot
+
+- **Latest ZIP:** dist/$($zip.Name)
+- **Last Hash:** $hash
+- **Last Updated:** $when local
+"@
+  Write-Host "Snapshot appended to docs (release mode)."
+} else {
+  Write-Host "Docs unchanged (non-release build)."
+}
