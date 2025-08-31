@@ -144,37 +144,36 @@ if (-not $env:SKIP_SNAPSHOT) {
     $zip = $LatestZip
     if (Test-Path $zip) {
       $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $zip).Hash
-      $ts   = (Get-Item $zip).LastWriteTime.ToString("yyyy-MM-dd HH:mm")
+      $ts   = (Get-Item $zip).LastWriteTime.ToString('yyyy-MM-dd HH:mm')
 
-      $docs = Join-Path $RepoRoot "docs"
+      $docs = Join-Path $RepoRoot 'docs'
       if (-not (Test-Path $docs)) { New-Item -ItemType Directory -Path $docs | Out-Null }
-      $md   = Join-Path $docs "fluff_inventory.md"
-
+      $md   = Join-Path $docs 'fluff_inventory.md'
       if (-not (Test-Path $md)) {
         @(
-          "# Fluff Inventory",
-          "",
-          "### Build Snapshot",
-          "",
-          "- **Latest ZIP:** (none)",
-          "- **Last Hash:**",
-          "- **Last Updated:**",
-          ""
+          '# Fluff Inventory', ''
+          '### Build Snapshot', ''
+          '- **Latest ZIP:** (none)'
+          '- **Last Hash:**'
+          '- **Last Updated:**', ''
         ) | Set-Content $md -Encoding UTF8
       }
 
-      $relZip = ($zip -replace [regex]::Escape($RepoRoot + [System.IO.Path]::DirectorySeparatorChar), '') -replace '\\','/'
+      # Repo-relative path with forward slashes for Markdown
+      $zipFull  = (Resolve-Path $zip).Path
+      $rootFull = (Resolve-Path $RepoRoot).Path
+      $relZip   = $zipFull.Substring($rootFull.Length).TrimStart('\') -replace '\\','/'
 
       $block = @"
 ### Build Snapshot
 
-- **Latest ZIP:** `$relZip`
+- **Latest ZIP:** $relZip
 - **Last Hash:** $hash
 - **Last Updated:** $ts local
 "@
 
       $content = Get-Content $md -Raw
-      $pattern = "(?ms)^### Build Snapshot.*?(?=^#|`$)"
+      $pattern = '(?s)### Build Snapshot.*?(?=^\#\# |\Z)'
       if ($content -match $pattern) {
         $content = [regex]::Replace($content, $pattern, $block, 'Multiline')
       } else {
@@ -182,6 +181,11 @@ if (-not $env:SKIP_SNAPSHOT) {
       }
       Set-Content $md $content -Encoding UTF8
       Write-Host "Updated Build Snapshot in $md"
+    }
+  } catch {
+    Write-Warning "Could not update Build Snapshot: $($_.Exception.Message)"
+  }
+}
 
 $MostRecentDated = $null
 if ($DatedFiles.Count -ge 1) { $MostRecentDated = $DatedFiles[0] }

@@ -1,4 +1,4 @@
-﻿# Fluff Inventory
+# Fluff Inventory
 
 > Generated: 2025-08-31 22:03:08 +10:00
 
@@ -51,6 +51,6 @@ _None_
 ### Build Snapshot
 
 - **Latest ZIP:** dist/picture_books_ai_1_clean_latest.zip
-- **Last Hash:** 22266486E59D09E65FA5131F6AEAD82C1046FB5E8BABDDB489FBE31FABAF2D3B
-- **Last Updated:** 2025-08-31 22:03 local
+- **Last Hash:** DB96715C1BE8D5B759ACFB7854B288375428C2CFCB2D2860AA18084BE12D48FF
+- **Last Updated:** 2025-08-31 23:07 local
 
