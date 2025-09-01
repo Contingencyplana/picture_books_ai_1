@@ -5,59 +5,78 @@
 
 ---
 
-## 📚 Pages (Current Progress: 01–32 scaffolded — narrative TBD)
+## 📚 Pages (Pagestanzas)
 
 ### Pagestanza 1 (Pages 01–04)
+
 - Page 01: TBD — narrative to be added in Pass-2
 - Page 02: TBD — narrative to be added in Pass-2
 - Page 03: TBD — narrative to be added in Pass-2
 - Page 04: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 2 (Pages 05–08)
-- Page 05: TBD
-- Page 06: TBD
-- Page 07: TBD
-- Page 08: TBD
+
+- Page 05: TBD — narrative to be added in Pass-2
+- Page 06: TBD — narrative to be added in Pass-2
+- Page 07: TBD — narrative to be added in Pass-2
+- Page 08: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 3 (Pages 09–12)
-- Page 09: TBD
-- Page 10: TBD
-- Page 11: TBD
-- Page 12: TBD
+
+- Page 09: TBD — narrative to be added in Pass-2
+- Page 10: TBD — narrative to be added in Pass-2
+- Page 11: TBD — narrative to be added in Pass-2
+- Page 12: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 4 (Pages 13–16)
-- Page 13: TBD
-- Page 14: TBD
-- Page 15: TBD
-- Page 16: TBD
+
+- Page 13: TBD — narrative to be added in Pass-2
+- Page 14: TBD — narrative to be added in Pass-2
+- Page 15: TBD — narrative to be added in Pass-2
+- Page 16: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 5 (Pages 17–20)
-- Page 17: TBD
-- Page 18: TBD
-- Page 19: TBD
-- Page 20: TBD
+
+- Page 17: TBD — narrative to be added in Pass-2
+- Page 18: TBD — narrative to be added in Pass-2
+- Page 19: TBD — narrative to be added in Pass-2
+- Page 20: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 6 (Pages 21–24)
-- Page 21: TBD
-- Page 22: TBD
-- Page 23: TBD
-- Page 24: TBD
+
+- Page 21: TBD — narrative to be added in Pass-2
+- Page 22: TBD — narrative to be added in Pass-2
+- Page 23: TBD — narrative to be added in Pass-2
+- Page 24: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 7 (Pages 25–28)
-- Page 25: TBD
-- Page 26: TBD
-- Page 27: TBD
-- Page 28: TBD
+
+- Page 25: TBD — narrative to be added in Pass-2
+- Page 26: TBD — narrative to be added in Pass-2
+- Page 27: TBD — narrative to be added in Pass-2
+- Page 28: TBD — narrative to be added in Pass-2
 
 ### Pagestanza 8 (Pages 29–32)
-- Page 29: TBD
-- Page 30: TBD
-- Page 31: TBD
-- Page 32: TBD
+
+- Page 29: TBD — narrative to be added in Pass-2
+- Page 30: TBD — narrative to be added in Pass-2
+- Page 31: TBD — narrative to be added in Pass-2
+- Page 32: TBD — narrative to be added in Pass-2
 
 ---
 
-## 🔜 Next Up
-- **Pass-2 Narrative Alignment** — replace placeholders with story beats (curiosity/bridge motif).
-- **Pass-3 Code/Schema** — refine Code Task semantics and stub determinism.
-- **Pass-4 Polish (Optional)** — light cadence/narrative polish; reproducible builds.
+## � Pass Checklist (Book 4)
+
+- [x] Pass 1 — Scaffold (7-line contract on all pages)
+- [ ] Pass 2 — Narrative (bridge/kindness arc beats)
+- [ ] Pass 3 — Code/Schema (Code Task verbs + stub alignment)
+- [ ] Pass 4 — Validation/Play (lint, stub check, reproducible zips)
+
+---
+
+## ✅ Pass Checklist (Standard)
+
+- [x] Pass 1 — Scaffold
+- [ ] Pass 2 — Narrative
+- [ ] Pass 3 — Code/Schema
+- [ ] Pass 4 — Validation/Play
