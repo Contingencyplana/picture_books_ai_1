@@ -58,8 +58,18 @@
 ---
 
 ## 🔧 Pass Checklist (Template)
-- [x] Pass-1 — Scaffold (7-line contract on all pages)
-- [ ] Pass-2 — Narrative (replace TBD beats)
-- [ ] Pass-3 — Code/Schema (align stubs + Code Tasks)
-- [ ] Pass-4 — Validation/Play (lint, stub check, reproducible zips)
-- [ ] Pass-5 — Art v0.x (optional)
+- [x] Pass 1 — Scaffold (7-line contract on all pages)
+- [ ] Pass 2 — Narrative (replace TBD beats)
+- [ ] Pass 3 — Code/Schema (align stubs + Code Tasks)
+- [ ] Pass 4 — Validation/Play (lint, stub check, reproducible zips)
+- [ ] Pass 5 — Art v0.x (optional)
+
+---
+
+## ✅ Pass Checklist (Standard)
+
+- [x] Pass 1 — Scaffold
+- [ ] Pass 2 — Narrative
+- [ ] Pass 3 — Code/Schema
+- [ ] Pass 4 — Validation/Play
+
