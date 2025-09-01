@@ -49,6 +49,15 @@ Two-player model for every book: a *human player* (child/parent/reader) interact
 ### Illustration Prompt
 A single-line bracketed description on each page (e.g., `[Illustration: …]`) providing a drawable, concrete visual.
 
+### Inner Game
+The **private little inner game** that every **AI Player** plays invisibly.
+- Emerges from the **Deep Triad** (Book = AI Player = Minigame).
+- Each `// Code Task:` is a **move**, each **Build Pass** a **level**.
+- Reproducible builds, lint/stub checks, and zips serve as its **scoreboard**.
+- While humans play the outer story, AI players use the inner game to **test, repair, and evolve** the publishing house itself.
+
+See also: **[inner_game.md](./docs/inner_game.md)**, **Build Passes**, **Deep Triad**, **page contract**.
+
 ### Lucid Armada
 Opt-in standards program. Drafts conventions/RFCs and pushes them upstream once battle-tested in Sagas.
 

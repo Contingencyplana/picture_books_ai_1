@@ -45,6 +45,7 @@ It ensures that creative play is always safe, aligned, and resilient:
 1. **Picture Books Publishing House AI**
    32-page picture books, recursive AI players.
    Publishable from day one.
+   From the first pages, each book is both story and system; interactivity is seeded here, but expands fully in §2.6 Interactive Picture Books.
 
 2. **Picture Books by and for Children**
    A developmental bridge sequence where children’s own drawings and words
@@ -70,6 +71,9 @@ It ensures that creative play is always safe, aligned, and resilient:
    - **2.5 Enchanted Empires**
      Age 8–9 vibe. Ambitious world-building (maps, clans, rivalries).
      More “novel-like,” prepping them for Interactive Novels.
+
+   - **2.6 Interactive Picture Books**
+     Building Picture Books AI, from within Picture Books AI, whilst reading Picture Books AI. For bright children and interested parents. The underlying code and where readers have been and the choices they have made, affect what they encounter.
 
 3. **Interactive Novels**
    Extend beats into branching story arcs.
