@@ -25,6 +25,10 @@ The minimal cadence for moving a book from scaffold → publishable slice:
 - **Pass-6 — Export**: generate PDF/EPUB/web previews.
 - **Pass-7 — Gameplay**: map page code to interactive minigame nodes.
 
+### Building spaces
+The core creative output: picture book folders containing pages, stubs, `ai_player.json`, and supporting scripts/tests.
+See also: `six_space_types.md`.
+
 ### Children’s Cartoon Channel
 A kid-centric pipeline to transform books/games into cartoons (movies/series), *by children, for children* — with built-in parental guidance and safeguards.
 
@@ -36,6 +40,10 @@ A minimal, predictable Python stub that matches the Code Task exactly (no random
 
 ### Doctor Lucid
 Consent-first steward bot. Proposes changes, never pushes without explicit approval. Enforces safety, clarity, and contract adherence.
+
+### Fluffy spaces
+Non-essential, auto-generated, or transient clutter removed from clean zips (e.g., `.git/`, `.venv/`, `__pycache__/`, ghost folders).
+See also: `six_space_types.md`.
 
 ### Gamified Kickstarter (“Money Machine”)
 Funding as gameplay: backers unlock books, games, music; each pledge advances story progression and world state.
@@ -67,6 +75,10 @@ The interactive scaffold of a book: code tasks, responses, and gentle mechanics 
 ### Mirrorstanza
 A **design lens inside a Treasury**: the four Roadstanzas (Q1–Q4) are planned to **mirror or echo** one another thematically or mechanically. Not a separate deliverable or count unit—just a patterning device used in planning and review to keep the quartet-of-quartets cohesive.
 
+### Overarching spaces
+Cross-book truths and universal contracts that apply across the entire Treasury (e.g., `glossary.md`, `build_passes.md`, `phases_and_stages.md`).
+See also: `six_space_types.md`.
+
 ### page contract (7-line)
 Fixed per-page structure:
 1. H1 title
@@ -80,6 +92,14 @@ Enforced by `lint_pages.ps1` and validated by `tests/page_stub_check.py`.
 
 ### Pagestanza
 A group of four consecutive pages that form a micro-arc. Used for drafting rhythm and commit batching.
+
+### Planning spaces
+Structures for tracking work and sequencing: taskmaps, milestones, and roadmaps. Exists at both book-level and treasury-level.
+See also: `six_space_types.md`.
+
+### Regimenting spaces
+Rules and enforcement layers that keep the repo disciplined and reproducible (e.g., `.gitattributes`, pre-commit hooks, lint scripts).
+See also: `six_space_types.md`, `regimenting_spaces.md`.
 
 ### Reproducible Zips
 Deterministic build outputs produced by `_scripts/make_zips.ps1`, verified with SHA256, with a rotation policy of **latest + one timestamped**.
@@ -110,6 +130,9 @@ Keep exactly two clean artifacts in `dist/`: `…_latest.zip` and the most recen
 
 ### Valiant Citadel
 Parallel safeguard layer (security, alignment, parental controls, resilience, monitoring) protecting every stage of the roadmap. See **Parallel Safeguard** note in README.
+
+### Vision spaces
+High-level intent documents that define purpose, scope, and guiding philosophy (e.g., `grand_plan.md`, `rhyme_and_reason.md`).
 
 ---
 
