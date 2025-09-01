@@ -1,4 +1,10 @@
-* text=auto
-*.md  eol=lf
-*.json eol=lf
-*.ps1 eol=crlf
+# Default: normalize all text files to LF in repo
+* text=auto eol=lf
+
+# Markdown, JSON, Python, etc. → always LF
+*.md    text eol=lf
+*.json  text eol=lf
+*.py    text eol=lf
+
+# PowerShell → always CRLF
+*.ps1   text eol=crlf

@@ -20,7 +20,7 @@
 3. Story line 2 (optional or second line / may be blank early Pass-1).
 4. `// Code Task: func_name() → RESULT: "Stub."` (deterministic placeholder)
 5. `[python]` tag (no fenced block here for simplicity).
-6. Stub `def func_name():` returning `"Stub."` exactly (4-space indents, no tabs).
+6. Stub `def func_name():` returning `"Stub."` exactly (single return line; 4 spaces indent; no tabs; no docstring).
 7. `[Illustration: …]` ≤160 chars (placeholder allowed).
 
 All files UTF-8 + LF. No trailing spaces. Maintain deterministic stub until Pass-3 changes its semantics (then update Code Task line + return string together).
