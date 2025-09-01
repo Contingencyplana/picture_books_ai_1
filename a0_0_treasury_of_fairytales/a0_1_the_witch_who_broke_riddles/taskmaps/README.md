@@ -6,36 +6,41 @@ Book 2 explores riddles, puzzles, and broken patterns that demand careful listen
 ---
 
 ## 📖 Synopsis (WIP)
+
 A witch’s riddles scatter across a kingdom; each one broken, misleading, or incomplete.
 A child must learn to ask the right questions, gather fragments, and restore meaning.
 
 ---
 
 ## 🧭 Guidance
+
 - Each page = **micro-beat**: story line(s) + code task + illustration prompt.
-- Track progress in `main_taskmap.md` (pagestanzas).
-- Track checkboxes in `milestones.md`.
+- Track pagestanza progress in `main_taskmap.md`.
+- Track page + pass completion in `milestones.md`.
 - Update synopsis here as the book evolves.
 
 ---
 
 ## ✅ Current Status
-- **Pass-1 — Scaffold:** complete (32 pages present, stubs deterministic).
-- **Pass-2 — Narrative:** not yet started (TBD placeholders).
-- **Pass-3 — Code/Schema:** pending.
-- **Pass-4 — Validation/Play:** pending.
+
+- **Pass 1 — Scaffold:** complete (32 pages present, stubs deterministic).
+- **Pass 2 — Narrative:** not yet started (TBD placeholders).
+- **Pass 3 — Code/Schema:** pending.
+- **Pass 4 — Validation/Play:** pending.
 - Optional passes: Art, Export, Gameplay.
 
 ---
 
 ## 📂 Key Files
-- `ai_player.json` → defines this AI Player (id, title, path, pages, principles).
-- `taskmaps/main_taskmap.md` → sequential map of pages.
-- `taskmaps/milestones.md` → pagestanza + pass tracking.
-- Zips in `/dist/` → reproducible builds (`_clean_latest.zip` + one timestamped).
+
+- `ai_player.json` → defines this AI Player (id, title, path, pages, principles)
+- `taskmaps/main_taskmap.md` → pagestanzas + beats
+- `taskmaps/milestones.md` → page + pass tracking
+- Zips in `/dist/` → reproducible builds (`_clean_latest.zip` + one timestamped)
 
 ---
 
 ## 🔮 Next Steps
-- Begin **Pass-2 Narrative**: replace placeholders with riddle-arc beats.
-- Plan **Pass-3 Code/Schema** alignment once narrative stable.
+
+- Begin **Pass 2 Narrative**: replace placeholders with riddle-arc beats.
+- Plan **Pass 3 Code/Schema** alignment once narrative stable.
