@@ -5,5 +5,5 @@
 ## Build Snapshot
 
 - **Latest ZIP:** dist/picture_books_ai_1_clean_latest.zip
-- **Last Hash:** EAE65C80AA772B44807A9D85C2BAD93419271E94799C2F246E77BCABF5C06B57
-- **Last Updated:** 2025-09-01 16:00:20 local
+- **Last Hash:** 47D3ED6E34B3E1669DC7FF47FF356A6F2702F6F629E6A60C3F2C454F6D87082D
+- **Last Updated:** 2025-09-01 16:05:44 local
