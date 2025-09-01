@@ -1,26 +1,47 @@
-# Book 4 — Taskmaps (The Bridge of Kind Questions)
+# Taskmaps — Book 4: *The Bridge of Kind Questions*
 
-**Status:** Pass-1 STRUCTURE (scaffolding) • **Pages:** 32
-**Purpose:** Track Book 4 progress across build passes while mirroring code reality.
+**Purpose:** Track narrative beats, code subtasks, and milestones for this AI Player.
+Book 4 closes **Roadstanza 0 — Foundations**, carrying a theme of bridges, curiosity, and gentle questions.
 
 ---
 
-## PASS SCOPE
-- Pass-1: Generate all 32 page scaffolds (7-line contract, deterministic stubs returning "Stub.").
-- Pass-2: Replace placeholder story lines with cohesive narrative (curiosity & bridge motif).
-- Pass-3: Refine Code Task semantics + ensure deterministic stub alignment.
-- Pass-4 (Optional): Light polish (illustration phrasing, cadence) + reproducible build confirmation.
+## 📖 Synopsis (WIP)
+A child approaches a bridge made not of stone, but of questions.
+Each step forward requires asking — and listening kindly.
+Through inquiry, they discover the bridge carries not just themselves, but others.
 
-## CONTRACT REMINDERS
-- H1 `# Page NN`, blank line after.
-- 1–2 placeholder story lines (may be refined later).
-- `// Code Task: func_name() → RESULT: "Stub."`
-- `[python]` tag followed by stub: `def func_name():` returning "Stub." only.
-- Single `[Illustration: …]` ≤160 chars.
-- 4-space indent inside stub; no tabs; UTF-8 LF.
+---
 
-## SYNC NOTES
-- Do not introduce narrative polish during Pass-1; keep scope tight.
-- Deterministic stub values are frozen to "Stub." until Pass-3.
-- If contract drift occurs, fix immediately before proceeding.
+## 🧭 Guidance
+- Each page = **micro-beat**: story line(s) + code task + illustration prompt.
+- Group progress into 8 **Pagestanzas** of 4 pages each.
+- Track sequential beats in `main_taskmap.md`.
+- Record completion in `milestones.md`.
 
+---
+
+## ✅ Current Status
+- **Pass-1 — Scaffold:** complete (32 pages + stubs present).
+- **Pass-2 — Narrative:** pending (placeholders to be replaced with curiosity/bridge theme).
+- **Pass-3 — Code/Schema:** pending (refine Code Task verbs, align deterministic stubs).
+- **Pass-4 — Validation/Play:** pending.
+
+Optional future passes:
+- Pass-5 Art: motifs, palettes.
+- Pass-6 Export: preview formats.
+- Pass-7 Gameplay: interactive mapping.
+
+---
+
+## 📂 Key Files
+- `ai_player.json` → defines this AI Player (id, title, path, pages, principles).
+- `taskmaps/main_taskmap.md` → sequential map of pages (Pagestanzas).
+- `taskmaps/milestones.md` → Pagestanza + pass tracking.
+- Zips in `/dist/` → reproducible builds (`_clean_latest.zip` + one timestamped).
+
+---
+
+## 🔮 Next Steps
+- Fill Pagestanza placeholders during Pass-2.
+- Sync milestones checkboxes with narrative progress.
+- Keep reproducible build pipeline green.

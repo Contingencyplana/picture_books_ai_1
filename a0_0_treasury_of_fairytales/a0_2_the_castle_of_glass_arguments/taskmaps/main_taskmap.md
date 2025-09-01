@@ -1,29 +1,66 @@
-# Taskmap — Book 3 (The Castle of Glass Arguments)
+# Main Taskmap — Book 3: *The Castle of Glass Arguments*
 
-**Scope:** Track granular tasks for Book 3.
-**Status:** Pass-3 COMPLETE; Pass-4 OPTIONAL/TBD.
+**Purpose:** Organize narrative + subtasks into a sequential map.
+**Status:** Pass-1 COMPLETE (scaffold baseline). Narrative TBD in Pass-2.
 
 ---
 
-## CONTEXT
+## 📚 Pages (Pagestanzas)
 
-- All pages P01–P32 verified via `tests/page_stub_check.py`, `_scripts/lint_pages.ps1`, and `_scripts/make_zips.ps1`.
-- Deterministic 7‑line contract enforced (no tabs, 4-space indents).
-- P01–P32 contract-clean; lint/stub/build green; zips confirmed (two-zip rotation).
+### Pagestanza 1 (Pages 01–04)
+- Page 01: TBD
+- Page 02: TBD
+- Page 03: TBD
+- Page 04: TBD
 
-## PIPELINE PASSES
+### Pagestanza 2 (Pages 05–08)
+- Page 05: TBD
+- Page 06: TBD
+- Page 07: TBD
+- Page 08: TBD
 
-- Pass-1 Structure (DONE)
-- Pass-2 Narrative alignment (DONE)
-- Pass-3 Deterministic stubs & schema (DONE)
-- Pass-4 Reproducible zips + light polish (OPTIONAL/TBD)
-  - If undertaken: refresh two-zip rotation, log SHA256, update roadmap + release notes.
-  - Micro‑polish scope (optional): tighten illustration phrasing; trim any line >160 chars; cadence edits (maintain contract).
+### Pagestanza 3 (Pages 09–12)
+- Page 09: TBD
+- Page 10: TBD
+- Page 11: TBD
+- Page 12: TBD
 
-## OPTIONAL TASKS (Pass-4 Candidate)
+### Pagestanza 4 (Pages 13–16)
+- Page 13: TBD
+- Page 14: TBD
+- Page 15: TBD
+- Page 16: TBD
 
-- [ ] If Pass-4 scheduled: confirm two most recent ZIP hashes appended to `fluff_inventory.md`
-- [ ] If Pass-4 scheduled: release notes entry with build tag + primary ZIP SHA
-- [ ] If Pass-4 scheduled: final polish sweep (illustration length, spacing, trailing blanks)
-- [ ] If Pass-4 scheduled: regenerate zips post-polish & verify hashes stable
-- [ ] If Pass-4 executed: mark Pass-4 COMPLETE (then consider optional Art v0 later)
+### Pagestanza 5 (Pages 17–20)
+- Page 17: TBD
+- Page 18: TBD
+- Page 19: TBD
+- Page 20: TBD
+
+### Pagestanza 6 (Pages 21–24)
+- Page 21: TBD
+- Page 22: TBD
+- Page 23: TBD
+- Page 24: TBD
+
+### Pagestanza 7 (Pages 25–28)
+- Page 25: TBD
+- Page 26: TBD
+- Page 27: TBD
+- Page 28: TBD
+
+### Pagestanza 8 (Pages 29–32)
+- Page 29: TBD
+- Page 30: TBD
+- Page 31: TBD
+- Page 32: TBD
+
+---
+
+## 🔧 Pass Checklist (Book 3)
+- [x] Pass-1 — Scaffold (7-line contract on all pages)
+- [ ] Pass-2 — Narrative (replace TBD beats with glass-castle arc)
+- [ ] Pass-3 — Code/Schema (align stubs + Code Tasks)
+- [ ] Pass-4 — Validation/Play (lint, stub check, reproducible zips)
+- [ ] Pass-5 — Art v0.x (optional)
+

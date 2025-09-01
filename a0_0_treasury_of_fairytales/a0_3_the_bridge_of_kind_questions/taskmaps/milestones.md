@@ -1,19 +1,60 @@
-# Milestones — Book 4
+# Milestones — Book 4: *The Bridge of Kind Questions*
 
-- **2025-09-01** — Pass-1 STRUCTURE STARTED
-  - Created scaffolding files (README, ai_player.json, taskmaps, initial pages TBD as added).
+## Pagestanza 1 (Pages 01–04)
+- [x] Page 01
+- [x] Page 02
+- [x] Page 03
+- [x] Page 04
 
-- **TBD** — Pass-1 COMPLETE
-  - All 32 pages present, 7-line contract satisfied, stubs deterministic.
+## Pagestanza 2 (Pages 05–08)
+- [x] Page 05
+- [x] Page 06
+- [x] Page 07
+- [x] Page 08
 
-- **TBD** — Pass-2 Narrative Alignment
-  - Placeholder lines replaced with cohesive curiosity/bridge theme.
+## Pagestanza 3 (Pages 09–12)
+- [x] Page 09
+- [x] Page 10
+- [x] Page 11
+- [x] Page 12
 
-- **TBD** — Pass-3 Code/Schema
-  - Deterministic stub semantics refined; Code Task verbs meaningful.
+## Pagestanza 4 (Pages 13–16)
+- [x] Page 13
+- [x] Page 14
+- [x] Page 15
+- [x] Page 16
 
-- **OPTIONAL (TBD)** — Pass-4 Polish
-  - Light phrasing polish; reproducible build + hash snapshot update.
+## Pagestanza 5 (Pages 17–20)
+- [x] Page 17
+- [x] Page 18
+- [x] Page 19
+- [x] Page 20
 
-- **OPTIONAL** — Art Pass v0 (after any Pass-4)
+## Pagestanza 6 (Pages 21–24)
+- [x] Page 21
+- [x] Page 22
+- [x] Page 23
+- [x] Page 24
 
+## Pagestanza 7 (Pages 25–28)
+- [x] Page 25
+- [x] Page 26
+- [x] Page 27
+- [x] Page 28
+
+## Pagestanza 8 (Pages 29–32)
+- [x] Page 29
+- [x] Page 30
+- [x] Page 31
+- [x] Page 32
+
+---
+
+## Pass Checklist (Book 4)
+- [x] **Pass-1 — Scaffold:** 32 pages present; 7-line contract enforced; stubs deterministic.
+- [ ] **Pass-2 — Narrative:** Placeholder lines replaced with bridge/kindness motif.
+- [ ] **Pass-3 — Code/Schema:** Code Task verbs refined; stubs aligned.
+- [ ] **Pass-4 — Validation/Play:** Lint/stub clean; reproducible zips active.
+- [ ] (Opt) **Pass-5 Art v0:** Draft STYLE_NOTES.md for motifs/palettes.
+- [ ] (Opt) **Pass-6 Export:** Generate preview (PDF/EPUB).
+- [ ] (Opt) **Pass-7 Gameplay:** Map pages to interactive nodes.

@@ -1,13 +1,60 @@
-# Milestones — Book 3
+# Milestones: Book 3 – The Castle of Glass Arguments
 
-- **2025-09-01** — Pass-3 COMPLETE (P01–P32)
-  - Deterministic Python stubs; 4-space indents; `[python]` fences; 7-line contract.
-  - P01–P32 contract-clean; lint/stub/build green; two-zip rotation confirmed.
+---
 
-- **OPTIONAL (Pass-4 TBD)** — Reproducible zips + light polish (only if scheduled)
-  - Would ensure two most recent ZIP hashes logged to `fluff_inventory.md`.
-  - Would add release notes with tag + primary ZIP SHA.
-  - Optional polish: tighten illustration phrasing; micro cadence edits (no contract drift).
+## Pagestanza 1 (Pages 01–04)
+- [x] Page 01
+- [x] Page 02
+- [x] Page 03
+- [x] Page 04
 
-- **FUTURE (Optional)** — Art Pass v0 (if scheduled after any Pass-4)
+## Pagestanza 2 (Pages 05–08)
+- [x] Page 05
+- [x] Page 06
+- [x] Page 07
+- [x] Page 08
 
+## Pagestanza 3 (Pages 09–12)
+- [x] Page 09
+- [x] Page 10
+- [x] Page 11
+- [x] Page 12
+
+## Pagestanza 4 (Pages 13–16)
+- [x] Page 13
+- [x] Page 14
+- [x] Page 15
+- [x] Page 16
+
+## Pagestanza 5 (Pages 17–20)
+- [x] Page 17
+- [x] Page 18
+- [x] Page 19
+- [x] Page 20
+
+## Pagestanza 6 (Pages 21–24)
+- [x] Page 21
+- [x] Page 22
+- [x] Page 23
+- [x] Page 24
+
+## Pagestanza 7 (Pages 25–28)
+- [x] Page 25
+- [x] Page 26
+- [x] Page 27
+- [x] Page 28
+
+## Pagestanza 8 (Pages 29–32)
+- [x] Page 29
+- [x] Page 30
+- [x] Page 31
+- [x] Page 32
+
+---
+
+## Pass Checklist (Book 3)
+- [x] **Pass-1 — Scaffold:** 32 pages present; contract enforced.
+- [ ] **Pass-2 — Narrative:** TBD, add story beats.
+- [ ] **Pass-3 — Code/Schema:** refine stubs + tasks.
+- [ ] **Pass-4 — Validation/Play:** lint + stub check + reproducible zips.
+- [ ] **Pass-5 — Art v0.x:** optional polish.

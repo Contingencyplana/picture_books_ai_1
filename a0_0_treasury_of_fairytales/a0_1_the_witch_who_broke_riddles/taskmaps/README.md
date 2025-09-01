@@ -1,18 +1,41 @@
-<!-- C:\Users\Admin\picture_books_ai_1\a0_0_treasury_of_fairytales\a0_1_the_witch_who_broke_riddles\taskmaps\README.md -->
+# Taskmaps — Book 2: *The Witch Who Broke Riddles*
 
-# taskmaps — a0_1_the_witch_who_broke_riddles
+**Purpose:** Track narrative beats, code subtasks, and milestones for this AI Player.
+Book 2 explores riddles, puzzles, and broken patterns that demand careful listening.
 
-This folder tracks scaffolding tasks, milestones, and pass criteria for **a0_1**.
+---
 
-## Files
-- `main_taskmap.md` — working checklist (setup, narrative, art, AI player, validation, release)
-- `milestones.md` — milestone gates with acceptance criteria
-  (Per-page code tasks live inline within each page stub; no separate `code_tasks.md` maintained.)
+## 📖 Synopsis (WIP)
+A witch’s riddles scatter across a kingdom; each one broken, misleading, or incomplete.
+A child must learn to ask the right questions, gather fragments, and restore meaning.
 
-## Status (Pass Gates)
-- ✅ P1 Scaffold · ✅ P2 Narrative · ✅ P3 Schema · ✅ P4 Repro zips · ✅ P5 Art v0
+---
 
-## Conventions
-- Keep items checkbox-driven.
-- Reference this folder from roadmaps and build passes.
-- Green criteria: lint clean, stubs ↔ code tasks, schema-valid JSON, reproducible zips.
+## 🧭 Guidance
+- Each page = **micro-beat**: story line(s) + code task + illustration prompt.
+- Track progress in `main_taskmap.md` (pagestanzas).
+- Track checkboxes in `milestones.md`.
+- Update synopsis here as the book evolves.
+
+---
+
+## ✅ Current Status
+- **Pass-1 — Scaffold:** complete (32 pages present, stubs deterministic).
+- **Pass-2 — Narrative:** not yet started (TBD placeholders).
+- **Pass-3 — Code/Schema:** pending.
+- **Pass-4 — Validation/Play:** pending.
+- Optional passes: Art, Export, Gameplay.
+
+---
+
+## 📂 Key Files
+- `ai_player.json` → defines this AI Player (id, title, path, pages, principles).
+- `taskmaps/main_taskmap.md` → sequential map of pages.
+- `taskmaps/milestones.md` → pagestanza + pass tracking.
+- Zips in `/dist/` → reproducible builds (`_clean_latest.zip` + one timestamped).
+
+---
+
+## 🔮 Next Steps
+- Begin **Pass-2 Narrative**: replace placeholders with riddle-arc beats.
+- Plan **Pass-3 Code/Schema** alignment once narrative stable.

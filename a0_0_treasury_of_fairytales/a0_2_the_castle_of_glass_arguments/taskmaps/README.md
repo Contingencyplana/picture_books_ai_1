@@ -1,21 +1,41 @@
-# Book 3 — Taskmaps (The Castle of Glass Arguments)
+# Taskmaps — Book 3: *The Castle of Glass Arguments*
 
-**Status:** Pass-3 COMPLETE; Pass-4 OPTIONAL/TBD • **Owner:** Mark R. Gillam • **Last updated:** 2025-09-01
-**Purpose:** Planning and audit trail for Book 3 work. Mirrors code reality (pages, tests, zips).
+**Purpose:** Track narrative beats, code subtasks, and milestones for this AI Player.
+Book 3 explores fragile arguments and reflections — glass-like logic that can shatter under pressure.
 
 ---
 
-## CONTEXT
+## 📖 Synopsis (WIP)
+In a castle made of glass, every argument echoes and refracts.
+The child learns that brittle logic breaks, but questions asked with care can reveal clarity.
 
-- Pages (P01–P32) conform to the **7-line page contract**:
-  - H1 page title; 1–2 story lines; `// Code Task: …`; `[python]` deterministic stub (4-space indents, no tabs); single `[Illustration: …]` ≤160 chars; UTF-8 + LF; one blank after H1.
-- P01–P32 contract-clean; lint/stub/build green; zips confirmed (two-zip rotation).
+---
 
-## NEXT (Pass-4 Optional/TBD)
+## 🧭 Guidance
+- Each page = **micro-beat**: story line(s) + code task + illustration prompt.
+- Track progress in `main_taskmap.md` (pagestanzas).
+- Track checkboxes in `milestones.md`.
+- Update synopsis here as the book evolves.
 
-- If scheduled: light polish (illustration phrasing, cadence) without breaking contract.
-- If executed: verify latest two ZIP hashes logged (`fluff_inventory.md`), add release notes entry/tag, confirm reproducible hash stability.
+---
 
-## UPCOMING (Optional)
+## ✅ Current Status
+- **Pass-1 — Scaffold:** complete (32 pages present, stubs deterministic).
+- **Pass-2 — Narrative:** not yet started (TBD placeholders).
+- **Pass-3 — Code/Schema:** pending.
+- **Pass-4 — Validation/Play:** pending.
+- Optional passes: Art, Export, Gameplay.
 
-- Art Pass v0 (style notes + alt-text guide) — only after any Pass-4 polish.
+---
+
+## 📂 Key Files
+- `ai_player.json` → defines this AI Player (id, title, path, pages, principles).
+- `taskmaps/main_taskmap.md` → sequential map of pages.
+- `taskmaps/milestones.md` → pagestanza + pass tracking.
+- Zips in `/dist/` → reproducible builds (`_clean_latest.zip` + one timestamped).
+
+---
+
+## 🔮 Next Steps
+- Begin **Pass-2 Narrative**: replace placeholders with glass-castle arc beats.
+- Plan **Pass-3 Code/Schema** alignment once narrative stable.

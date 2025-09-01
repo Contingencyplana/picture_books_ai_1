@@ -1,37 +1,65 @@
-# Main Taskmap — {{BOOK_TITLE}}
+# Main Taskmap — *Template Picture Book*
 
-**Status:** Pass-1 STRUCTURE (template)
+**Purpose:** Scaffold new books by pagestanza (groups of 4 pages).
+**Status:** Pass-1 COMPLETE (scaffold baseline). Replace “TBD” during Pass-2+.
 
 ---
 
-## OBJECTIVES
+## 📚 Pages (Pagestanzas)
 
-- Define core learning / emotional arc.
-- Maintain 7-line contract across all pages.
+### Pagestanza 1 (Pages 01–04)
+- Page 01: TBD
+- Page 02: TBD
+- Page 03: TBD
+- Page 04: TBD
 
-## CONSTRAINTS
+### Pagestanza 2 (Pages 05–08)
+- Page 05: TBD
+- Page 06: TBD
+- Page 07: TBD
+- Page 08: TBD
 
-- 32 pages; deterministic stub per page returning "Stub." until Pass-3.
-- Illustration prompt ≤160 chars.
+### Pagestanza 3 (Pages 09–12)
+- Page 09: TBD
+- Page 10: TBD
+- Page 11: TBD
+- Page 12: TBD
 
-## PASS CHECKLIST
+### Pagestanza 4 (Pages 13–16)
+- Page 13: TBD
+- Page 14: TBD
+- Page 15: TBD
+- Page 16: TBD
 
-- [ ] Pass-1: All page files exist + contract validated.
-- [ ] Pass-2: Narrative beats replace placeholders.
-- [ ] Pass-3: Code Task semantics refined (function names meaningful).
-- [ ] Pass-4 (Optional): Polish + reproducible build.
+### Pagestanza 5 (Pages 17–20)
+- Page 17: TBD
+- Page 18: TBD
+- Page 19: TBD
+- Page 20: TBD
 
-## BEAT PLAN
+### Pagestanza 6 (Pages 21–24)
+- Page 21: TBD
+- Page 22: TBD
+- Page 23: TBD
+- Page 24: TBD
 
-- Each `pageNN.md` acts as a micro-task.
-- Ensure forward/backward continuity tags (optional) in Pass-2.
+### Pagestanza 7 (Pages 25–28)
+- Page 25: TBD
+- Page 26: TBD
+- Page 27: TBD
+- Page 28: TBD
 
-## OPEN QUESTIONS
+### Pagestanza 8 (Pages 29–32)
+- Page 29: TBD
+- Page 30: TBD
+- Page 31: TBD
+- Page 32: TBD
 
-- Core puzzle or learning arc?
-- How do illustration + code reinforce transformation?
+---
 
-## NOTES
-
-- Update Code Task & stub return together when leaving "Stub." semantics.
-- Avoid over-formatting early; optimize clarity.
+## 🔧 Pass Checklist (Template)
+- [x] Pass-1 — Scaffold (7-line contract on all pages)
+- [ ] Pass-2 — Narrative (replace TBD beats)
+- [ ] Pass-3 — Code/Schema (align stubs + Code Tasks)
+- [ ] Pass-4 — Validation/Play (lint, stub check, reproducible zips)
+- [ ] Pass-5 — Art v0.x (optional)

@@ -1,35 +1,60 @@
-<!-- C:\Users\Admin\picture_books_ai_1\a0_0_treasury_of_fairytales\a0_1_the_witch_who_broke_riddles\taskmaps\milestones.md -->
+# Milestones: Book 2 – The Witch Who Broke Riddles
 
-# Milestones — a0_1_the_witch_who_broke_riddles
+---
 
-## M1 — Scaffold in place
-**Includes:** README, ai_player.json (stub), taskmaps
-**Accept:** Files exist; lint clean
+## Pagestanza 1 (Pages 01–04)
+- [x] Page 01
+- [x] Page 02
+- [x] Page 03
+- [x] Page 04
 
-## M2 — Story beats locked
-**Includes:** 32-page outline; tone & themes final
-**Accept:** Review with “no child left out” principle
+## Pagestanza 2 (Pages 05–08)
+- [x] Page 05
+- [x] Page 06
+- [x] Page 07
+- [x] Page 08
 
-## M3 — AI Player finalized
-**Includes:** core_loop verbs; safety notes; schema-required fields filled
-**Accept:** Schema validation passes
+## Pagestanza 3 (Pages 09–12)
+- [x] Page 09
+- [x] Page 10
+- [x] Page 11
+- [x] Page 12
 
-## M4 — Art direction & thumbnails
-**Includes:** motifs, palette, page thumbnails
-**Accept:** Coherent visual rhythm & accessibility checks
+## Pagestanza 4 (Pages 13–16)
+- [x] Page 13
+- [x] Page 14
+- [x] Page 15
+- [x] Page 16
 
-## M5 — Green pipeline
-**Includes:** all passes green; reproducible zips
-**Accept:** Build log shows two-file policy; hashes documented
+## Pagestanza 5 (Pages 17–20)
+- [x] Page 17
+- [x] Page 18
+- [x] Page 19
+- [x] Page 20
 
-## Pagestanza Progress (check all per group)
-- **Pages 01–04**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 05–08**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 09–12**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 13–16**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 17–20**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 21–24**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 25–28**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
-- **Pages 29–32**: [x] Story lines · [x] // Code Task · [x] [Illustration:] · [x] Alt-text drafted · [x] Review
+## Pagestanza 6 (Pages 21–24)
+- [x] Page 21
+- [x] Page 22
+- [x] Page 23
+- [x] Page 24
 
-> **Build snapshot:** After each release build, append the latest ZIP + SHA256 to `fluff_inventory.md` (don’t duplicate hashes here).
+## Pagestanza 7 (Pages 25–28)
+- [x] Page 25
+- [x] Page 26
+- [x] Page 27
+- [x] Page 28
+
+## Pagestanza 8 (Pages 29–32)
+- [x] Page 29
+- [x] Page 30
+- [x] Page 31
+- [x] Page 32
+
+---
+
+## Pass Checklist (Book 2)
+- [x] **Pass-1 — Scaffold:** 32 pages present; contract enforced.
+- [ ] **Pass-2 — Narrative:** TBD, add story beats.
+- [ ] **Pass-3 — Code/Schema:** refine stubs + tasks.
+- [ ] **Pass-4 — Validation/Play:** lint + stub check + reproducible zips.
+- [ ] **Pass-5 — Art v0.x:** optional polish.

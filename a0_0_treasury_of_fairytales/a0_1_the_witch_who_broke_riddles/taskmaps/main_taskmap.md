@@ -1,33 +1,65 @@
-<!-- C:\Users\Admin\picture_books_ai_1\a0_0_treasury_of_fairytales\a0_1_the_witch_who_broke_riddles\taskmaps\main_taskmap.md -->
+# Main Taskmap — Book 2: *The Witch Who Broke Riddles*
 
-# Main Taskmap — a0_1_the_witch_who_broke_riddles
+**Purpose:** Organize narrative + subtasks into a sequential map.
+**Status:** Pass-1 COMPLETE (scaffold baseline). Narrative TBD in Pass-2.
 
-## Setup
-- [x] Create `README.md` (purpose, logline, beats)
-- [x] Add `ai_player.json` (stub now; finalized for schema pass)
-- [x] Add `taskmaps/` stubs (this file + milestones)
+---
 
-## Narrative & beats
-- [x] Lock 32-page beats (first pass complete in README)
-- [x] Write page micro-prompts (P03–P32)
-- [x] Draft back-pocket game (P29) and grown-ups note (P30)
+## 📚 Pages (Pagestanzas)
 
-## Art direction
-- [x] Define palette & motifs (witch, knots, question-flowers)
-- [x] Page-by-page composition roughs (thumbnails)
+### Pagestanza 1 (Pages 01–04)
+- Page 01: TBD
+- Page 02: TBD
+- Page 03: TBD
+- Page 04: TBD
 
-## AI Player specifics
-- [x] Finalize `player.core_loop` verbs & transitions
-- [x] Add any schema-required fields (versioning, constraints)
-- [x] Safety notes align with Valiant Citadel
+### Pagestanza 2 (Pages 05–08)
+- Page 05: TBD
+- Page 06: TBD
+- Page 07: TBD
+- Page 08: TBD
 
-## Validation passes
-- [x] Pass 1: lint / structure
-- [x] Pass 2: stub ↔ code tasks
-- [x] Pass 3: schema-valid JSON
-- [x] Pass 4: reproducible zips
-- [x] Pass 5: Art Pass v0 (STYLE_NOTES + ALT_TEXT_GUIDE)
+### Pagestanza 3 (Pages 09–12)
+- Page 09: TBD
+- Page 10: TBD
+- Page 11: TBD
+- Page 12: TBD
 
-## Release
-- [x] Roadmap links updated
-- [x] `dist` refreshed (two-file policy verified)
+### Pagestanza 4 (Pages 13–16)
+- Page 13: TBD
+- Page 14: TBD
+- Page 15: TBD
+- Page 16: TBD
+
+### Pagestanza 5 (Pages 17–20)
+- Page 17: TBD
+- Page 18: TBD
+- Page 19: TBD
+- Page 20: TBD
+
+### Pagestanza 6 (Pages 21–24)
+- Page 21: TBD
+- Page 22: TBD
+- Page 23: TBD
+- Page 24: TBD
+
+### Pagestanza 7 (Pages 25–28)
+- Page 25: TBD
+- Page 26: TBD
+- Page 27: TBD
+- Page 28: TBD
+
+### Pagestanza 8 (Pages 29–32)
+- Page 29: TBD
+- Page 30: TBD
+- Page 31: TBD
+- Page 32: TBD
+
+---
+
+## 🔧 Pass Checklist (Book 2)
+- [x] Pass-1 — Scaffold (7-line contract on all pages)
+- [ ] Pass-2 — Narrative (replace TBD beats with riddle-themed arc)
+- [ ] Pass-3 — Code/Schema (align stubs + Code Tasks)
+- [ ] Pass-4 — Validation/Play (lint, stub check, reproducible zips)
+- [ ] Pass-5 — Art v0.x (optional)
