@@ -1,0 +1,12 @@
+{
+  "$schema": "_schemas/ai_player.schema.json",
+  "id": "a0_3_the_bridge_of_kind_questions",
+  "title": "The Bridge of Kind Questions",
+  "path": "a0_0_treasury_of_fairytales/a0_3_the_bridge_of_kind_questions",
+  "pages": 32,
+  "principles": [
+    "Every question builds trust before seeking clarity.",
+    "Curiosity is gentle, specific, and emotionally aware.",
+    "No question is a trap; each is a plank toward understanding."
+  ]
+}
