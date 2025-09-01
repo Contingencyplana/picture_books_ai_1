@@ -24,7 +24,7 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 - **CRC** — *Contract, Reproducibility, Consistency* (shorthand for our build guarantees).
 - **CRLF** — Windows newline (`\r\n`); used in `.ps1` while repo targets LF for Markdown/text.
 - **CSR** — *Checksums & Size Review* (the quick SHA256 + MB scan after zips).
-- **CT** — *Code Task* ID (CT-01..CT-32) defined in `taskmaps/code_tasks.md`.
+- **CT** — *Code Task* (implicit ID CT-01..CT-32 mapped by page number; defined inline via each page’s single `// Code Task:` line — no separate `code_tasks.md`).
 
 ## D
 
@@ -51,7 +51,7 @@ Acronyms used across **Picture Books Publishing House AI** and the broader Creat
 
 ## P
 
-- **Pass N** — One of the build passes (Scaffold, Narrative, Code, Validation/Play).
+- **Pass N** — One of the build passes (P1 Scaffold, P2 Narrative, P3 Code/Schema, P4 Repro/Validation, (Opt) P5 Art v0, etc. (Schema)).
 - **PBP** — *Picture Book Page* (one `pageNN.md`).
 - **PNN** — Page shorthand used in docs/commits (e.g., P03–P10).
 - **PS** — PowerShell script.

@@ -7,14 +7,10 @@ This folder tracks scaffolding tasks, milestones, and pass criteria for **a0_1**
 ## Files
 - `main_taskmap.md` — working checklist (setup, narrative, art, AI player, validation, release)
 - `milestones.md` — milestone gates with acceptance criteria
-- `code_tasks.md` — CT-01..CT-32 task definitions and acceptance checks
+  (Per-page code tasks live inline within each page stub; no separate `code_tasks.md` maintained.)
 
 ## Status (Pass Gates)
 - ✅ P1 Scaffold · ✅ P2 Narrative · ✅ P3 Schema · ✅ P4 Repro zips · ✅ P5 Art v0
-
-## Files
-- `main_taskmap.md` — working checklist for setup, narrative, art, AI player, validation, release
-- `milestones.md` — milestone gates with acceptance criteria
 
 ## Conventions
 - Keep items checkbox-driven.

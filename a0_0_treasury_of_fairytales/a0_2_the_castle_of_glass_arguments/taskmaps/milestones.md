@@ -1,20 +1,13 @@
-# Milestones — Book 3: The Castle of Glass Arguments
+# Milestones — Book 3
 
-## Pagestanza Tracker
+- **2025-09-01** — Pass-3 COMPLETE (P01–P32)
+  - Deterministic Python stubs; 4-space indents; `[python]` fences; 7-line contract.
+  - Tests + lint + build green; two-zip rotation updated.
 
-- [ ] Pages 01–04
-- [ ] Pages 05–08
-- [ ] Pages 09–12
-- [ ] Pages 13–16
-- [ ] Pages 17–20
-- [ ] Pages 21–24
-- [ ] Pages 25–28
-- [ ] Pages 29–32
+- **NEXT (Pass-4 IN PROGRESS)** — Reproducible zips + light polish
+  - Ensure two most recent ZIP hashes logged to `fluff_inventory.md`.
+  - Update release notes with tag + primary ZIP SHA.
+  - Optional: tighten illustration phrasing; micro cadence edits (no contract drift).
 
-## Release Checklist
+- **FUTURE (Optional)** — Art Pass v0 (if scheduled after Pass-4)
 
-- [ ] All pages drafted
-- [ ] All code tasks mapped
-- [ ] All stubs pass lint/stub checks
-- [ ] Art Pass v0 complete
-- [ ] Export pipeline scaffolded

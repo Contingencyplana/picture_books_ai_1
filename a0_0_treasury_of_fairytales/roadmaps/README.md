@@ -20,7 +20,9 @@ They differ from taskmaps, which track progress inside a single picture book.
 ## 📚 Current Status
 
 - **Roadstanza 0 — Foundations**
-  - Book 1 (*The Loop That Wanted to Close*) is complete through **Pass 4 (Validation / Play)**.
+  - Book 1 (*The Loop That Wanted to Close*) is complete through **Pass 4 (Validation / Play)** (optional Art pass still open).
+  - Book 2 (*The Witch who Broke Riddles*) is complete through **Pass 5 (Art v0.1)**.
+  - Book 3 (*The Castle of Glass Arguments*) is complete through **Pass 3 (stubs P01–P32 contract-complete, lint/stub/build checks green)**; Pass 4 in progress.
   - Stable reproducible build process: lint + stub check + zip rotation (latest + one timestamped), SHA256 checksums verified.
   - Optional passes (Art, Export, Gameplay) remain available.
 

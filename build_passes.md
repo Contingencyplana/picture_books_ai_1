@@ -6,23 +6,24 @@
 
 ## 📚 Core Passes (Minimum 4)
 
-**Pass 1 — Scaffold**
+### Pass 1 — Scaffold
+
 - Create folder and 32 pages (`page01.md` … `page32.md`) via `_scripts/new_book.ps1` or template.
 - Add `README.md`, `ai_player.json` (validates), and stubs under `taskmaps/`.
 - Linter should pass for presence/structure.
 
-**Pass 2 — Narrative**
+### Pass 2 — Narrative
+
 - For *every page*, add:
   1) 1–2 story lines (present-tense micro-beats)
   2) `// Code Task: …` (commented, pseudo-code per Page Contract)
   3) `[Illustration: …]` (clear visual prompt)
-- If using a tasks file, mirror **Book 1**:
-  - `taskmaps/code_tasks.md` with headings **`## CT-XX — <title>`** (two-digit IDs, CT-01..CT-32).
-  - In each page, keep **exactly one** task tag and keep casing consistent.
-    - Preferred (Book-1 compatible): use only the existing `// Code Task:` line.
-    - Add a separate `// Code Task ID: a0_1-CT-XX` line **only if your checker requires it**—and don’t mix conventions within a book.
+- Code Tasks are defined inline only (no separate `code_tasks.md`).
+  - Keep exactly one `// Code Task:` line per page (consistent casing).
+  - If a checker later requires IDs, adopt a uniform second line format: `// Code Task ID: <book-slug>-CT-XX` (avoid unless needed).
 
-**Pass 3 — Code (Executable Stubs)**
+### Pass 3 — Code/Schema (Executable Stubs)
+
 - Keep the `// Code Task:` comment (for clarity).
 - Add a tiny real code stub *beneath* the comment (language TBD; Python recommended later).
 - (Optional) add a micro-test or validation note.
@@ -34,7 +35,8 @@ def attempt_close(loop):
     return "Fragmented"
 ```
 
-## Pass 4 — Validation / Play
+### Pass 4 — Validation / Play
+
 - Run `python tests/page_stub_check.py` → all stubs must execute and match their `// Code Task` expectations.
 - Run `pwsh _scripts/lint_pages.ps1 -BookPath <book>` → all pages must pass lint (titles, tasks, illustrations).
 - Ensure `ai_player.json` exists at the book root and validates against `_schemas/ai_player.schema.json`.
@@ -55,7 +57,9 @@ def attempt_close(loop):
 ---
 
 ## 🤖 AI Player JSON
+
 Each book must contain an `ai_player.json` at its root, validating against `_schemas/ai_player.schema.json` and defining:
+
 - **id**: unique string, e.g. `"a0_1_the_witch_who_broke_riddles"`
 - **title**: human-readable book title
 - **path**: relative folder path
@@ -66,22 +70,27 @@ Each book must contain an `ai_player.json` at its root, validating against `_sch
 ---
 
 ## 🎨 Optional Passes
-**Pass 5 — Art Pass v0**
+
+### Pass 5 — Art Pass v0
+
 - Tighten illustration prompts; draft `art/STYLE_NOTES.md` (motifs, palettes).
 
-**Pass 6 — Export Pass**
+### Pass 6 — Export Pass
+
 - Generate PDF/EPUB/web preview (pipeline TBD).
 - Place outputs in `a0_0_treasury_of_fairytales/exports/`.
 
-**Pass 7 — Gameplay Pass (Later)**
+### Pass 7 — Gameplay Pass (Later)
+
 - Map page code to interactive minigame nodes (design TBD).
 
 ---
 
 ## ✅ Per-Book Checklist
+
 - [ ] **P1 Scaffold:** 32 pages present; linter runs.
 - [ ] **P2 Narrative:** Each page has story + `// Code Task:` + `[Illustration: …]`.
-- [ ] **P3 Code:** Executable stubs exist (where applicable).
+- [ ] **P3 Code/Schema:** Executable stubs + schema-valid JSON.
 - [ ] **P4 Validation:** Linter + schema green; **reproducible hash** verified; zip policy enforced; **Build snapshot** recorded.
 - [ ] (Opt) **P5 Art:** STYLE_NOTES; prompts consistent.
 - [ ] (Opt) **P6 Export:** Preview generated to `exports/`.
@@ -89,6 +98,7 @@ Each book must contain an `ai_player.json` at its root, validating against `_sch
 ---
 
 ## 🧱 Page Contract (reminder)
+
 Each `pageNN.md` must follow this exact shape:
 
 ```markdownlint
@@ -101,7 +111,8 @@ Each `pageNN.md` must follow this exact shape:
 [Illustration: …]
 ```
 
-### Rules (strict):
+### Rules (strict)
+
 1. **Header:** `# Page NN` where `NN` is zero-padded (01–32) and matches the filename (`pageNN.md`).
 2. **Story lines:** 1–2 lines, present-tense, ≤ 120 chars each; no trailing spaces.
 3. **Code Task line:**
@@ -118,7 +129,8 @@ Each `pageNN.md` must follow this exact shape:
 6. **Typography:** Curly quotes OK; en/em dashes OK. Prefer consistent punctuation across the book.
 7. **Do not** add extra headings, links, or code blocks inside the pages at this stage.
 
-### Lint expectations (regex-level):
+### Lint expectations (regex-level)
+
 - Header (01–32, zero-padded):
   `^#\s*Page\s*(0[1-9]|[12]\d|3[0-2])$`
 - Code Task (accepts `→` or `->`):
@@ -128,7 +140,8 @@ Each `pageNN.md` must follow this exact shape:
 - (If using a separate ID tag) Code Task ID:
   `^//\s*Code Task ID:\s*[a-z0-9_-]+-CT-\d{2}\s*$`
 
-### Naming & location:
+### Naming & location
+
 - Filenames: `page01.md` … `page32.md` inside the book folder
   `a0_0_treasury_of_fairytales/a0_1_the_witch_who_broke_riddles/`
 - Do **not** prefix page files with stanza codes (`a0_0_…`). Keep those only for folders.
