@@ -23,7 +23,7 @@
 |---|-------------------------------------------------|---------------------------------------|-----------------------|---------------|
 | 1 | `a0_0_the_loop_that_wanted_to_close`            | The Loop that Wanted to Close         | **Pass-4 COMPLETE**   | Optional Art pass open |
 | 2 | `a0_1_the_witch_who_broke_riddles`              | The Witch Who Broke Riddles           | **Pass-5 (Art v0.1)** | P1–P5 baseline complete |
-| 3 | `a0_2_the_castle_of_glass_arguments`            | The Castle of Glass Arguments         | **Pass-3 COMPLETE**   | P01–P32 contract-clean; Pass-4 (repro zips) in progress |
+| 3 | `a0_2_the_castle_of_glass_arguments`            | The Castle of Glass Arguments         | **Pass-3 COMPLETE**   | P01–P32 contract-clean; lint/stub/build green; zips confirmed; Pass-4 optional/TBD |
 | 4 | `a0_3_*`                                        | Book 4                                | TBD                   |               |
 | 5 | `a0_4_*`                                        | Book 5                                | TBD                   |               |
 | 6 | `a0_5_*`                                        | Book 6                                | TBD                   |               |
@@ -39,5 +39,6 @@
 |16 | `a1_5_*`                                        | Book 16                               | TBD                   |               |
 
 **Next series actions**
-1) Roll Book 3 through **Pass-4 (P01–P32)**.
-2) Add release-notes entry + (optional) tag for “Book 3 Pass-4 complete”.
+
+1) Initiate Book 4 scaffold.
+2) (Optional) Schedule Pass-4 polish for Book 3 if needed.
