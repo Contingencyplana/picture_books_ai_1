@@ -1,11 +1,10 @@
 # Page 01
 
-A soft mist rests over the first plank.
-A gentle question wonders if you're ready.
+The first misty plank waits; you ask, "May I cross kindly?"
+The bridge warms, answering with a soft, yes-like glow.
 
-// Code Task: bridge_q_p01() → RESULT: "Stub."
+// Code Task: bk4_p01_invite() → RESULT: "Stub."
 [python]
-def bridge_q_p01():
-    """Return the deterministic placeholder value for Page 01."""
+def bk4_p01_invite():
     return "Stub."
-[Illustration: First glowing plank of a bridge emerging from fog, inviting and calm.]
+[Illustration: Single misty plank hovering, faint warm glow brightening at a child's polite question.]

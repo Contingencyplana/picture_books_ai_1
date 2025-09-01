@@ -1,11 +1,10 @@
 # Page 03
 
-A quiet question asks: What would make this safer?
-You feel the plank steady beneath your feet.
+You wonder aloud, "What helps everyone feel safe here?"
+A third plank locks firm, kindness shaping its fit.
 
-// Code Task: bridge_q_p03() → RESULT: "Stub."
+// Code Task: bk4_p03_steady() → RESULT: "Stub."
 [python]
-def bridge_q_p03():
-    """Return the deterministic placeholder value for Page 03."""
+def bk4_p03_steady():
     return "Stub."
-[Illustration: Third plank settling into place, runes for listening etched faintly.]
+[Illustration: Third plank clicks in snugly, soft runes glowing for safety and care.]

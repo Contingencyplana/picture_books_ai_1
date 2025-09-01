@@ -1,11 +1,10 @@
 # Page 02
 
-A second plank glows when you breathe slowly.
-The bridge listens for kindness in silence.
+You breathe in slow, asking, "How can I listen better?"
+A second plank settles, tuned to your quiet pause.
 
-// Code Task: bridge_q_p02() → RESULT: "Stub."
+// Code Task: bk4_p02_listen() → RESULT: "Stub."
 [python]
-def bridge_q_p02():
-    """Return the deterministic placeholder value for Page 02."""
+def bk4_p02_listen():
     return "Stub."
-[Illustration: Two planks now, soft light pulsing with a child's calm breath.]
+[Illustration: Two joined planks, light gently syncing with a child's slow breathing and attentive posture.]

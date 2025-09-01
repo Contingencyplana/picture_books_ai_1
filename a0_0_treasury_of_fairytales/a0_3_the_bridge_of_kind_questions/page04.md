@@ -1,11 +1,10 @@
 # Page 04
 
-You wonder: Who else needs to feel welcome?
-The question lays a steady fourth plank.
+You ask, "Who might still be waiting to join us?"
+A fourth plank extends, widening space for more feet.
 
-// Code Task: bridge_q_p04() → RESULT: "Stub."
+// Code Task: bk4_p04_welcome() → RESULT: "Stub."
 [python]
-def bridge_q_p04():
-    """Return the deterministic placeholder value for Page 04."""
+def bk4_p04_welcome():
     return "Stub."
-[Illustration: Fourth plank extends toward a distant shore, warm glow widening.]
+[Illustration: Fourth plank lengthens toward a hazy shore, extra room glowing for future friends.]
