@@ -1,10 +1,11 @@
 {
-  "id": "{{TREASURY_ID}}.{{BOOK_ID}}",
+  "id": "{{BOOK_ID}}",
   "title": "{{BOOK_TITLE}}",
-  "age_band": "5-8",
-  "voice": "warm, whimsical, lightly puzzling",
+  "path": "a0_0_treasury_of_fairytales/{{BOOK_ID}}",
   "pages": 32,
-  "style_tags": ["template-style"],
-  "safety": {"rating":"G","violence":"none","fear":"gentle"},
-  "checks": ["32_files", "3_paragraphs_per_page", "has_illustration_prompt", "has_code_task"]
+  "principles": [
+    "Emotional safety first.",
+    "Curiosity over speed.",
+    "Clarity with kindness."
+  ]
 }

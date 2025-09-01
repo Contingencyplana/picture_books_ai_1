@@ -1,32 +1,8 @@
-[ ] page01.md — (beat title)
-[ ] page02.md — (beat title)
-[ ] page03.md — (beat title)
-[ ] page04.md — (beat title)
-[ ] page05.md — (beat title)
-[ ] page06.md — (beat title)
-[ ] page07.md — (beat title)
-[ ] page08.md — (beat title)
-[ ] page09.md — (beat title)
-[ ] page10.md — (beat title)
-[ ] page11.md — (beat title)
-[ ] page12.md — (beat title)
-[ ] page13.md — (beat title)
-[ ] page14.md — (beat title)
-[ ] page15.md — (beat title)
-[ ] page16.md — (beat title)
-[ ] page17.md — (beat title)
-[ ] page18.md — (beat title)
-[ ] page19.md — (beat title)
-[ ] page20.md — (beat title)
-[ ] page21.md — (beat title)
-[ ] page22.md — (beat title)
-[ ] page23.md — (beat title)
-[ ] page24.md — (beat title)
-[ ] page25.md — (beat title)
-[ ] page26.md — (beat title)
-[ ] page27.md — (beat title)
-[ ] page28.md — (beat title)
-[ ] page29.md — (beat title)
-[ ] page30.md — (beat title)
-[ ] page31.md — (beat title)
-[ ] page32.md — (beat title)
+# Milestones — {{BOOK_TITLE}}
+
+- **TBD (Pass-1 STARTED)** — Template instantiated; placeholders intact.
+- **TBD (Pass-1 COMPLETE)** — 32 pages, contract validated (lint + stub check).
+- **TBD (Pass-2 COMPLETE)** — Narrative beats coherent; placeholders removed.
+- **TBD (Pass-3 COMPLETE)** — Deterministic stub semantics aligned to Code Tasks.
+- **OPTIONAL (Pass-4 COMPLETE)** — Polish & reproducible build hashed.
+- **OPTIONAL (Art Pass v0)** — Style/alt-text exploration (post Pass-4 if any).
