@@ -22,7 +22,7 @@
 |---------|----------------------------------------|---------------------------------------------|-------------------------------------|
 | a0_0    | The Loop That Wanted to Close          | Establish the **page contract + stub harness**; golden path for `// Code Task` execution and reproducible builds.                 | P1–P4 ✅                                    |
 | a0_1    | The Witch Who Broke Riddles            | Demonstrate **rule-repair** & kinder constraints; **CT mapping**; Art v0 patterns (STYLE_NOTES, ALT_TEXT_GUIDE); accessibility cues. | P1–P5 ✅ (v0.1)                             |
-| a0_2    | The Castle of Glass Arguments          | Teach **fragile vs. resilient reasoning**; safe disagreement patterns; constraints that improve clarity without “gotcha”.             | P3 ✅ (stubs P01–P32 contract-complete, lint/stub/build checks green); P4 in progress |
+| a0_2    | The Castle of Glass Arguments          | Teach **fragile vs. resilient reasoning**; safe disagreement patterns; constraints that improve clarity without “gotcha”.             | P3 ✅ (P01–P32 contract-clean; lint/stub/build green; zips confirmed; P4 optional/TBD) |
 | a0_3    | *(TBD)*                                | Complement the arc (e.g., **bridges of kind questions**): inquiry mechanics; inclusive play + safety.                           | P0 (reserve)                                |
 
 ### Drift checks (keep these true)
