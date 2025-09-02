@@ -1,11 +1,10 @@
 # Page 22
 
-You ask which part needs more time to form.
-A flexible segment appears, patient and light.
+You calibrate: "Should we slow one part a bit?"
+A twenty-second plank adjusts with gentle flex.
 
-// Code Task: bridge_q_p22() → RESULT: "Stub."
+// Code Task: bk4_p22_calibrate() → RESULT: "Stub."
 [python]
-def bridge_q_p22():
-    """Return the deterministic placeholder value for Page 22."""
+def bk4_p22_calibrate():
     return "Stub."
-[Illustration: Twenty-second plank with soft elastic joints accommodating growth.]
+[Illustration: Twenty-second plank subtly resizing segments like sliding scale markers of light.]

@@ -1,11 +1,10 @@
 # Page 21
 
-A patient what-if invites creative repair.
-Potential pathways shimmer into view.
+You verify: "Is this still the right direction?"
+A twenty-first plank firms as options clarify.
 
-// Code Task: bridge_q_p21() → RESULT: "Stub."
+// Code Task: bk4_p21_verify() → RESULT: "Stub."
 [python]
-def bridge_q_p21():
-    """Return the deterministic placeholder value for Page 21."""
+def bk4_p21_verify():
     return "Stub."
-[Illustration: Twenty-first plank overlaid with translucent branching options.]
+[Illustration: Twenty-first plank with faint checkmarks fading in while unused ghost paths dissolve.]

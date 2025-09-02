@@ -1,11 +1,10 @@
 # Page 23
 
-A gentle invitation asks for another view.
-The bridge widens to welcome more voices.
+You align: "Does this match what we both pictured?"
+A twenty-third plank widens, edges syncing.
 
-// Code Task: bridge_q_p23() → RESULT: "Stub."
+// Code Task: bk4_p23_align() → RESULT: "Stub."
 [python]
-def bridge_q_p23():
-    """Return the deterministic placeholder value for Page 23."""
+def bk4_p23_align():
     return "Stub."
-[Illustration: Twenty-third plank broadened slightly with side lanterns lit.]
+[Illustration: Twenty-third plank widening evenly, edge lights syncing into a shared outline.]

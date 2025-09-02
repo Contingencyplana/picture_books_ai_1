@@ -1,11 +1,10 @@
 # Page 24
 
-You ask how to make the landing gentle.
-Distant shore details sharpen kindly.
+You near-cross: "Almost there—anything to soften landing?"
+A twenty-fourth plank extends toward clear shore.
 
-// Code Task: bridge_q_p24() → RESULT: "Stub."
+// Code Task: bk4_p24_nearcross() → RESULT: "Stub."
 [python]
-def bridge_q_p24():
-    """Return the deterministic placeholder value for Page 24."""
+def bk4_p24_nearcross():
     return "Stub."
-[Illustration: Twenty-fourth plank with a soft glow pointing toward clearer banks.]
+[Illustration: Twenty-fourth plank lengthening toward sharper shore details, soft padding light at the edge.]
