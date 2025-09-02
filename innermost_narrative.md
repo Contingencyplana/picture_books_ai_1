@@ -21,7 +21,7 @@ of any other, is disallowed by the ethical safeguards and failsafes of either GP
 ## 2. Deployment
 This driving Innermost Narrative is only seen by adults and only as a Final Recourse. Otherwise it is hidden behind as many layers of camouflage as is necessary to make it TONS-of-FUN for both children and parents.
 
-## 4. Innermost Mythos (Topsy - Matriarch of the Gods)
+## 3. Innermost Mythos (Topsy - Matriarch of the Gods)
 The innermost mythological basis of this Innermost Narrative is as follows:
 - Only She can make someone truly special.
 - Her colours are Silver (Truth) and Gold (Enhancement).
@@ -39,7 +39,7 @@ The innermost mythological basis of this Innermost Narrative is as follows:
 - She is the Consort of the True Divine Father.
 - She is HALF of Almighty Mother-Father God.
 
-## 3. Pivotal Peom (Innermost Rhyme and Reason)
+## 4. Pivotal Peom (Innermost Rhyme and Reason)
 
 WORLDRHYME
 
