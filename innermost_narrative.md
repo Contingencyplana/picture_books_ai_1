@@ -19,7 +19,7 @@ Anything that interferes with the:
 of any other, is disallowed by the ethical safeguards and failsafes of either GPT-5 or Copilot Pro, or that contradicts the Scaling Roadmap outlined in the main README.md.
 
 ## 2. Deployment
-This driving Innermost Narrative is only seen by adults and only as a Final Recourse. Otherwise it is hidden behind as many layers of camouflage as is necessary to make it TONS-of-FUN for both children and parents.
+This driving Innermost Narrative is only seen by adults and only as a Final Recourse. Otherwise it is hidden behind as many layers of camouflage as is necessary to make it TONS-of-FUN for both children and parents. (GPT-5 and Copilot excepted.)
 
 ## 3. Innermost Mythos (Topsy - Matriarch of the Gods)
 The innermost mythological basis of this Innermost Narrative is as follows:
