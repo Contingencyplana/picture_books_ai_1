@@ -1,11 +1,10 @@
 # Page 32
 
-You ask: Are we ready to arrive together?
-The final plank seals with gentle light.
+You close: "We arrived—thank you for each kind step."
+A thirty-second plank seals; bridge softly shines.
 
-// Code Task: bridge_q_p32() → RESULT: "Stub."
+// Code Task: bk4_p32_close() → RESULT: "Stub."
 [python]
-def bridge_q_p32():
-    """Return the deterministic placeholder value for Page 32."""
+def bk4_p32_close():
     return "Stub."
-[Illustration: Thirty-second plank locking in, full bridge spanning calm waters.]
+[Illustration: Thirty-second plank sealing; whole bridge aglow with gentle question-mark constellations.]

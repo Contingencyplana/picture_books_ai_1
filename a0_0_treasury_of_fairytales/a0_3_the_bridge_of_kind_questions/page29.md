@@ -1,11 +1,10 @@
 # Page 29
 
-A question about rest slows the final pace.
-No plank forms hurried or uneven.
+You ready: "Shall we gather breath before the end?"
+A twenty-ninth plank rests into balance.
 
-// Code Task: bridge_q_p29() → RESULT: "Stub."
+// Code Task: bk4_p29_ready() → RESULT: "Stub."
 [python]
-def bridge_q_p29():
-    """Return the deterministic placeholder value for Page 29."""
+def bk4_p29_ready():
     return "Stub."
-[Illustration: Twenty-ninth plank settling gently, rhythm steady and unforced.]
+[Illustration: Twenty-ninth plank settling evenly as a soft pause ring shimmers around it.]

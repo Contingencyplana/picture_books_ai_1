@@ -1,11 +1,10 @@
 # Page 31
 
-A final clarifying why softens remaining doubts.
-The span almost meets the opposite edge.
+You cross: "Here comes our gentle last step."
+A thirty-first plank narrows toward shore glow.
 
-// Code Task: bridge_q_p31() → RESULT: "Stub."
+// Code Task: bk4_p31_cross() → RESULT: "Stub."
 [python]
-def bridge_q_p31():
-    """Return the deterministic placeholder value for Page 31."""
+def bk4_p31_cross():
     return "Stub."
-[Illustration: Thirty-first plank tapering toward the shore, glow steady and sure.]
+[Illustration: Thirty-first plank narrowing gracefully toward bright shore meeting point.]

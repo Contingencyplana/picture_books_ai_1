@@ -1,11 +1,10 @@
 # Page 30
 
-You ask: What welcome awaits on the far side?
-Mist parts; colors of arrival brighten.
+You consent: "Is it okay to finish this crossing?"
+A thirtieth plank forms; colors invite softly.
 
-// Code Task: bridge_q_p30() → RESULT: "Stub."
+// Code Task: bk4_p30_consent() → RESULT: "Stub."
 [python]
-def bridge_q_p30():
-    """Return the deterministic placeholder value for Page 30."""
+def bk4_p30_consent():
     return "Stub."
-[Illustration: Thirtieth plank reflecting distant shore hues like watercolor.]
+[Illustration: Thirtieth plank taking on gentle shore hues after a small glowing yes-symbol appears.]
