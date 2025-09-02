@@ -1,11 +1,10 @@
 # Page 13
 
-A reflective question calms a wobble.
-The tension folds into steady quiet.
+You ask, "What would make this easier to answer?"
+A thirteenth plank settles as strain unwinds.
 
-// Code Task: bridge_q_p13() → RESULT: "Stub."
+// Code Task: bk4_p13_reframe() → RESULT: "Stub."
 [python]
-def bridge_q_p13():
-    """Return the deterministic placeholder value for Page 13."""
+def bk4_p13_reframe():
     return "Stub."
-[Illustration: Thirteenth plank buffered by soft air currents, stabilizing sway.]
+[Illustration: Thirteenth plank easing flat while soft question-mark wisps smooth ripples.]

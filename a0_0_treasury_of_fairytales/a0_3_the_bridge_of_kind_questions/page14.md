@@ -1,11 +1,10 @@
 # Page 14
 
-You ask: What part feels fragile right now?
-A brace appears, gentle yet firm.
+You offer, "Would you like to decide the next plank?"
+A fourteenth plank forms, edges open for choice.
 
-// Code Task: bridge_q_p14() → RESULT: "Stub."
+// Code Task: bk4_p14_invite() → RESULT: "Stub."
 [python]
-def bridge_q_p14():
-    """Return the deterministic placeholder value for Page 14."""
+def bk4_p14_invite():
     return "Stub."
-[Illustration: Fourteenth plank with a translucent brace curving underneath.]
+[Illustration: Fourteenth plank appearing with small selectable glyphs hovering near its front edge.]

@@ -1,11 +1,10 @@
 # Page 16
 
-You ask: Is there something I should pause for?
-Another segment locks with a resonant click.
+You ask, "Shall we try one careful step?"
+A sixteenth plank links, inviting forward.
 
-// Code Task: bridge_q_p16() → RESULT: "Stub."
+// Code Task: bk4_p16_step() → RESULT: "Stub."
 [python]
-def bridge_q_p16():
-    """Return the deterministic placeholder value for Page 16."""
+def bk4_p16_step():
     return "Stub."
-[Illustration: Sixteenth plank interlocks with a glowing dovetail joint.]
+[Illustration: Sixteenth plank linking with a soft forward arrow motif glowing at its center.]

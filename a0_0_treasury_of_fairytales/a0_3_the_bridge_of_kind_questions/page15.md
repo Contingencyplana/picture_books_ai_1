@@ -1,11 +1,10 @@
 # Page 15
 
-A gentle rephrase turns a sharp edge smooth.
-The bridge glows approval in soft amber.
+You ask, "What’s safe to skip for now?"
+A fifteenth plank appears with calm borders.
 
-// Code Task: bridge_q_p15() → RESULT: "Stub."
+// Code Task: bk4_p15_boundaries() → RESULT: "Stub."
 [python]
-def bridge_q_p15():
-    """Return the deterministic placeholder value for Page 15."""
+def bk4_p15_boundaries():
     return "Stub."
-[Illustration: Fifteenth plank shining with diffused amber light, edges rounded.]
+[Illustration: Fifteenth plank outlined by gentle amber boundary lines, unused fragments dissolving away.]
