@@ -1,11 +1,10 @@
 # Page 28
 
-You ask: What have we learned crossing so far?
-A memory pattern etches along the span.
+You checkpoint: "What have we learned so far?"
+A twenty-eighth plank records gentle glyphs.
 
-// Code Task: bridge_q_p28() → RESULT: "Stub."
+// Code Task: bk4_p28_checkpoint() → RESULT: "Stub."
 [python]
-def bridge_q_p28():
-    """Return the deterministic placeholder value for Page 28."""
+def bk4_p28_checkpoint():
     return "Stub."
-[Illustration: Twenty-eighth plank engraved with subtle glyphs of past questions.]
+[Illustration: Twenty-eighth plank engraving softly with symbols of earlier question themes.]

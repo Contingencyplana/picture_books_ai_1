@@ -1,11 +1,10 @@
 # Page 26
 
-You ask: What gratitude can we express now?
-The structure answers with golden seams.
+You share-control: "Want to choose how we pause next?"
+A twenty-sixth plank forms with shared nodes.
 
-// Code Task: bridge_q_p26() → RESULT: "Stub."
+// Code Task: bk4_p26_sharecontrol() → RESULT: "Stub."
 [python]
-def bridge_q_p26():
-    """Return the deterministic placeholder value for Page 26."""
+def bk4_p26_sharecontrol():
     return "Stub."
-[Illustration: Twenty-sixth plank with fine gold inlay highlighting joints.]
+[Illustration: Twenty-sixth plank showing small joint nodes lighting up for turn-taking choices.]

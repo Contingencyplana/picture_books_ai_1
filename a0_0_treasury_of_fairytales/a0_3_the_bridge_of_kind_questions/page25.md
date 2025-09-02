@@ -1,11 +1,10 @@
 # Page 25
 
-A question about pacing slows the stride.
-The bridge responds with deeper resonance.
+You appreciate: "Thanks for walking this kindly."
+A twenty-fifth plank deepens with warm tone.
 
-// Code Task: bridge_q_p25() → RESULT: "Stub."
+// Code Task: bk4_p25_appreciate() → RESULT: "Stub."
 [python]
-def bridge_q_p25():
-    """Return the deterministic placeholder value for Page 25."""
+def bk4_p25_appreciate():
     return "Stub."
-[Illustration: Twenty-fifth plank vibrating softly, matching a calm walking rhythm.]
+[Illustration: Twenty-fifth plank glowing with gentle amber pulses like thankful heartbeats.]

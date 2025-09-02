@@ -1,11 +1,10 @@
 # Page 27
 
-A measured when question reduces strain.
-The arches beneath distribute weight.
+You pace: "How slow keeps this easy for both of us?"
+A twenty-seventh plank settles with even arches.
 
-// Code Task: bridge_q_p27() → RESULT: "Stub."
+// Code Task: bk4_p27_pace() → RESULT: "Stub."
 [python]
-def bridge_q_p27():
-    """Return the deterministic placeholder value for Page 27."""
+def bk4_p27_pace():
     return "Stub."
-[Illustration: Twenty-seventh plank with new sub-arches channeling soft light.]
+[Illustration: Twenty-seventh plank supported by balanced arches pulsing in measured sequence.]
