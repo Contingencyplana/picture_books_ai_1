@@ -1,11 +1,10 @@
 # Page 20
 
-You ask: What would help you feel safer now?
-The railings strengthen with quiet grace.
+You encourage: "One more small step together?"
+A twentieth plank sets; side rails glow steady.
 
-// Code Task: bridge_q_p20() → RESULT: "Stub."
+// Code Task: bk4_p20_encourage() → RESULT: "Stub."
 [python]
-def bridge_q_p20():
-    """Return the deterministic placeholder value for Page 20."""
+def bk4_p20_encourage():
     return "Stub."
-[Illustration: Twentieth plank with soft rails forming, carved with gentle symbols.]
+[Illustration: Twentieth plank with newly bright rails, tiny forward spark bridging a small gap ahead.]

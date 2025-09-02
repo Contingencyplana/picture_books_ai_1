@@ -1,11 +1,10 @@
 # Page 19
 
-A softly framed why settles disagreement.
-Shared purpose threads beneath the boards.
+You balance: "We both want... Can both fit here?"
+A nineteenth plank weaves twin aims beneath.
 
-// Code Task: bridge_q_p19() → RESULT: "Stub."
+// Code Task: bk4_p19_balance() → RESULT: "Stub."
 [python]
-def bridge_q_p19():
-    """Return the deterministic placeholder value for Page 19."""
+def bk4_p19_balance():
     return "Stub."
-[Illustration: Nineteenth plank with luminous threads weaving below to unite spans.]
+[Illustration: Nineteenth plank underside braided with two intertwining light strands.]

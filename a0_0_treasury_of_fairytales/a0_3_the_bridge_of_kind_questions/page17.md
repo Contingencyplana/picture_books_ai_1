@@ -1,11 +1,10 @@
 # Page 17
 
-A clarifying question invites collaboration.
-Two distant silhouettes step closer.
+You reflect back: "I heard you say... Did I get it?"
+A seventeenth plank joins, echoing gently.
 
-// Code Task: bridge_q_p17() → RESULT: "Stub."
+// Code Task: bk4_p17_reflect() → RESULT: "Stub."
 [python]
-def bridge_q_p17():
-    """Return the deterministic placeholder value for Page 17."""
+def bk4_p17_reflect():
     return "Stub."
-[Illustration: Seventeenth plank with figures approaching from opposite shores.]
+[Illustration: Seventeenth plank mirroring faint phrases in soft light above its surface.]

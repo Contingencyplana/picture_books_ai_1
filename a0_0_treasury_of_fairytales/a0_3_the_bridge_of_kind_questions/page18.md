@@ -1,11 +1,10 @@
 # Page 18
 
-You ask what future the other hopes to reach.
-The span aligns with their quiet answer.
+You affirm, "That goal matters; I hear it well."
+An eighteenth plank brightens in agreement.
 
-// Code Task: bridge_q_p18() → RESULT: "Stub."
+// Code Task: bk4_p18_affirm() → RESULT: "Stub."
 [python]
-def bridge_q_p18():
-    """Return the deterministic placeholder value for Page 18."""
+def bk4_p18_affirm():
     return "Stub."
-[Illustration: Eighteenth plank shimmering with a faint projection of a horizon.]
+[Illustration: Eighteenth plank glowing with a soft checkmark of light over a shared horizon.]
