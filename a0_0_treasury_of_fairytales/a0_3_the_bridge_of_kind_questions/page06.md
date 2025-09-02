@@ -1,11 +1,10 @@
 # Page 06
 
-You ask: What are we both trying to protect?
-A plank forms, strong with shared intent.
+You ask, "What are we both hoping to keep safe?"
+A sixth plank forms, sharing your joined care.
 
-// Code Task: bridge_q_p06() → RESULT: "Stub."
+// Code Task: bk4_p06_align() → RESULT: "Stub."
 [python]
-def bridge_q_p06():
-    """Return the deterministic placeholder value for Page 06."""
+def bk4_p06_align():
     return "Stub."
-[Illustration: Sixth plank reinforced by two soft handprints meeting in center.]
+[Illustration: Sixth plank forming with two overlapping soft light shields in the center.]

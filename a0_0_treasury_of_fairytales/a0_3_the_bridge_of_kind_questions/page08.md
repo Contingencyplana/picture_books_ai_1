@@ -1,11 +1,10 @@
 # Page 08
 
-You try a smaller, softer question.
-The bridge extends without a creak.
+You soften it: "Could you tell me more?"
+An eighth plank glides forward, smooth and sure.
 
-// Code Task: bridge_q_p08() → RESULT: "Stub."
+// Code Task: bk4_p08_soften() → RESULT: "Stub."
 [python]
-def bridge_q_p08():
-    """Return the deterministic placeholder value for Page 08."""
+def bk4_p08_soften():
     return "Stub."
-[Illustration: Eighth plank added seamlessly, edges lit with fine gold threads.]
+[Illustration: Eighth plank extending seamlessly, thin golden question-mark shimmer at its front edge.]

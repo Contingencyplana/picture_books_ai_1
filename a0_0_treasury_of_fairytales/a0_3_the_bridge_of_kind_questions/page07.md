@@ -1,11 +1,10 @@
 # Page 07
 
-A listening pause becomes a bright support beam.
-Silence, too, is part of the bridge.
+You pause, letting quiet finish your question.
+A seventh plank arches, built from listening.
 
-// Code Task: bridge_q_p07() → RESULT: "Stub."
+// Code Task: bk4_p07_pause() → RESULT: "Stub."
 [python]
-def bridge_q_p07():
-    """Return the deterministic placeholder value for Page 07."""
+def bk4_p07_pause():
     return "Stub."
-[Illustration: Seventh plank with a gentle arch beneath, glowing softly in quiet.]
+[Illustration: Seventh plank with a soft arch below, tiny hush symbols (rests) glowing along the curve.]

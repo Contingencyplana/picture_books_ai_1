@@ -1,11 +1,10 @@
 # Page 05
 
-A kinder phrasing appears in your mind.
-The bridge rewards clarity over speed.
+You try, "How can I ask this kindly?"
+A fifth plank slides in, clearer and patient.
 
-// Code Task: bridge_q_p05() → RESULT: "Stub."
+// Code Task: bk4_p05_clarify() → RESULT: "Stub."
 [python]
-def bridge_q_p05():
-    """Return the deterministic placeholder value for Page 05."""
+def bk4_p05_clarify():
     return "Stub."
-[Illustration: Fifth plank inscribed with gentle curved symbols of patience.]
+[Illustration: Fifth plank aligning as soft rearranged word shapes glow above it.]
