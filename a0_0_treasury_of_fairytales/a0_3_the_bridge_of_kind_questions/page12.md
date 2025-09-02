@@ -1,11 +1,10 @@
 # Page 12
 
-You ask: What have I not listened to yet?
-Another support joins beneath the planks.
+You wonder, "What have I not heard yet?"
+A twelfth plank braces with a listening lattice.
 
-// Code Task: bridge_q_p12() → RESULT: "Stub."
+// Code Task: bk4_p12_discover() → RESULT: "Stub."
 [python]
-def bridge_q_p12():
-    """Return the deterministic placeholder value for Page 12."""
+def bk4_p12_discover():
     return "Stub."
-[Illustration: Twelfth plank with a soft underside lattice forming from light.]
+[Illustration: Twelfth plank underside weaving a pale lattice of light-eared shapes.]

@@ -1,11 +1,10 @@
 # Page 10
 
-You ask what might make the crossing gentler.
-Another plank settles with a warm hum.
+You offer, "Would a slower pace help?"
+A tenth plank eases in, humming kindly.
 
-// Code Task: bridge_q_p10() → RESULT: "Stub."
+// Code Task: bk4_p10_adjust() → RESULT: "Stub."
 [python]
-def bridge_q_p10():
-    """Return the deterministic placeholder value for Page 10."""
+def bk4_p10_adjust():
     return "Stub."
-[Illustration: Tenth plank edged with a soft bronze shimmer, resonant and calm.]
+[Illustration: Tenth plank sliding in with a faint bronze pulse like a calm breathing rhythm.]

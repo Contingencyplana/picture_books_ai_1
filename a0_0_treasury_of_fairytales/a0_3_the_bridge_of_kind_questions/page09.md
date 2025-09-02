@@ -1,11 +1,10 @@
 # Page 09
 
-A curious "What do you need?" steadies the span.
-Confidence replaces the early mist.
+You ask, "What do you need right now?"
+A ninth plank seats, mist lifting to clear care.
 
-// Code Task: bridge_q_p09() → RESULT: "Stub."
+// Code Task: bk4_p09_support() → RESULT: "Stub."
 [python]
-def bridge_q_p09():
-    """Return the deterministic placeholder value for Page 09."""
+def bk4_p09_support():
     return "Stub."
-[Illustration: Ninth plank clear and strong; mist thinning to reveal distant shapes.]
+[Illustration: Ninth plank locking as fading mist trails off, gentle beam of light between sides.]

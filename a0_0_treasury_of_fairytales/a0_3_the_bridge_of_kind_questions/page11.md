@@ -1,11 +1,10 @@
 # Page 11
 
-A question about feelings reinforces the frame.
-The structure responds with layered light.
+You ask, "How are you feeling inside?"
+An eleventh plank binds, lights layering soft.
 
-// Code Task: bridge_q_p11() → RESULT: "Stub."
+// Code Task: bk4_p11_empathize() → RESULT: "Stub."
 [python]
-def bridge_q_p11():
-    """Return the deterministic placeholder value for Page 11."""
+def bk4_p11_empathize():
     return "Stub."
-[Illustration: Eleventh plank with subtle glowing veins syncing like a heartbeat.]
+[Illustration: Eleventh plank lit by gentle layered bands pulsing like calm heartbeats.]
